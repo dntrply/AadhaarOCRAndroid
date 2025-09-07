@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aadhaar OCR</string>
+    <string name="capture_aadhaar">Capture Aadhaar Card</string>
+    <string name="process_image">Process Image</string>
+    <string name="export_csv">Export to CSV</string>
+    <string name="name_label">Name:</string>
+    <string name="gender_label">Gender:</string>
+    <string name="dob_label">Date of Birth:</string>
+    <string name="uid_label">Aadhaar Number:</string>
+    <string name="address_label">Address:</string>
+    <string name="camera_permission_required">Camera permission is required to capture Aadhaar cards</string>
+    <string name="processing_image">Processing image...</string>
+    <string name="data_exported">Data exported to CSV successfully</string>
+</resources>

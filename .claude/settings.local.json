@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(chmod:*)",
+      "Bash(./gradlew:*)",
+      "WebFetch(domain:services.gradle.org)",
+      "Bash(curl:*)",
+      "Bash(set JAVA_HOME=C:Program FilesJavajdk-17.0.11)",
+      "Read(//c/Program Files/Java/**)",
+      "Bash(dir:*)",
+      "Bash(export:*)",
+      "Read(//c/Users/**)",
+      "Bash(unzip:*)",
+      "Bash(adb:*)",
+      "Bash(emulator:*)",
+      "Bash(.gradlew assembleDebug)",
+      "Bash(gradlew.bat assembleDebug:*)",
+      "WebFetch(domain:developers.google.com)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
