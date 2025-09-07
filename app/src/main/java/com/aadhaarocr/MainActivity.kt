@@ -22,6 +22,11 @@ import kotlinx.coroutines.launch
 import java.io.ByteArrayOutputStream
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+// OpenCV imports temporarily disabled due to disk space issues
+// import org.opencv.android.OpenCVLoaderCallback
+// import org.opencv.android.LoaderCallbackInterface
+// import org.opencv.android.BaseLoaderCallback
+// import org.opencv.android.OpenCVLoader
 
 class MainActivity : AppCompatActivity() {
 
@@ -43,6 +48,21 @@ class MainActivity : AppCompatActivity() {
             Manifest.permission.READ_EXTERNAL_STORAGE
         )
     }
+
+    // OpenCV loader callback temporarily disabled due to disk space issues
+    // private val loaderCallback = object : BaseLoaderCallback(this) {
+    //     override fun onManagerConnected(status: Int) {
+    //         when (status) {
+    //             LoaderCallbackInterface.SUCCESS -> {
+    //                 Log.d(TAG, "OpenCV loaded successfully")
+    //                 // OpenCV is ready to use
+    //             }
+    //             else -> {
+    //                 super.onManagerConnected(status)
+    //             }
+    //         }
+    //     }
+    // }
 
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
@@ -428,6 +448,18 @@ class MainActivity : AppCompatActivity() {
             alpha = if (isFlashOn) 1.0f else 0.7f
         }
     }
+
+    // OpenCV initialization temporarily disabled due to disk space issues
+    // override fun onResume() {
+    //     super.onResume()
+    //     if (!OpenCVLoader.initDebug()) {
+    //         Log.d(TAG, "Internal OpenCV library not found. Using OpenCV Manager for initialization")
+    //         OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION, this, loaderCallback)
+    //     } else {
+    //         Log.d(TAG, "OpenCV library found inside package. Using it!")
+    //         loaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS)
+    //     }
+    // }
 
     override fun onDestroy() {
         super.onDestroy()

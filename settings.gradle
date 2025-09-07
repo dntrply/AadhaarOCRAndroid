@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Aadhaar OCR Android"
 include ':app'
+// include ':opencv'  // Temporarily disabled due to disk space issues

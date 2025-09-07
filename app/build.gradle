@@ -55,8 +55,9 @@ dependencies {
     // Coroutines for ML Kit Tasks
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3'
     
-    // Image processing - OpenCV (commented out - needs manual integration)
-    // implementation 'org.opencv:opencv-java:4.8.0'
+    // Image processing - OpenCV (temporarily disabled due to disk space issues)
+    // implementation project(':opencv')
+    // TODO: Re-enable after freeing disk space or use alternative approach
     
     // CSV processing
     implementation 'com.opencsv:opencsv:5.8'
