@@ -34,11 +34,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cameraExecutor: ExecutorService
     private lateinit var ocrProcessor: AadhaarOCRProcessor
     private lateinit var csvExporter: CSVExporter
+    private lateinit var workflowManager: WorkflowManager
     
     private var imageCapture: ImageCapture? = null
     private var capturedBitmap: Bitmap? = null
     private var camera: Camera? = null
     private var isFlashOn: Boolean = false
+    private var currentWorkflowId: String? = null
 
     companion object {
         private const val TAG = "MainActivity"
@@ -86,15 +88,162 @@ class MainActivity : AppCompatActivity() {
 
         ocrProcessor = AadhaarOCRProcessor()
         csvExporter = CSVExporter(this)
+        workflowManager = WorkflowManager(this)
         cameraExecutor = Executors.newSingleThreadExecutor()
 
         setupClickListeners()
         initializeUI()
+        setupWorkflowObservers()
         
         if (allPermissionsGranted()) {
             startCamera()
         } else {
             requestPermissionLauncher.launch(REQUIRED_PERMISSIONS)
+        }
+    }
+
+    private fun setupWorkflowObservers() {
+        // Observe workflow changes and update UI
+        lifecycleScope.launch {
+            workflowManager.currentWorkflow.collect { workflow ->
+                workflow?.let { updateWorkflowUI(it) }
+            }
+        }
+        
+        lifecycleScope.launch {
+            workflowManager.activeWorkflows.collect { workflows ->
+                updateDashboardUI(workflows.values.toList())
+            }
+        }
+    }
+    
+    private fun updateWorkflowUI(workflow: PatientWorkflowRecord) {
+        binding.apply {
+            // Show workflow progress card when there's an active workflow
+            workflowProgress.root.visibility = View.VISIBLE
+            
+            // Update workflow progress card
+            workflowProgress.apply {
+                tvWorkflowId.text = workflow.id.takeLast(8)
+                tvProgressStep.text = "Progress: Step ${getStepNumber(workflow.state)} of 7"
+                tvProgressPercentage.text = "${workflow.getProgressPercentage()}%"
+                progressBar.progress = workflow.getProgressPercentage()
+                tvCurrentStepDescription.text = workflow.getCurrentStepDescription()
+                
+                // Update patient info if available
+                if (!workflow.patientName.isNullOrEmpty()) {
+                    layoutPatientInfo.visibility = View.VISIBLE
+                    tvPatientName.text = "Current: ${workflow.patientName}"
+                    tvAadhaarNumber.text = "Aadhaar: ${workflow.aadhaarNumber ?: "Processing..."}"
+                } else {
+                    layoutPatientInfo.visibility = View.GONE
+                }
+                
+                // Update step indicators
+                updateStepIndicators(workflow.state)
+            }
+        }
+    }
+    
+    private fun updateDashboardUI(workflows: List<PatientWorkflowRecord>) {
+        val completed = workflows.count { it.state == WorkflowState.COMPLETED }
+        val inProgress = workflows.count { it.state != WorkflowState.COMPLETED && it.state != WorkflowState.ERROR }
+        val pending = workflows.count { it.state == WorkflowState.PENDING }
+        
+        binding.workflowDashboard.apply {
+            tvCompletedCount.text = completed.toString()
+            tvInProgressCount.text = inProgress.toString()
+            tvPendingCount.text = pending.toString()
+        }
+    }
+    
+    private fun updateStepIndicators(state: WorkflowState) {
+        binding.workflowProgress.apply {
+            // Reset all icons
+            iconCapture.text = "⏳"
+            iconProcess.text = "⏳"
+            iconExport.text = "⏳"
+            iconCopy.text = "⏳"
+            iconHmsImport.text = "⏳"
+            iconHmsVerify.text = "⏳"
+            iconComplete.text = "⏳"
+            
+            // Update based on current state
+            when (state) {
+                WorkflowState.CAPTURED, WorkflowState.PROCESSED, WorkflowState.EXPORTED, 
+                WorkflowState.COPIED, WorkflowState.HMS_IMPORTED, WorkflowState.HMS_VERIFIED, 
+                WorkflowState.COMPLETED -> {
+                    iconCapture.text = "✅"
+                    textCapture.setTextColor(ContextCompat.getColor(this@MainActivity, R.color.md_theme_light_onSurface))
+                }
+                WorkflowState.PENDING -> {
+                    iconCapture.text = "🔄"
+                    textCapture.setTextColor(ContextCompat.getColor(this@MainActivity, R.color.md_theme_light_primary))
+                }
+                else -> {}
+            }
+            
+            if (state == WorkflowState.PROCESSED || state == WorkflowState.EXPORTED || 
+                state == WorkflowState.COPIED || state == WorkflowState.HMS_IMPORTED || 
+                state == WorkflowState.HMS_VERIFIED || state == WorkflowState.COMPLETED) {
+                iconProcess.text = "✅"
+            } else if (state == WorkflowState.CAPTURED) {
+                iconProcess.text = "🔄"
+                textProcess.setTextColor(ContextCompat.getColor(this@MainActivity, R.color.md_theme_light_primary))
+            }
+            
+            if (state == WorkflowState.EXPORTED || state == WorkflowState.COPIED || 
+                state == WorkflowState.HMS_IMPORTED || state == WorkflowState.HMS_VERIFIED || 
+                state == WorkflowState.COMPLETED) {
+                iconExport.text = "✅"
+            } else if (state == WorkflowState.PROCESSED) {
+                iconExport.text = "🔄"
+                textExport.setTextColor(ContextCompat.getColor(this@MainActivity, R.color.md_theme_light_primary))
+            }
+            
+            if (state == WorkflowState.COPIED || state == WorkflowState.HMS_IMPORTED || 
+                state == WorkflowState.HMS_VERIFIED || state == WorkflowState.COMPLETED) {
+                iconCopy.text = "✅"
+            } else if (state == WorkflowState.EXPORTED) {
+                iconCopy.text = "🔄"
+                textCopy.setTextColor(ContextCompat.getColor(this@MainActivity, R.color.md_theme_light_primary))
+            }
+            
+            if (state == WorkflowState.HMS_IMPORTED || state == WorkflowState.HMS_VERIFIED || 
+                state == WorkflowState.COMPLETED) {
+                iconHmsImport.text = "✅"
+            } else if (state == WorkflowState.COPIED) {
+                iconHmsImport.text = "🔄"
+                textHmsImport.setTextColor(ContextCompat.getColor(this@MainActivity, R.color.md_theme_light_primary))
+            }
+            
+            if (state == WorkflowState.HMS_VERIFIED || state == WorkflowState.COMPLETED) {
+                iconHmsVerify.text = "✅"
+            } else if (state == WorkflowState.HMS_IMPORTED) {
+                iconHmsVerify.text = "🔄"
+                textHmsVerify.setTextColor(ContextCompat.getColor(this@MainActivity, R.color.md_theme_light_primary))
+            }
+            
+            if (state == WorkflowState.COMPLETED) {
+                iconComplete.text = "✅"
+            } else if (state == WorkflowState.HMS_VERIFIED) {
+                iconComplete.text = "🔄"
+                textComplete.setTextColor(ContextCompat.getColor(this@MainActivity, R.color.md_theme_light_primary))
+            }
+        }
+    }
+    
+    private fun getStepNumber(state: WorkflowState): Int {
+        return when (state) {
+            WorkflowState.PENDING -> 1
+            WorkflowState.CAPTURED -> 2
+            WorkflowState.PROCESSED -> 3
+            WorkflowState.EXPORTED -> 4
+            WorkflowState.COPIED -> 5
+            WorkflowState.HMS_IMPORTED -> 6
+            WorkflowState.HMS_VERIFIED -> 7
+            WorkflowState.COMPLETED -> 7
+            WorkflowState.ERROR -> 0
         }
     }
 
@@ -136,6 +285,11 @@ class MainActivity : AppCompatActivity() {
             btnExportCsv.isEnabled = false
         }
     }
+    
+    private fun startNewWorkflow() {
+        currentWorkflowId = workflowManager.startNewWorkflow()
+        Log.d(TAG, "Started new workflow: $currentWorkflowId")
+    }
 
     private fun setupClickListeners() {
         binding.btnCapture.setOnClickListener {
@@ -146,6 +300,9 @@ class MainActivity : AppCompatActivity() {
                 if (binding.btnCapture.text.toString().contains("Retake")) {
                     // Clear previous image when retaking
                     clearPreviousCapture()
+                } else {
+                    // Start new workflow when starting camera for first time
+                    startNewWorkflow()
                 }
                 startCamera()
                 binding.previewView.visibility = View.VISIBLE
@@ -244,6 +401,11 @@ class MainActivity : AppCompatActivity() {
                         contentResolver.openInputStream(uri)?.use { inputStream ->
                             capturedBitmap = BitmapFactory.decodeStream(inputStream)
                             showCapturedImage()
+                            
+                            // Update workflow state to captured
+                            currentWorkflowId?.let { workflowId ->
+                                workflowManager.advanceWorkflow(workflowId, WorkflowState.CAPTURED)
+                            }
                         }
                     }
                 }
@@ -300,10 +462,34 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             try {
                 val aadhaarData = ocrProcessor.processAadhaarCard(bitmap)
-                displayResults(aadhaarData)
+                
+                // Update workflow with extracted data
+                currentWorkflowId?.let { workflowId ->
+                    when (val result = workflowManager.updateWorkflowWithAadhaarData(workflowId, aadhaarData)) {
+                        is WorkflowResult.Success -> {
+                            displayResults(aadhaarData)
+                        }
+                        is WorkflowResult.Error -> {
+                            Log.e(TAG, "Workflow error: ${result.message}")
+                            Toast.makeText(
+                                this@MainActivity,
+                                "Workflow error: ${result.message}",
+                                Toast.LENGTH_LONG
+                            ).show()
+                            displayResults(aadhaarData) // Still show results even if workflow fails
+                        }
+                    }
+                } ?: run {
+                    // No workflow active, just display results
+                    displayResults(aadhaarData)
+                }
+                
                 showProcessing(false)
             } catch (e: Exception) {
                 Log.e(TAG, "Error processing image", e)
+                currentWorkflowId?.let { workflowId ->
+                    workflowManager.setWorkflowError(workflowId, "OCR processing failed: ${e.message}")
+                }
                 Toast.makeText(
                     this@MainActivity,
                     "Error processing image: ${e.message}",
@@ -403,6 +589,11 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             csvExporter.exportToCSV(aadhaarData)
                 .onSuccess { filePath ->
+                    // Update workflow with CSV file path
+                    currentWorkflowId?.let { workflowId ->
+                        workflowManager.updateCsvFilePath(workflowId, filePath)
+                    }
+                    
                     Toast.makeText(
                         this@MainActivity,
                         "${getString(R.string.data_exported)}\n$filePath",
@@ -410,6 +601,11 @@ class MainActivity : AppCompatActivity() {
                     ).show()
                 }
                 .onFailure { exception ->
+                    // Set workflow error if export fails
+                    currentWorkflowId?.let { workflowId ->
+                        workflowManager.setWorkflowError(workflowId, "CSV export failed: ${exception.message}")
+                    }
+                    
                     Toast.makeText(
                         this@MainActivity,
                         "Export failed: ${exception.message}",
