@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/md_theme_light_outline">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📋 Patient Registration Workflow"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_light_primary" />
+
+            <TextView
+                android:id="@+id/tvWorkflowId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WF_001"
+                android:textSize="12sp"
+                android:textColor="@color/md_theme_light_onSurfaceVariant"
+                android:fontFamily="monospace" />
+
+        </LinearLayout>
+
+        <!-- Current Patient Info -->
+        <LinearLayout
+            android:id="@+id/layoutPatientInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvPatientName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Current: Rohit Kumar"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_light_onSurface" />
+
+            <TextView
+                android:id="@+id/tvAadhaarNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aadhaar: 1234 5678 9012"
+                android:textSize="14sp"
+                android:textColor="@color/md_theme_light_onSurfaceVariant"
+                android:fontFamily="monospace"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- Progress Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvProgressStep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Progress: Step 5 of 7"
+                android:textSize="14sp"
+                android:textColor="@color/md_theme_light_onSurface" />
+
+            <TextView
+                android:id="@+id/tvProgressPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="71%"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_light_primary" />
+
+        </LinearLayout>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginBottom="20dp"
+            android:progress="71"
+            android:max="100"
+            android:progressTint="@color/md_theme_light_primary"
+            android:progressBackgroundTint="@color/md_theme_light_surfaceVariant" />
+
+        <!-- Workflow Steps -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <!-- Step 1: Photo Captured -->
+            <LinearLayout
+                android:id="@+id/stepCapture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:id="@+id/iconCapture"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:text="✅"
+                    android:textSize="16sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/textCapture"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Photo Captured"
+                    android:textSize="14sp"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/md_theme_light_onSurface" />
+
+            </LinearLayout>
+
+            <!-- Step 2: Data Processed -->
+            <LinearLayout
+                android:id="@+id/stepProcess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:id="@+id/iconProcess"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:text="✅"
+                    android:textSize="16sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/textProcess"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Data Processed"
+                    android:textSize="14sp"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/md_theme_light_onSurface" />
+
+            </LinearLayout>
+
+            <!-- Step 3: CSV Generated -->
+            <LinearLayout
+                android:id="@+id/stepExport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:id="@+id/iconExport"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:text="✅"
+                    android:textSize="16sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/textExport"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CSV Generated"
+                    android:textSize="14sp"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/md_theme_light_onSurface" />
+
+            </LinearLayout>
+
+            <!-- Step 4: File Copied -->
+            <LinearLayout
+                android:id="@+id/stepCopy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:id="@+id/iconCopy"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:text="✅"
+                    android:textSize="16sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/textCopy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="File Copied"
+                    android:textSize="14sp"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/md_theme_light_onSurface" />
+
+            </LinearLayout>
+
+            <!-- Step 5: HMS Import (In Progress) -->
+            <LinearLayout
+                android:id="@+id/stepHmsImport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:id="@+id/iconHmsImport"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:text="🔄"
+                    android:textSize="16sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/textHmsImport"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="HMS Import (In Progress)"
+                    android:textSize="14sp"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/md_theme_light_primary"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Step 6: HMS Verification -->
+            <LinearLayout
+                android:id="@+id/stepHmsVerify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:id="@+id/iconHmsVerify"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:text="⏳"
+                    android:textSize="16sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/textHmsVerify"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="HMS Verification"
+                    android:textSize="14sp"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/md_theme_light_onSurfaceVariant" />
+
+            </LinearLayout>
+
+            <!-- Step 7: Complete -->
+            <LinearLayout
+                android:id="@+id/stepComplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:id="@+id/iconComplete"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:text="⏳"
+                    android:textSize="16sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/textComplete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Complete"
+                    android:textSize="14sp"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/md_theme_light_onSurfaceVariant" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Current Step Description -->
+        <TextView
+            android:id="@+id/tvCurrentStepDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Next: Import CSV to HMS System"
+            android:textSize="14sp"
+            android:textColor="@color/md_theme_light_onSurface"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewInstructions"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="View Instructions"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMarkComplete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Mark Complete"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
