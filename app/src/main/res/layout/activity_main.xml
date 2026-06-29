@@ -1,377 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:background="#F8F9FA">
 
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:padding="16dp"
+        android:text="Patient Registration Wizard"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Progress Indicator -->
+    <TextView
+        android:id="@+id/tvCurrentStep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E9ECEF"
+        android:padding="12dp"
+        android:text="STEP 1: Capture Aadhaar"
+        android:textColor="#495057"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <!-- Content Area -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- STAGE 1 & 2: Image Input / Processing View -->
+                <LinearLayout
+                    android:id="@+id/layoutCapture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.camera.view.PreviewView
+                        android:id="@+id/previewView"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:background="@android:color/black"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imagePreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:scaleType="fitCenter"
+                        android:background="#DEE2E6"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btnCapture"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="16dp"
+                        android:text="📷 CAPTURE PHOTO"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btnGallery"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="8dp"
+                        android:text="🖼️ PICK FROM GALLERY" />
+                </LinearLayout>
+
+                <!-- STAGE 3: Data Verification (Manual review) -->
+                <include android:id="@+id/cardResultsInclude" layout="@layout/activity_main_results_card" />
+
+                <!-- Manual Instruction Panel -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardInstructions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#E7F5FF"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#A5D8FF">
+                    <TextView
+                        android:id="@+id/tvManualInstructions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="Please check if data is correct. If not, click RETAKE at the bottom."
+                        android:textColor="#1864AB"
+                        android:textStyle="italic" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Global Processing Overlay -->
+        <FrameLayout
+            android:id="@+id/loadingOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80FFFFFF"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <!-- Navigation Bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:padding="16dp"
+        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"
-            android:textColor="?attr/colorPrimary" />
-
-        <!-- Workflow Dashboard -->
-        <include
-            android:id="@+id/workflowDashboard"
-            layout="@layout/workflow_dashboard_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp" />
-
-        <!-- Workflow Progress -->
-        <include
-            android:id="@+id/workflowProgress"
-            layout="@layout/workflow_progress_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="RETAKE"
             android:visibility="gone" />
 
-        <!-- Camera Preview -->
-        <androidx.camera.view.PreviewView
-            android:id="@+id/previewView"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginBottom="16dp"
-            android:background="@color/black"
-            android:visibility="gone" />
-
-        <!-- Image Preview -->
-        <ImageView
-            android:id="@+id/imagePreview"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginBottom="16dp"
-            android:background="@color/teal_200"
-            android:scaleType="centerCrop"
-            android:contentDescription="Captured Aadhaar card"
-            android:visibility="gone" />
-
-        <!-- Flash Toggle Button -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnFlash"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="16dp"
-            android:text="🔦"
-            android:textSize="18sp"
-            android:visibility="gone"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:contentDescription="Toggle flash" />
-
-        <!-- Action Buttons -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="24dp">
-
-            <Button
-                android:id="@+id/btnCapture"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="8dp"
-                android:text="@string/capture_aadhaar"
-                style="@style/Widget.Material3.Button" />
-
-            <Button
-                android:id="@+id/btnProcess"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp"
-                android:text="@string/process_image"
-                android:enabled="false"
-                style="@style/Widget.Material3.Button.OutlinedButton" />
-
-        </LinearLayout>
-
-        <!-- Progress Bar -->
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/tvProgress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/processing_image"
-            android:layout_marginBottom="24dp"
-            android:visibility="gone" />
-
-        <!-- Validation Status Display -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardValidation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:visibility="gone"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="8dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-                        android:id="@+id/ivValidationIcon"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginEnd="8dp"
-                        android:contentDescription="Validation status" />
-
-                    <TextView
-                        android:id="@+id/tvValidationMessage"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <ProgressBar
-                    android:id="@+id/progressValidation"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="8dp"
-                    android:layout_marginTop="8dp"
-                    android:max="100" />
-
-                <TextView
-                    android:id="@+id/tvConfidenceScore"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:textSize="12sp"
-                    android:layout_gravity="end" />
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Extracted Data Display -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardResults"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:visibility="gone"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="8dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Extracted Information"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="16dp"
-                    android:textColor="?attr/colorPrimary" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="8dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/name_label"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvName"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:textIsSelectable="true" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="8dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/gender_label"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvGender"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:textIsSelectable="true" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="8dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/dob_label"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvDob"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:textIsSelectable="true" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="8dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/uid_label"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvUid"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:textIsSelectable="true" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="16dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/address_label"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvAddress"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:textIsSelectable="true" />
-
-                </LinearLayout>
-
-                <Button
-                    android:id="@+id/btnExportCsv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/export_csv"
-                    style="@style/Widget.Material3.Button.OutlinedButton" />
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Debug: Raw OCR Text Display -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardDebug"
-            android:layout_width="match_parent"
-            android:layout_height="600dp"
-            android:layout_marginBottom="16dp"
-            android:visibility="gone"
-            app:cardElevation="2dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="#FFF3E0">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="12dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="DEBUG: Raw OCR Text (Scroll to see all)"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="8dp"
-                    android:textColor="#FF6F00" />
-
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:background="#FFF8E1"
-                    android:scrollbars="vertical"
-                    android:fadeScrollbars="false">
-
-                    <TextView
-                        android:id="@+id/tvDebugText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="8dp"
-                        android:textSize="10sp"
-                        android:textIsSelectable="true"
-                        android:fontFamily="monospace"
-                        android:textColor="#E65100"
-                        android:lineSpacingMultiplier="1.0" />
-
-                </ScrollView>
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:layout_marginStart="8dp"
+            android:text="PROCEED"
+            android:enabled="false" />
 
     </LinearLayout>
 
-</ScrollView>
+</LinearLayout>
