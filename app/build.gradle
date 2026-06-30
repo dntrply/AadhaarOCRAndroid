@@ -8,13 +8,9 @@ def getGitCommitCount = { ->
         return project.property('customVersionCode').toInteger()
     }
     try {
-        def stdout = new ByteArrayOutputStream()
-        exec {
-            commandLine 'git', 'rev-list', '--count', 'HEAD'
-            standardOutput = stdout
-        }
-        return stdout.toString().trim().toInteger()
+        return "git rev-list --count HEAD".execute().text.trim().toInteger()
     } catch (Exception e) {
+        println "GIT VERSION CODE ERROR: " + e.message
         return 1
     }
 }
@@ -24,13 +20,9 @@ def getGitVersionName = { ->
         return project.property('customVersionName').toString()
     }
     try {
-        def stdout = new ByteArrayOutputStream()
-        exec {
-            commandLine 'git', 'describe', '--tags', '--always', '--dirty'
-            standardOutput = stdout
-        }
-        return stdout.toString().trim()
+        return "git describe --tags --always --dirty".execute().text.trim()
     } catch (Exception e) {
+        println "GIT VERSION NAME ERROR: " + e.message
         return "1.0.0-dev"
     }
 }
