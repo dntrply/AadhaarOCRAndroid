@@ -27,6 +27,16 @@ def getGitVersionName = { ->
     }
 }
 
+def getGitReleaseNotes = { ->
+    try {
+        def notes = ['git', 'log', '-10', '--pretty=format:%h - %s'].execute().text.trim()
+        return notes.replace('"', '\\"').replace('\n', '\\n')
+    } catch (Exception e) {
+        println "GIT RELEASE NOTES ERROR: " + e.message
+        return "No release notes available"
+    }
+}
+
 android {
     namespace = 'com.aadhaarocr'
     compileSdk = 36
@@ -37,6 +47,7 @@ android {
         targetSdk = 35
         versionCode getGitCommitCount()
         versionName getGitVersionName()
+        buildConfigField "String", "RELEASE_NOTES", "\"${getGitReleaseNotes()}\""
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         
@@ -80,11 +91,12 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 
     applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "AadhaarOCR-v${variant.versionName}-${variant.name}.apk"
+            outputFileName = "AadhaarOCR.apk"
         }
     }
 }

@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
@@ -98,6 +99,24 @@ class MainActivity : AppCompatActivity() {
         binding.btnBack.setOnClickListener {
             resetWizard()
         }
+
+        binding.btnAbout.setOnClickListener {
+            showAboutDialog()
+        }
+    }
+
+    private fun showAboutDialog() {
+        val version = BuildConfig.VERSION_NAME
+        val code = BuildConfig.VERSION_CODE
+        val releaseNotes = BuildConfig.RELEASE_NOTES
+
+        val message = "Version: $version ($code)\n\nRecent Updates:\n$releaseNotes"
+
+        AlertDialog.Builder(this)
+            .setTitle("About Aadhaar OCR")
+            .setMessage(message)
+            .setPositiveButton("Close", null)
+            .show()
     }
 
     private val pickImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
@@ -144,7 +163,11 @@ class MainActivity : AppCompatActivity() {
             try {
                 cameraProvider.unbindAll()
                 cameraProvider.bindToLifecycle(this, CameraSelector.DEFAULT_BACK_CAMERA, preview, imageCapture)
-            } catch (e: Exception) { Log.e(TAG, "Camera failed", e) }
+            } catch (e: Exception) { 
+                Log.e(TAG, "Camera failed", e)
+                Toast.makeText(this, "Failed to open camera. Hardware might be in use.", Toast.LENGTH_LONG).show()
+                resetWizard()
+            }
         }, ContextCompat.getMainExecutor(this))
     }
 
@@ -248,6 +271,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val requestPermissionLauncher = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permissions ->
-        if (permissions.values.all { it }) startCamera()
+        if (permissions.values.all { it }) {
+            startCamera()
+        } else {
+            Toast.makeText(this, "Camera permissions are required to scan Aadhaar cards.", Toast.LENGTH_LONG).show()
+            resetWizard()
+        }
     }
 }
