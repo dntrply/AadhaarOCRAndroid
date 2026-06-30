@@ -80,6 +80,7 @@ app/src/main/res/
 - Implements the same parsing logic as the original Python version
 - Handles name extraction, gender detection, date parsing, and address extraction
 - Uses regex patterns optimized for Aadhaar card format
+- **Back of Card Processing**: The back of the card typically interleaves English and Hindi text in unpredictable OCR blocks and lacks demographic fields. The processor accepts an `isBackOfCard` flag. When true, it disables heuristic Name extraction to prevent false-positives (which otherwise cause premature termination of the Address scan). It also employs an extended 15-line backward scan, explicitly filters out Devanagari characters, and deduplicates adjacent repeating words to reconstruct a clean English address.
 
 ### CSVExporter  
 - Creates CSV files in the Documents/AadhaarOCR directory

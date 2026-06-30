@@ -46,7 +46,7 @@ class AadhaarOCRProcessor {
         )
     }
     
-    suspend fun processAadhaarCard(bitmap: Bitmap): AadhaarData {
+    suspend fun processAadhaarCard(bitmap: Bitmap, isBackOfCard: Boolean = false): AadhaarData {
         Log.d(TAG, "Starting OCR...")
         return try {
             val inputImage = InputImage.fromBitmap(bitmap, 0)
@@ -60,13 +60,21 @@ class AadhaarOCRProcessor {
             val lines = fullText.split("\n").map { it.trim() }.filter { it.isNotEmpty() }
             
             // Core Extraction Pipeline
-            val name = extractName(lines)
-            val gender = extractGender(fullText)
-            val dob = extractDOB(fullText)
-            val uid = extractUID(fullText)
+            var name = ""
+            var dob = ""
+            var gender = ""
+            var uid = ""
+            
+            if (!isBackOfCard) {
+                name = extractName(lines)
+                gender = extractGender(fullText)
+                dob = extractDOB(fullText)
+                uid = extractUID(fullText)
+            }
+            
             val address = extractAddress(lines, name)
 
-            val isValid = uid.isNotEmpty() && name.isNotEmpty()
+            val isValid = if (isBackOfCard) address.isNotEmpty() else (uid.isNotEmpty() && name.isNotEmpty())
             val score = calculateConfidence(name, dob, uid)
 
             val debugText = buildString {
@@ -309,22 +317,45 @@ class AadhaarOCRProcessor {
         // Strategy 2: Fallback to finding State + PIN and walking backwards
         for (i in lines.indices) {
             val lower = lines[i].lowercase()
-            if (INDIAN_STATES.any { lower.contains(it) }) {
+                if (INDIAN_STATES.any { lower.contains(it) }) {
                 val pinMatch = Regex("\\b\\d{6}\\b").find(lines[i])
                 if (pinMatch != null) {
                     val addressLines = mutableListOf<String>()
                     // Walk backwards from the State/PIN line
-                    for (j in i downTo (i - 7).coerceAtLeast(0)) {
+                    for (j in i downTo (i - 15).coerceAtLeast(0)) {
                         val currentLine = lines[j].trim()
                         // Stop if we hit the person's name, or a routing label like "To"
                         if (name.isNotEmpty() && currentLine.equals(name, ignoreCase = true)) break
                         if (currentLine.equals("To", ignoreCase = true)) break
                         // Stop if we hit a UID
                         if (currentLine.contains(Regex("\\d{4}[ \\t]+\\d{4}[ \\t]+\\d{4}"))) break
+                        // Stop if we hit an address label
+                        if (currentLine.contains(Regex("(?i)^(?:address|पता)"))) break
                         
-                        addressLines.add(0, currentLine)
+                        // Filter out lines containing Devanagari since we are anchoring on an English state name
+                        if (currentLine.any { it in '\u0900'..'\u097F' }) continue
+                        // Filter out noisy 1-2 character artifacts
+                        if (currentLine.length <= 2) continue
+                        
+                        // Avoid adding the exact same line twice (OCR overlap)
+                        if (addressLines.isEmpty() || !addressLines.first().equals(currentLine, ignoreCase = true)) {
+                            addressLines.add(0, currentLine)
+                        }
                     }
-                    return addressLines.joinToString(", ")
+                    
+                    // Cleanup: Remove adjacent duplicate comma-separated components only
+                    val rawParts = addressLines.joinToString(", ").split(Regex(",\\s*")).map { it.trim() }.filter { it.isNotEmpty() }
+                    val deduplicatedParts = mutableListOf<String>()
+                    for (part in rawParts) {
+                        if (deduplicatedParts.isEmpty() || !deduplicatedParts.last().equals(part, ignoreCase = true)) {
+                            deduplicatedParts.add(part)
+                        }
+                    }
+                    
+                    // Further cleanup: remove duplicate adjacent words like "Mumbai Mumbai"
+                    val finalAddress = deduplicatedParts.joinToString(", ").replace(Regex("\\b(\\w+)\\s+\\1\\b", RegexOption.IGNORE_CASE), "$1")
+                    
+                    return finalAddress
                 }
             }
         }

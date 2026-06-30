@@ -14,11 +14,11 @@ class AadhaarOCRProcessorTest {
     @Test
     fun testAadhaarExtraction() = runBlocking {
         val context = InstrumentationRegistry.getInstrumentation().context
-        val inputStream = context.assets.open("fictional_aadhaar.jpg")
+        val inputStream = context.assets.open("test_back.jpg")
         val bitmap = BitmapFactory.decodeStream(inputStream)
         
         val processor = AadhaarOCRProcessor()
-        val result = processor.processAadhaarCard(bitmap)
+        val result = processor.processAadhaarCard(bitmap, isBackOfCard = true)
         
         println("================== OCR RAW TEXT ==================")
         println(result.rawOcrText)
@@ -28,6 +28,11 @@ class AadhaarOCRProcessorTest {
         println("Extracted DOB: ${result.dob}")
         println("Extracted UID: ${result.uid}")
         println("Extracted Address: ${result.address}")
+        
+        // Ensure that name extraction is disabled for back of card and the parser runs the whole way through
+        assertEquals("", result.name)
+        // Ensure deduplication and filtering produce the clean expected address from the OCR blocks
+        assertEquals("Main Rd, Bandra East, Bandra, Mumbai, Maharashtra 400068", result.address)
         
         processor.cleanup()
     }
