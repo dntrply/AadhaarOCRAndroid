@@ -93,6 +93,20 @@ app/src/main/res/
 - Coordinates between OCR processing and UI updates
 - Manages the complete user workflow
 
+## Build & Release Configuration
+
+The project is configured to use a unified cryptographic keystore to ensure that APK signatures remain consistent across all developers and machines, avoiding "App Not Installed" signature mismatch errors during updates.
+
+**Important Security Note**: The release keystore (`aadhaarocr.jks`) is purposely **not** committed to this repository.
+
+### How to build an Official Release APK:
+If you need to generate an official release build (or if you are a new developer setting up the project):
+1. Obtain the `aadhaarocr.jks` file and the `keystore.properties` file from your team lead or secure password vault.
+2. Place both files in the root folder of the project (`AadhaarOCRAndroid/`).
+3. Run the release build: `./gradlew assembleRelease`
+   
+> The `build.gradle` file will automatically detect `keystore.properties` (which is safely ignored by `.gitignore`) and use it to securely sign your release APK. If these files are not present, Android Studio will safely fall back to using your computer's local, auto-generated debug key for testing.
+
 ## Permissions
 
 The app requires the following permissions:
