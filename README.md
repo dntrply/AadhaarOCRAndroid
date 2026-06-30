@@ -104,6 +104,8 @@ The app's `versionCode` and `versionName` are dynamically generated during the G
 - **`versionCode`**: Calculated automatically using the total number of Git commits (`git rev-list --count HEAD`). This ensures the `versionCode` always safely increments, preventing "App not installed" downgrade errors when sharing APKs.
 - **`versionName`**: Derived from the latest Git tag (e.g. `v1.2.0`). If no tags exist, it falls back to the short commit hash or a default value.
 - **Requirements**: You must have Git installed on your machine and the project must be tracked as a Git repository for the versioning automation to work. If Git is unavailable, it safely defaults to version `1.0.0-dev` with a version code of `1`.
+- **Manual Overrides**: If Git is unattached (e.g., when downloading the source as a zip), developers can manually override these values during the build process using Gradle project properties. For example:
+  `./gradlew assembleRelease -PcustomVersionCode=15 -PcustomVersionName="1.5.0"`
 
 ### How to build an Official Release APK:
 If you need to generate an official release build (or if you are a new developer setting up the project):
