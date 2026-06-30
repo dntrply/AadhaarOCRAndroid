@@ -107,6 +107,13 @@ The app's `versionCode` and `versionName` are dynamically generated during the G
 - **Manual Overrides**: If Git is unattached (e.g., when downloading the source as a zip), developers can manually override these values during the build process using Gradle project properties. For example:
   `./gradlew assembleRelease -PcustomVersionCode=15 -PcustomVersionName="1.5.0"`
 
+### Best Practices: `versionCode` vs `versionName`
+When managing Android releases, it is important to understand the distinction between these two values:
+- **`versionCode` (Internal Integer)**: This is the only value Android actually cares about when installing an update. It **must strictly increment** with every single release build you share (even for tiny bug fixes). If you generate an APK with a `versionCode` equal to or lower than the one installed on the device, Android will reject it with an "App not installed" error.
+- **`versionName` (User-Facing String)**: This is simply the human-readable version string shown to users in the app settings (e.g., `1.0.0`, `v1.2-beta`). It does **not** strictly need to change on every internal build, but best practice dictates following Semantic Versioning (Major.Minor.Patch) for official public releases.
+
+> By relying on the automated Git automation above, your `versionCode` safely increments on every commit automatically, ensuring you never run into Android update errors.
+
 ### How to build an Official Release APK:
 If you need to generate an official release build (or if you are a new developer setting up the project):
 1. Obtain the `aadhaarocr.jks` file and the `keystore.properties` file from your team lead or secure password vault.
