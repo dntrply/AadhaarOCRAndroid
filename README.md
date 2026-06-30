@@ -114,6 +114,18 @@ When managing Android releases, it is important to understand the distinction be
 
 > By relying on the automated Git automation above, your `versionCode` safely increments on every commit automatically, ensuring you never run into Android update errors.
 
+### Managing `versionName` with Git Tags (Best Practice)
+To automatically set the user-facing `versionName`, this project uses `git describe`. Instead of typing version numbers into code, you manage them entirely through Git Tags:
+
+1. **Tagging a Release**: When you are ready to publish a new version (e.g., 1.0.0), create a Git tag:
+   ```bash
+   git tag v1.0.0
+   ```
+   *The script will automatically detect this tag and set the `versionName` to `v1.0.0`.*
+
+2. **Automatic Dev Tracking**: If you make 3 commits *after* tagging `v1.0.0`, the script dynamically generates a name like `v1.0.0-3-ga1b2c3` (showing it is 3 commits ahead of the tag).
+3. **Dirty State Detection**: If you build the app with uncommitted changes in your editor, the script automatically appends `-dirty` (e.g., `v1.0.0-3-ga1b2c3-dirty`) to warn you that the build contains unrecorded changes.
+
 ### How to build an Official Release APK:
 If you need to generate an official release build (or if you are a new developer setting up the project):
 1. Obtain the `aadhaarocr.jks` file and the `keystore.properties` file from your team lead or secure password vault.
