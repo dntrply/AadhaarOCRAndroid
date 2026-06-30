@@ -21,13 +21,27 @@ android {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
     }
+    signingConfigs {
+        debug {
+            storeFile file('aadhaarocr.jks')
+            storePassword 'aadhaarocr'
+            keyAlias 'my-key-alias'
+            keyPassword 'aadhaarocr'
+        }
+        release {
+            storeFile file('aadhaarocr.jks')
+            storePassword 'aadhaarocr'
+            keyAlias 'my-key-alias'
+            keyPassword 'aadhaarocr'
+        }
+    }
 
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
