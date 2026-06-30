@@ -22,17 +22,16 @@ android {
         }
     }
     signingConfigs {
-        debug {
-            storeFile file('aadhaarocr.jks')
-            storePassword 'aadhaarocr'
-            keyAlias 'my-key-alias'
-            keyPassword 'aadhaarocr'
-        }
         release {
-            storeFile file('aadhaarocr.jks')
-            storePassword 'aadhaarocr'
-            keyAlias 'my-key-alias'
-            keyPassword 'aadhaarocr'
+            def keystorePropertiesFile = rootProject.file("keystore.properties")
+            if (keystorePropertiesFile.exists()) {
+                def keystoreProperties = new Properties()
+                keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+                storeFile file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+            }
         }
     }
 
@@ -41,7 +40,11 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            if (rootProject.file("keystore.properties").exists()) {
+                signingConfig signingConfigs.release
+            } else {
+                signingConfig signingConfigs.debug
+            }
         }
     }
     compileOptions {
