@@ -132,8 +132,8 @@ class MainActivity : AppCompatActivity() {
 
     private val pickImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         uri?.let {
-            contentResolver.openInputStream(it)?.use { stream ->
-                val bitmap = BitmapFactory.decodeStream(stream)
+            val bitmap = loadAndRotateBitmap(it)
+            if (bitmap != null) {
                 processImage(bitmap)
             }
         }
@@ -165,9 +165,8 @@ class MainActivity : AppCompatActivity() {
         if (success) {
             currentPhotoUri?.let { uri ->
                 try {
-                    contentResolver.openInputStream(uri)?.use { stream ->
-                        val fullBitmap = BitmapFactory.decodeStream(stream)
-                        
+                    val fullBitmap = loadAndRotateBitmap(uri)
+                    if (fullBitmap != null) {
                         // Scale down the bitmap to avoid OutOfMemoryError and Canvas too large exceptions
                         val maxDimension = 1920f
                         val scale = minOf(maxDimension / fullBitmap.width, maxDimension / fullBitmap.height, 1f)
@@ -184,10 +183,13 @@ class MainActivity : AppCompatActivity() {
                         }
                         
                         processImage(finalBitmap)
+                    } else {
+                        Toast.makeText(this, "Failed to load captured image", Toast.LENGTH_SHORT).show()
+                        resetWizard()
                     }
                 } catch (e: Exception) {
                     Log.e(TAG, "Error processing captured image", e)
-                    Toast.makeText(this, "Failed to load captured image: ${e.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Failed to process image: ${e.message}", Toast.LENGTH_SHORT).show()
                     resetWizard()
                 }
             }
@@ -224,6 +226,39 @@ class MainActivity : AppCompatActivity() {
     private fun processImage(bitmap: Bitmap) {
         viewModel.processCapturedBitmap(bitmap, isCapturingBack) {
             isCapturingBack = false
+        }
+    }
+
+    private fun loadAndRotateBitmap(uri: android.net.Uri): Bitmap? {
+        val bitmap = contentResolver.openInputStream(uri)?.use { stream ->
+            BitmapFactory.decodeStream(stream)
+        } ?: return null
+
+        var orientation = android.media.ExifInterface.ORIENTATION_NORMAL
+        try {
+            contentResolver.openInputStream(uri)?.use { stream ->
+                val exif = android.media.ExifInterface(stream)
+                orientation = exif.getAttributeInt(android.media.ExifInterface.TAG_ORIENTATION, android.media.ExifInterface.ORIENTATION_NORMAL)
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Error reading EXIF", e)
+        }
+
+        val matrix = android.graphics.Matrix()
+        when (orientation) {
+            android.media.ExifInterface.ORIENTATION_ROTATE_90 -> matrix.postRotate(90f)
+            android.media.ExifInterface.ORIENTATION_ROTATE_180 -> matrix.postRotate(180f)
+            android.media.ExifInterface.ORIENTATION_ROTATE_270 -> matrix.postRotate(270f)
+        }
+
+        return if (matrix.isIdentity) {
+            bitmap
+        } else {
+            val rotatedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.width, bitmap.height, matrix, true)
+            if (rotatedBitmap != bitmap) {
+                bitmap.recycle()
+            }
+            rotatedBitmap
         }
     }
 
