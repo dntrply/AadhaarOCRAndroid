@@ -135,6 +135,28 @@ If you need to generate an official release build (or if you are a new developer
    
 > The `build.gradle` file will automatically detect `keystore.properties` (which is safely ignored by `.gitignore`) and use it to securely sign your release APK. If these files are not present, Android Studio will safely fall back to using your computer's local, auto-generated debug key for testing.
 
+## Firebase & Crashlytics Integration
+
+This project is configured with Firebase Crashlytics to monitor field crashes (e.g. `OutOfMemoryError` on high-resolution cameras) directly in the Firebase console.
+
+### Configuration
+1. Ensure the `app/google-services.json` file (downloaded from your Firebase Console) is present in the `app/` directory.
+2. The Firebase BOM, Analytics, and Crashlytics plugins are already configured in the build scripts.
+
+### Crashlytics Testing (Staging Build Type)
+To test that Crashlytics mapping uploads and exception reporting work properly, a dedicated `staging` build type is configured. 
+
+The `staging` build type:
+- Inherits exactly from the `release` configuration (fully obfuscated and minified via ProGuard/R8).
+- Exposes a custom `BuildConfig.ENABLE_CRASH_BUTTON = true` flag.
+- Enables a visible **"💥 SIMULATE CRASH"** button on the main screen that throws a `RuntimeException`.
+
+To generate a build for testing Crashlytics:
+```bash
+./gradlew assembleStaging
+```
+This guarantees your testing accurately simulates a production release environment without accidentally exposing test crash buttons to real end users in the standard `release` build.
+
 ## Permissions
 
 The app requires the following permissions:

@@ -50,6 +50,7 @@ android {
         versionCode getGitCommitCount()
         versionName getGitVersionName()
         buildConfigField "String", "RELEASE_NOTES", "\"${getGitReleaseNotes()}\""
+        buildConfigField "boolean", "ENABLE_CRASH_BUTTON", "false"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         
@@ -82,6 +83,11 @@ android {
             } else {
                 signingConfig signingConfigs.debug
             }
+        }
+        staging {
+            initWith release
+            matchingFallbacks = ['release']
+            buildConfigField "boolean", "ENABLE_CRASH_BUTTON", "true"
         }
     }
     compileOptions {

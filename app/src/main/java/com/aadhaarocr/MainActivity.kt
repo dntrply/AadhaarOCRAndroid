@@ -94,6 +94,13 @@ class MainActivity : AppCompatActivity() {
             isCapturingBack = false
             pickImageLauncher.launch("image/*")
         }
+        
+        if (BuildConfig.ENABLE_CRASH_BUTTON) {
+            binding.btnCrashTest.visibility = View.VISIBLE
+            binding.btnCrashTest.setOnClickListener {
+                throw RuntimeException("Test Crash - Simulated via Crashlytics Test Button")
+            }
+        }
 
         binding.btnNext.setOnClickListener {
             handleNavigation()

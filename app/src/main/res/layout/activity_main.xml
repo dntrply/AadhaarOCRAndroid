@@ -99,6 +99,16 @@
                         android:layout_height="56dp"
                         android:layout_marginTop="8dp"
                         android:text="🖼️ PICK FROM GALLERY" />
+                        
+                    <Button
+                        android:id="@+id/btnCrashTest"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/design_default_color_error"
+                        android:visibility="gone"
+                        android:text="💥 SIMULATE CRASH" />
                 </LinearLayout>
 
                 <!-- STAGE 3: Data Verification (Manual review) -->
