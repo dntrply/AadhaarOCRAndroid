@@ -7,115 +7,144 @@
     android:layout_marginBottom="16dp"
     android:visibility="gone"
     app:cardElevation="4dp"
-    app:cardCornerRadius="8dp">
+    app:cardCornerRadius="16dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#DEE2E6">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Extracted Information"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="24dp"
             android:textColor="?attr/colorPrimary" />
 
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/name_label"
-                android:textStyle="bold" />
-            <EditText
+            android:layout_marginBottom="12dp"
+            app:startIconDrawable="@android:drawable/ic_menu_edit"
+            android:hint="@string/name_label">
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tvName"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
                 android:inputType="textPersonName" />
-        </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/gender_label"
-                android:textStyle="bold" />
-            <EditText
+            android:layout_marginBottom="12dp"
+            app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+            android:hint="@string/gender_label">
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tvGender"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
                 android:inputType="text" />
-        </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dob_label"
-                android:textStyle="bold" />
-            <EditText
+            android:layout_marginBottom="12dp"
+            app:startIconDrawable="@android:drawable/ic_menu_today"
+            android:hint="@string/dob_label">
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tvDob"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
                 android:inputType="date" />
-        </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/uid_label"
-                android:textStyle="bold" />
-            <EditText
+            android:layout_marginBottom="12dp"
+            app:startIconDrawable="@android:drawable/ic_menu_info_details"
+            android:hint="@string/uid_label">
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tvUid"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
                 android:inputType="number" />
-        </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/address_label"
-                android:textStyle="bold" />
-            <EditText
+            android:layout_marginBottom="8dp"
+            app:startIconDrawable="@android:drawable/ic_menu_mapmode"
+            android:hint="@string/address_label">
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tvAddress"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:minLines="2" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Inline Smart Button for Address Capture -->
+        <LinearLayout
+            android:id="@+id/layoutCaptureBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="#FFF5F5"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="4dp">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚠️ Address is missing. Scan the back of the card to automatically fill it in:"
+                android:textColor="#C92A2A"
+                android:textSize="13sp"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold" />
+                
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <Button
+                    android:id="@+id/btnCaptureBack"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    app:backgroundTint="#FFE3E3"
+                    android:textColor="#C92A2A"
+                    android:text="📷 Camera" />
+                    
+                <Button
+                    android:id="@+id/btnGalleryBack"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    app:backgroundTint="#FFE3E3"
+                    android:textColor="#C92A2A"
+                    android:text="🖼️ Gallery" />
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

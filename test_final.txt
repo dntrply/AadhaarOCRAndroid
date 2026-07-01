@@ -1,0 +1,1507 @@
+Initialized native services in: C:\Users\dntrp\.gradle\native
+Initialized jansi services in: C:\Users\dntrp\.gradle\native
+Removing 1 daemon stop events from registry
+Previous Daemon (33340) stopped at Wed Jul 01 00:48:10 IST 2026 other compatible daemons were started and after being idle for 0 minutes and not recently used
+Starting a Gradle Daemon, 1 busy and 1 stopped Daemons could not be reused, use --status for details
+Received JVM installation metadata from 'C:\Program Files\Microsoft\jdk-17.0.11.9-hotspot': {JAVA_HOME=C:\Program Files\Microsoft\jdk-17.0.11.9-hotspot, JAVA_VERSION=17.0.11, JAVA_VENDOR=Microsoft, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=17.0.11+9-LTS, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=17.0.11+9-LTS, VM_VENDOR=Microsoft, OS_ARCH=amd64}
+Starting process 'Gradle build daemon'. Working directory: C:\Users\dntrp\.gradle\daemon\9.4.1 Command: C:\Users\dntrp\.gradle\jdks\jetbrains_s_r_o_-21-amd64-windows.2\bin\java.exe --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.xml/javax.xml.namespace=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED -Xmx2048m -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant -cp C:\Users\dntrp\.gradle\wrapper\dists\gradle-9.4.1-bin\arn2x92ynaizyzdaamcbpbhtj\gradle-9.4.1\lib\gradle-daemon-main-9.4.1.jar -javaagent:C:\Users\dntrp\.gradle\wrapper\dists\gradle-9.4.1-bin\arn2x92ynaizyzdaamcbpbhtj\gradle-9.4.1\lib\agents\gradle-instrumentation-agent-9.4.1.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 9.4.1
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 15.412 secs.
+The client will now receive all logging from the daemon (pid: 3116). The daemon log file: C:\Users\dntrp\.gradle\daemon\9.4.1\daemon-3116.out.log
+Starting build in new daemon [memory: 2 GiB]
+Using 8 worker leases.
+Operational build model parameters: {cachingModelBuilding=false, configurationCache=false, configurationCacheDisabledReason=null, configurationCacheParallelLoad=false, configurationCacheParallelStore=false, configureOnDemand=false, invalidateCoupledProjects=false, isolatedProjects=false, modelAsProjectDependency=false, modelBuilding=false, parallelModelBuilding=false, parallelProjectConfiguration=false, parallelProjectExecution=false, resilientModelBuilding=false}
+Received JVM installation metadata from 'C:\Users\dntrp\.gradle\jdks\jetbrains_s_r_o_-21-amd64-windows.2': {JAVA_HOME=C:\Users\dntrp\.gradle\jdks\jetbrains_s_r_o_-21-amd64-windows.2, JAVA_VERSION=21.0.11, JAVA_VENDOR=JetBrains s.r.o., RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=21.0.11+1-b1163.116, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=21.0.11+1-b1163.116, VM_VENDOR=JetBrains s.r.o., OS_ARCH=amd64}
+Watching the file system is configured to be enabled if available
+Now considering [C:\Users\dntrp\projects\AadhaarOCRAndroid] as hierarchies to watch
+File system watching is active
+Starting Build
+Resolved plugin [id: 'org.gradle.toolchains.foojay-resolver-convention', version: '1.0.0']
+Settings evaluated using settings file 'C:\Users\dntrp\projects\AadhaarOCRAndroid\settings.gradle'.
+Projects loaded. Root project using build file 'C:\Users\dntrp\projects\AadhaarOCRAndroid\build.gradle'.
+Included projects: [root project 'Aadhaar OCR Android', project ':app']
+
+> Configure project :
+Evaluating root project 'Aadhaar OCR Android' using build file 'C:\Users\dntrp\projects\AadhaarOCRAndroid\build.gradle'.
+Resolved plugin [id: 'com.android.application', version: '9.2.1', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.2.10', apply: false]
+
+> Configure project :app
+Evaluating project ':app' using build file 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build.gradle'.
+Resolved plugin [id: 'com.android.application', version: '9.2.1']
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.2.10']
+WARNING: The option setting 'android.usesSdkInManifest.disallowed=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.sdk.defaultTargetSdkToCompileSdkIfUnset=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.enableAppCompileTimeRClass=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.builtInKotlin=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.newDsl=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.r8.optimizedResourceShrinking=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.defaults.buildfeatures.resvalues=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+Using default execution profile
+Build fe76ce66-11b9-48c3-a46a-03c14425d7e7 is started
+Using Kotlin Gradle Plugin gradle813 variant
+WARNING: API 'applicationVariants' is obsolete and has been replaced with 'AndroidComponentsExtension'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+The legacy variant API is disabled by default in AGP 9.0, but can be re-enabled by adding 
+    android.newDsl=false
+to this project's gradle.properties file.
+For more information, see http://developer.android.com/build/r/new-dsl.
+
+To determine what is calling applicationVariants, use -Pandroid.debug.obsoleteApi=true on the command line to display more information.
+WARNING: API 'testVariants' is obsolete and has been replaced with 'AndroidComponentsExtension'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+The legacy variant API is disabled by default in AGP 9.0, but can be re-enabled by adding 
+    android.newDsl=false
+to this project's gradle.properties file.
+For more information, see http://developer.android.com/build/r/new-dsl.
+
+To determine what is calling testVariants, use -Pandroid.debug.obsoleteApi=true on the command line to display more information.
+WARNING: API 'unitTestVariants' is obsolete and has been replaced with 'AndroidComponentsExtension'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+The legacy variant API is disabled by default in AGP 9.0, but can be re-enabled by adding 
+    android.newDsl=false
+to this project's gradle.properties file.
+For more information, see http://developer.android.com/build/r/new-dsl.
+
+To determine what is calling unitTestVariants, use -Pandroid.debug.obsoleteApi=true on the command line to display more information.
+WARNING: The property android.dependency.excludeLibraryComponentsFromConstraints improves project import performance for very large projects. It should be enabled to improve performance.
+To suppress this warning, add android.generateSyncIssueWhenLibraryConstraintsAreEnabled=false to gradle.properties
+WARNING: The property android.dependency.excludeLibraryComponentsFromConstraints improves project import performance for very large projects. It should be enabled to improve performance.
+To suppress this warning, add android.generateSyncIssueWhenLibraryConstraintsAreEnabled=false to gradle.properties
+WARNING: The property android.dependency.excludeLibraryComponentsFromConstraints improves project import performance for very large projects. It should be enabled to improve performance.
+To suppress this warning, add android.generateSyncIssueWhenLibraryConstraintsAreEnabled=false to gradle.properties
+WARNING: The property android.dependency.excludeLibraryComponentsFromConstraints improves project import performance for very large projects. It should be enabled to improve performance.
+To suppress this warning, add android.generateSyncIssueWhenLibraryConstraintsAreEnabled=false to gradle.properties
+All projects evaluated.
+Task name matched 'connectedAndroidTest'
+Selected primary task 'connectedAndroidTest' from project :
+Adding -Xuse-inline-scopes-numbers Kotlin compiler flag for task :app:compileDebugAndroidTestKotlin
+Adding -Xuse-inline-scopes-numbers Kotlin compiler flag for task :app:compileDebugKotlin
+Tasks to be executed: [task ':app:checkKotlinGradlePluginConfigurationErrors', task ':app:preBuild', task ':app:preDebugBuild', task ':app:dataBindingMergeDependencyArtifactsDebug', task ':app:generateDebugResValues', task ':app:generateDebugResources', task ':app:mergeDebugResources', task ':app:packageDebugResources', task ':app:processDebugNavigationResources', task ':app:parseDebugLocalResources', task ':app:dataBindingGenBaseClassesDebug', task ':app:generateDebugBuildConfig', task ':app:checkDebugAarMetadata', task ':app:mapDebugSourceSetPaths', task ':app:compileDebugNavigationResources', task ':app:createDebugCompatibleScreenManifests', task ':app:extractDeepLinksDebug', task ':app:processDebugMainManifest', task ':app:processDebugManifest', task ':app:processDebugManifestForPackage', task ':app:processDebugResources', task ':app:compileDebugKotlin', task ':app:javaPreCompileDebug', task ':app:compileDebugJavaWithJavac', task ':app:bundleDebugClassesToCompileJar', task ':app:preDebugAndroidTestBuild', task ':app:dataBindingMergeDependencyArtifactsDebugAndroidTest', task ':app:generateDebugAndroidTestResValues', task ':app:generateDebugAndroidTestResources', task ':app:mergeDebugAndroidTestResources', task ':app:dataBindingGenBaseClassesDebugAndroidTest', task ':app:processDebugAndroidTestManifest', task ':app:generateDebugAndroidTestBuildConfig', task ':app:checkDebugAndroidTestAarMetadata', task ':app:mapDebugAndroidTestSourceSetPaths', task ':app:processDebugAndroidTestNavigationResources', task ':app:compileDebugAndroidTestNavigationResources', task ':app:processDebugAndroidTestResources', task ':app:compileDebugAndroidTestKotlin', task ':app:javaPreCompileDebugAndroidTest', task ':app:compileDebugAndroidTestJavaWithJavac', task ':app:generateDebugAssets', task ':app:mergeDebugAssets', task ':app:compressDebugAssets', task ':app:generateDebugGlobalSynthetics', task ':app:processDebugJavaRes', task ':app:mergeDebugJavaResource', task ':app:checkDebugDuplicateClasses', task ':app:desugarDebugFileDependencies', task ':app:mergeExtDexDebug', task ':app:mergeLibDexDebug', task ':app:dexBuilderDebug', task ':app:mergeProjectDexDebug', task ':app:mergeDebugJniLibFolders', task ':app:mergeDebugNativeLibs', task ':app:stripDebugDebugSymbols', task ':app:validateSigningDebug', task ':app:writeDebugAppMetadata', task ':app:writeDebugSigningConfigVersions', task ':app:packageDebug', task ':app:createDebugApkListingFileRedirect', task ':app:generateDebugAndroidTestAssets', task ':app:mergeDebugAndroidTestAssets', task ':app:compressDebugAndroidTestAssets', task ':app:generateDebugAndroidTestGlobalSynthetics', task ':app:processDebugAndroidTestJavaRes', task ':app:mergeDebugAndroidTestJavaResource', task ':app:checkDebugAndroidTestDuplicateClasses', task ':app:desugarDebugAndroidTestFileDependencies', task ':app:mergeExtDexDebugAndroidTest', task ':app:mergeLibDexDebugAndroidTest', task ':app:dexBuilderDebugAndroidTest', task ':app:mergeProjectDexDebugAndroidTest', task ':app:mergeDebugAndroidTestJniLibFolders', task ':app:mergeDebugAndroidTestNativeLibs', task ':app:stripDebugAndroidTestDebugSymbols', task ':app:validateSigningDebugAndroidTest', task ':app:writeDebugAndroidTestSigningConfigVersions', task ':app:packageDebugAndroidTest', task ':app:createDebugAndroidTestApkListingFileRedirect', task ':app:connectedDebugAndroidTest', task ':app:connectedAndroidTest']
+Tasks that were excluded: []
+Resolve mutations for :app:checkKotlinGradlePluginConfigurationErrors (Thread[#71,Execution worker,5,main]) started.
+:app:checkKotlinGradlePluginConfigurationErrors (Thread[#71,Execution worker,5,main]) started.
+
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':app:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :app:preBuild (Thread[#70,included builds,5,main]) started.
+:app:preBuild (Thread[#70,included builds,5,main]) started.
+
+> Task :app:preBuild UP-TO-DATE
+Skipping task ':app:preBuild' as it has no actions.
+Resolve mutations for :app:preDebugBuild (Thread[#74,Execution worker Thread 4,5,main]) started.
+:app:preDebugBuild (Thread[#74,Execution worker Thread 4,5,main]) started.
+
+> Task :app:preDebugBuild UP-TO-DATE
+Skipping task ':app:preDebugBuild' as it has no actions.
+Resolve mutations for :app:dataBindingMergeDependencyArtifactsDebug (Thread[#74,Execution worker Thread 4,5,main]) started.
+:app:dataBindingMergeDependencyArtifactsDebug (Thread[#70,included builds,5,main]) started.
+
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+Caching disabled for task ':app:dataBindingMergeDependencyArtifactsDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:dataBindingMergeDependencyArtifactsDebug' as it is up-to-date.
+
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+Resolve mutations for :app:generateDebugResValues (Thread[#70,included builds,5,main]) started.
+:app:generateDebugResValues (Thread[#70,included builds,5,main]) started.
+
+> Task :app:generateDebugResValues UP-TO-DATE
+Caching disabled for task ':app:generateDebugResValues' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugResValues' as it is up-to-date.
+Resolve mutations for :app:generateDebugResources (Thread[#70,included builds,5,main]) started.
+:app:generateDebugResources (Thread[#70,included builds,5,main]) started.
+
+> Task :app:generateDebugResources UP-TO-DATE
+Caching disabled for task ':app:generateDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugResources' as it is up-to-date.
+Resolve mutations for :app:mergeDebugResources (Thread[#70,included builds,5,main]) started.
+:app:mergeDebugResources (Thread[#70,included builds,5,main]) started.
+
+> Task :app:mergeDebugResources UP-TO-DATE
+Caching disabled for task ':app:mergeDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:mergeDebugResources' as it is up-to-date.
+Resolve mutations for :app:packageDebugResources (Thread[#70,included builds,5,main]) started.
+:app:packageDebugResources (Thread[#70,included builds,5,main]) started.
+
+> Task :app:packageDebugResources UP-TO-DATE
+Caching disabled for task ':app:packageDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:packageDebugResources' as it is up-to-date.
+Resolve mutations for :app:processDebugNavigationResources (Thread[#70,included builds,5,main]) started.
+:app:processDebugNavigationResources (Thread[#70,included builds,5,main]) started.
+
+> Task :app:processDebugNavigationResources UP-TO-DATE
+Caching disabled for task ':app:processDebugNavigationResources' because:
+  Build cache is disabled
+Skipping task ':app:processDebugNavigationResources' as it is up-to-date.
+Resolve mutations for :app:parseDebugLocalResources (Thread[#70,included builds,5,main]) started.
+:app:parseDebugLocalResources (Thread[#70,included builds,5,main]) started.
+
+> Task :app:parseDebugLocalResources UP-TO-DATE
+Caching disabled for task ':app:parseDebugLocalResources' because:
+  Build cache is disabled
+Skipping task ':app:parseDebugLocalResources' as it is up-to-date.
+Resolve mutations for :app:dataBindingGenBaseClassesDebug (Thread[#70,included builds,5,main]) started.
+:app:dataBindingGenBaseClassesDebug (Thread[#70,included builds,5,main]) started.
+
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+Caching disabled for task ':app:dataBindingGenBaseClassesDebug' because:
+  Build cache is disabled
+Skipping task ':app:dataBindingGenBaseClassesDebug' as it is up-to-date.
+Resolve mutations for :app:generateDebugBuildConfig (Thread[#70,included builds,5,main]) started.
+:app:generateDebugBuildConfig (Thread[#70,included builds,5,main]) started.
+
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+Caching disabled for task ':app:generateDebugBuildConfig' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugBuildConfig' as it is up-to-date.
+Resolve mutations for :app:checkDebugAarMetadata (Thread[#70,included builds,5,main]) started.
+:app:checkDebugAarMetadata (Thread[#70,included builds,5,main]) started.
+
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+Caching disabled for task ':app:checkDebugAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:checkDebugAarMetadata' as it is up-to-date.
+Resolve mutations for :app:mapDebugSourceSetPaths (Thread[#70,included builds,5,main]) started.
+:app:mapDebugSourceSetPaths (Thread[#70,included builds,5,main]) started.
+
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+Caching disabled for task ':app:mapDebugSourceSetPaths' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:mapDebugSourceSetPaths' as it is up-to-date.
+Resolve mutations for :app:compileDebugNavigationResources (Thread[#70,included builds,5,main]) started.
+:app:compileDebugNavigationResources (Thread[#70,included builds,5,main]) started.
+
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+Caching disabled for task ':app:compileDebugNavigationResources' because:
+  Build cache is disabled
+Skipping task ':app:compileDebugNavigationResources' as it is up-to-date.
+Resolve mutations for :app:createDebugCompatibleScreenManifests (Thread[#70,included builds,5,main]) started.
+:app:createDebugCompatibleScreenManifests (Thread[#70,included builds,5,main]) started.
+
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+Caching disabled for task ':app:createDebugCompatibleScreenManifests' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:createDebugCompatibleScreenManifests' as it is up-to-date.
+Resolve mutations for :app:extractDeepLinksDebug (Thread[#70,included builds,5,main]) started.
+:app:extractDeepLinksDebug (Thread[#70,included builds,5,main]) started.
+
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+Caching disabled for task ':app:extractDeepLinksDebug' because:
+  Build cache is disabled
+Skipping task ':app:extractDeepLinksDebug' as it is up-to-date.
+Resolve mutations for :app:processDebugMainManifest (Thread[#76,Execution worker Thread 6,5,main]) started.
+:app:processDebugMainManifest (Thread[#70,included builds,5,main]) started.
+
+> Task :app:processDebugMainManifest
+Caching disabled for task ':app:processDebugMainManifest' because:
+  Build cache is disabled
+Task ':app:processDebugMainManifest' is not up-to-date because:
+  Value of input property 'optionalFeatures' has changed for task ':app:processDebugMainManifest'
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\07ec8949c47067457923054262bad63d\transformed\viewbinding-9.2.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\8c52e83ce5145f87a7ea6701a4f645a3\transformed\material-1.12.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\8ac3745471f7bae2dd279c9dc5d53538\transformed\constraintlayout-2.2.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\4a132d4ddf260f665376e0fd9536ef70\transformed\camera-video-1.4.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\1d03946057e2df823c22fc796c39a229\transformed\camera-lifecycle-1.4.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\efdf6459d8a0ca00f7126208bfd83667\transformed\camera-camera2-1.4.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\c65f65eabe3e4d57ae06823c535bfd37\transformed\camera-core-1.4.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\36f2971437cb4f4451414fec56a35aca\transformed\camera-view-1.4.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\7ff5de26f44e3eb6c0999e6375f461a4\transformed\appcompat-resources-1.7.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\88b21e03bf247e6b5791f60983fa04ec\transformed\text-recognition-16.0.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\0ad4a79b4e24a03de13203c501f9f70c\transformed\text-recognition-devanagari-16.0.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\65fe074d9f98fd39098308585c08c13b\transformed\play-services-mlkit-text-recognition-19.0.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\9a4d0f52595f7bb44b0698804d461f15\transformed\text-recognition-bundled-common-17.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\c355f76153772869d7f36c4e02eeb04e\transformed\play-services-mlkit-text-recognition-devanagari-16.0.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\6f82251bdee26fd961a0759dc31474fb\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\94ff8a7450778f3d9bb4b8b3d19f7cec\transformed\vision-common-17.3.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\3257757785024becffbe417943b71b02\transformed\common-18.11.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\76d1ee739f937f2e9225cabddc16b04e\transformed\appcompat-1.7.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\862b03144ffab5290504f7f7530c0baf\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\9659e57fdba563d27ee936eea8847a70\transformed\emoji2-1.3.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\e91b71e5777ffe540c545cf473810f3f\transformed\drawerlayout-1.1.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\987282db68b44afc306f469ddc04495c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\8d0e93fb343d455ecc9ae6c8d7ba473b\transformed\transition-1.5.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\393a298c650783d5a2e83ab93008765a\transformed\dynamicanimation-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\96475c5067517250309e2e6b50e0fd36\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\f3b3436f3e2d768e91363c501e98f3d1\transformed\vectordrawable-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\52ec9e4276722876458f837c45510a9a\transformed\viewpager2-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\acde11ba6b8719c268044936181629e0\transformed\play-services-base-18.5.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\f4a51068f3acb2c8516191b7e062f9ac\transformed\activity-ktx-1.10.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\b1cf887a5fc67c64c4ffb507a137e0d1\transformed\fragment-1.5.4\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\1a9ee21d7f0c2a2b8cadf72fa5b73e02\transformed\activity-1.10.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a4b0a1d4e824790adc3f9312b236f3b5\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\1344c9f7b8c50b126a7517c86fe390b3\transformed\loader-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\d01b1e2315b0b19de4c4b5c029f2a073\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\fbe740010a8108ba6f38b25bc7d2b5d2\transformed\savedstate-1.2.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\75bc8c23a424cafecab459fadf1b3eab\transformed\lifecycle-livedata-core-ktx-2.8.7\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\cad2e3656c2c1d1fd86dbe06128ea157\transformed\lifecycle-runtime-release\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\b7ac82805264730433042638486977c6\transformed\lifecycle-viewmodel-2.8.7\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\53472a0db412ab57113c7e71d04318b0\transformed\lifecycle-viewmodel-release\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\ef8de3186a1269afe69428294ae0562e\transformed\lifecycle-viewmodel-savedstate-2.8.7\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\cd935b154a794f33a407e37a085713de\transformed\lifecycle-livedata-core-2.8.7\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\696a073d0f79164f9b1675bf72c67c58\transformed\lifecycle-process-2.8.7\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\d772147b188f3dcaccb0384c162575d8\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\f2fb96323396f5577456705efc684289\transformed\lifecycle-viewmodel-ktx-2.8.7\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\1fb06cdf4ce6fa3e44df72a61a4917c7\transformed\lifecycle-livedata-2.8.7\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\84e181e07a1d8500e3314f2aeaa6d5d6\transformed\vision-interfaces-16.3.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\c1d6a01f1c2ec72360905358e713f7ff\transformed\play-services-tasks-18.2.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\32113ce662d816f700965d0e1e0b2574\transformed\play-services-basement-18.4.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\07818df1640e2a18beb33c47a98ef799\transformed\viewpager-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\711ff35bee3c8348924a58f5c3c6b839\transformed\recyclerview-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\4369c640b93bd65d9ba075e539e93952\transformed\customview-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\b2cdb7af07318c1bf0fba66d31aa4941\transformed\core-1.15.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\591aaa77985bca302df8c7aaa82c24ed\transformed\core-ktx-1.15.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\5ca5f19e2174173b763df8383cedf789\transformed\annotation-experimental-1.4.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\ede5a96565d3e739f5e5bf9a298c563a\transformed\startup-runtime-1.1.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\91a2135a86e8b5ec164dd060f8afa33f\transformed\tracing-1.2.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\8aeb05e648391db5b630a4e5a3087917\transformed\tracing-ktx-1.2.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\521e7c43ebb0268962f0c29a13aad33e\transformed\cursoradapter-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\c3df521821b044c1fd4a319b83b31daa\transformed\cardview-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\f93a3e3e76c7576952a16c5ee590c0bc\transformed\exifinterface-1.3.2\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\8cfd071bea1c76afb5badb36604c5048\transformed\interpolator-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\443cc8b7619e48eb955bf503a40b2d30\transformed\versionedparcelable-1.1.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\035e20b4049cf9c86a247f868ffeb2af\transformed\core-runtime-2.2.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a9b92a3297b4c57be357c54900761b0c\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a6364e44f774994595ad00e909ee9d81\transformed\transport-runtime-2.2.6\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\e85b4407bf901695b05c146253270ded\transformed\transport-api-2.2.1\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\6197029f2cab8412fde1230d2a34a505\transformed\firebase-components-16.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\2448d09f542b1238eb053b415a359c83\transformed\firebase-encoders-json-17.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\f3ea98e3cd7a8bac7fe876cef62aa687\transformed\documentfile-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\66ea75b2c02a3de3bec42645fc782e9b\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\96174470101683ed0bcd17fc67d8f96c\transformed\print-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\1dc1682b419ac8ba1a23749cbc1ff02c\transformed\image-1.0.0-beta1\AndroidManifest.xml
+Merging main manifest C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml
+
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\07ec8949c47067457923054262bad63d\transformed\viewbinding-9.2.1\AndroidManifest.xml
+Merging manifest with lower [androidx.databinding:viewbinding:9.2.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.databinding:viewbinding:9.2.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\8c52e83ce5145f87a7ea6701a4f645a3\transformed\material-1.12.0\AndroidManifest.xml
+Merging manifest with lower [com.google.android.material:material:1.12.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.material:material:1.12.0] AndroidManifest.xml:20:5-44
+application defined in both files...
+Merging application with lower [com.google.android.material:material:1.12.0] AndroidManifest.xml:22:5-20
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\8ac3745471f7bae2dd279c9dc5d53538\transformed\constraintlayout-2.2.0\AndroidManifest.xml
+Merging manifest with lower [androidx.constraintlayout:constraintlayout:2.2.0] AndroidManifest.xml:2:1-9:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.constraintlayout:constraintlayout:2.2.0] AndroidManifest.xml:5:5-44
+application defined in both files...
+Merging application with lower [androidx.constraintlayout:constraintlayout:2.2.0] AndroidManifest.xml:7:5-20
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\4a132d4ddf260f665376e0fd9536ef70\transformed\camera-video-1.4.1\AndroidManifest.xml
+Merging manifest with lower [androidx.camera:camera-video:1.4.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.camera:camera-video:1.4.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\1d03946057e2df823c22fc796c39a229\transformed\camera-lifecycle-1.4.1\AndroidManifest.xml
+Merging manifest with lower [androidx.camera:camera-lifecycle:1.4.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.camera:camera-lifecycle:1.4.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\efdf6459d8a0ca00f7126208bfd83667\transformed\camera-camera2-1.4.1\AndroidManifest.xml
+Merging manifest with lower [androidx.camera:camera-camera2:1.4.1] AndroidManifest.xml:17:1-36:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.camera:camera-camera2:1.4.1] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.camera:camera-camera2:1.4.1] AndroidManifest.xml:23:5-34:19
+Adopted [service: null]
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\c65f65eabe3e4d57ae06823c535bfd37\transformed\camera-core-1.4.1\AndroidManifest.xml
+Merging manifest with lower [androidx.camera:camera-core:1.4.1] AndroidManifest.xml:17:1-36:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.camera:camera-core:1.4.1] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.camera:camera-core:1.4.1] AndroidManifest.xml:23:5-34:19
+service#androidx.camera.core.impl.MetadataHolderService defined in both files...
+Merging service#androidx.camera.core.impl.MetadataHolderService with lower [androidx.camera:camera-core:1.4.1] AndroidManifest.xml:29:9-33:78
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\36f2971437cb4f4451414fec56a35aca\transformed\camera-view-1.4.1\AndroidManifest.xml
+Merging manifest with lower [androidx.camera:camera-view:1.4.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.camera:camera-view:1.4.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\7ff5de26f44e3eb6c0999e6375f461a4\transformed\appcompat-resources-1.7.0\AndroidManifest.xml
+Merging manifest with lower [androidx.appcompat:appcompat-resources:1.7.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.appcompat:appcompat-resources:1.7.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\88b21e03bf247e6b5791f60983fa04ec\transformed\text-recognition-16.0.1\AndroidManifest.xml
+Merging manifest with lower [com.google.mlkit:text-recognition:16.0.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.mlkit:text-recognition:16.0.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\0ad4a79b4e24a03de13203c501f9f70c\transformed\text-recognition-devanagari-16.0.1\AndroidManifest.xml
+Merging manifest with lower [com.google.mlkit:text-recognition-devanagari:16.0.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.mlkit:text-recognition-devanagari:16.0.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\65fe074d9f98fd39098308585c08c13b\transformed\play-services-mlkit-text-recognition-19.0.1\AndroidManifest.xml
+Merging manifest with lower [com.google.android.gms:play-services-mlkit-text-recognition:19.0.1] AndroidManifest.xml:2:1-8:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.gms:play-services-mlkit-text-recognition:19.0.1] AndroidManifest.xml:6:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\9a4d0f52595f7bb44b0698804d461f15\transformed\text-recognition-bundled-common-17.0.0\AndroidManifest.xml
+Merging manifest with lower [com.google.mlkit:text-recognition-bundled-common:17.0.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.mlkit:text-recognition-bundled-common:17.0.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\c355f76153772869d7f36c4e02eeb04e\transformed\play-services-mlkit-text-recognition-devanagari-16.0.1\AndroidManifest.xml
+Merging manifest with lower [com.google.android.gms:play-services-mlkit-text-recognition-devanagari:16.0.1] AndroidManifest.xml:2:1-8:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.gms:play-services-mlkit-text-recognition-devanagari:16.0.1] AndroidManifest.xml:6:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\6f82251bdee26fd961a0759dc31474fb\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml
+Merging manifest with lower [com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] AndroidManifest.xml:2:1-18:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] AndroidManifest.xml:6:5-44
+application defined in both files...
+Merging application with lower [com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] AndroidManifest.xml:8:5-16:19
+Adopted [service: null]
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\94ff8a7450778f3d9bb4b8b3d19f7cec\transformed\vision-common-17.3.0\AndroidManifest.xml
+Merging manifest with lower [com.google.mlkit:vision-common:17.3.0] AndroidManifest.xml:2:1-18:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.mlkit:vision-common:17.3.0] AndroidManifest.xml:6:5-44
+application defined in both files...
+Merging application with lower [com.google.mlkit:vision-common:17.3.0] AndroidManifest.xml:8:5-16:19
+service#com.google.mlkit.common.internal.MlKitComponentDiscoveryService defined in both files...
+Merging service#com.google.mlkit.common.internal.MlKitComponentDiscoveryService with lower [com.google.mlkit:vision-common:17.3.0] AndroidManifest.xml:9:9-15:19
+Adopted [meta-data: null]
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\3257757785024becffbe417943b71b02\transformed\common-18.11.0\AndroidManifest.xml
+Merging manifest with lower [com.google.mlkit:common:18.11.0] AndroidManifest.xml:2:1-26:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.mlkit:common:18.11.0] AndroidManifest.xml:6:5-44
+application defined in both files...
+Merging application with lower [com.google.mlkit:common:18.11.0] AndroidManifest.xml:8:5-24:19
+Adopted [provider: null]
+service#com.google.mlkit.common.internal.MlKitComponentDiscoveryService defined in both files...
+Merging service#com.google.mlkit.common.internal.MlKitComponentDiscoveryService with lower [com.google.mlkit:common:18.11.0] AndroidManifest.xml:15:9-23:19
+Adopted [meta-data: null]
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\76d1ee739f937f2e9225cabddc16b04e\transformed\appcompat-1.7.0\AndroidManifest.xml
+Merging manifest with lower [androidx.appcompat:appcompat:1.7.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.appcompat:appcompat:1.7.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\862b03144ffab5290504f7f7530c0baf\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml
+Merging manifest with lower [androidx.emoji2:emoji2-views-helper:1.3.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.emoji2:emoji2-views-helper:1.3.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\9659e57fdba563d27ee936eea8847a70\transformed\emoji2-1.3.0\AndroidManifest.xml
+Merging manifest with lower [androidx.emoji2:emoji2:1.3.0] AndroidManifest.xml:17:1-35:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.emoji2:emoji2:1.3.0] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.emoji2:emoji2:1.3.0] AndroidManifest.xml:23:5-33:19
+Adopted [provider: null]
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\e91b71e5777ffe540c545cf473810f3f\transformed\drawerlayout-1.1.1\AndroidManifest.xml
+Merging manifest with lower [androidx.drawerlayout:drawerlayout:1.1.1] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.drawerlayout:drawerlayout:1.1.1] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\987282db68b44afc306f469ddc04495c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.coordinatorlayout:coordinatorlayout:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.coordinatorlayout:coordinatorlayout:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\8d0e93fb343d455ecc9ae6c8d7ba473b\transformed\transition-1.5.0\AndroidManifest.xml
+Merging manifest with lower [androidx.transition:transition:1.5.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.transition:transition:1.5.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\393a298c650783d5a2e83ab93008765a\transformed\dynamicanimation-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.dynamicanimation:dynamicanimation:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.dynamicanimation:dynamicanimation:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\96475c5067517250309e2e6b50e0fd36\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.vectordrawable:vectordrawable-animated:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.vectordrawable:vectordrawable-animated:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\f3b3436f3e2d768e91363c501e98f3d1\transformed\vectordrawable-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.vectordrawable:vectordrawable:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.vectordrawable:vectordrawable:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\52ec9e4276722876458f837c45510a9a\transformed\viewpager2-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.viewpager2:viewpager2:1.0.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.viewpager2:viewpager2:1.0.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\acde11ba6b8719c268044936181629e0\transformed\play-services-base-18.5.0\AndroidManifest.xml
+Merging manifest with lower [com.google.android.gms:play-services-base:18.5.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.gms:play-services-base:18.5.0] AndroidManifest.xml:3:5-44
+application defined in both files...
+Merging application with lower [com.google.android.gms:play-services-base:18.5.0] AndroidManifest.xml:4:5-6:19
+Adopted [activity: null]
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\f4a51068f3acb2c8516191b7e062f9ac\transformed\activity-ktx-1.10.0\AndroidManifest.xml
+Merging manifest with lower [androidx.activity:activity-ktx:1.10.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.activity:activity-ktx:1.10.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\b1cf887a5fc67c64c4ffb507a137e0d1\transformed\fragment-1.5.4\AndroidManifest.xml
+Merging manifest with lower [androidx.fragment:fragment:1.5.4] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.fragment:fragment:1.5.4] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\1a9ee21d7f0c2a2b8cadf72fa5b73e02\transformed\activity-1.10.0\AndroidManifest.xml
+Merging manifest with lower [androidx.activity:activity:1.10.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.activity:activity:1.10.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a4b0a1d4e824790adc3f9312b236f3b5\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.legacy:legacy-support-core-utils:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.legacy:legacy-support-core-utils:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\1344c9f7b8c50b126a7517c86fe390b3\transformed\loader-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.loader:loader:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.loader:loader:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\d01b1e2315b0b19de4c4b5c029f2a073\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml
+Merging manifest with lower [androidx.savedstate:savedstate-ktx:1.2.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.savedstate:savedstate-ktx:1.2.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\fbe740010a8108ba6f38b25bc7d2b5d2\transformed\savedstate-1.2.1\AndroidManifest.xml
+Merging manifest with lower [androidx.savedstate:savedstate:1.2.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.savedstate:savedstate:1.2.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\75bc8c23a424cafecab459fadf1b3eab\transformed\lifecycle-livedata-core-ktx-2.8.7\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\cad2e3656c2c1d1fd86dbe06128ea157\transformed\lifecycle-runtime-release\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-runtime-android:2.8.7] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-runtime-android:2.8.7] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\b7ac82805264730433042638486977c6\transformed\lifecycle-viewmodel-2.8.7\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel:2.8.7] AndroidManifest.xml:2:1-5:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel:2.8.7] AndroidManifest.xml:4:5-43
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\53472a0db412ab57113c7e71d04318b0\transformed\lifecycle-viewmodel-release\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\ef8de3186a1269afe69428294ae0562e\transformed\lifecycle-viewmodel-savedstate-2.8.7\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\cd935b154a794f33a407e37a085713de\transformed\lifecycle-livedata-core-2.8.7\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-livedata-core:2.8.7] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-livedata-core:2.8.7] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\696a073d0f79164f9b1675bf72c67c58\transformed\lifecycle-process-2.8.7\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-process:2.8.7] AndroidManifest.xml:17:1-35:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-process:2.8.7] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.lifecycle:lifecycle-process:2.8.7] AndroidManifest.xml:23:5-33:19
+provider#androidx.startup.InitializationProvider defined in both files...
+Merging provider#androidx.startup.InitializationProvider with lower [androidx.lifecycle:lifecycle-process:2.8.7] AndroidManifest.xml:24:9-32:20
+Adopted [meta-data: null]
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\d772147b188f3dcaccb0384c162575d8\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\f2fb96323396f5577456705efc684289\transformed\lifecycle-viewmodel-ktx-2.8.7\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\1fb06cdf4ce6fa3e44df72a61a4917c7\transformed\lifecycle-livedata-2.8.7\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-livedata:2.8.7] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-livedata:2.8.7] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\84e181e07a1d8500e3314f2aeaa6d5d6\transformed\vision-interfaces-16.3.0\AndroidManifest.xml
+Merging manifest with lower [com.google.mlkit:vision-interfaces:16.3.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.mlkit:vision-interfaces:16.3.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\c1d6a01f1c2ec72360905358e713f7ff\transformed\play-services-tasks-18.2.0\AndroidManifest.xml
+Merging manifest with lower [com.google.android.gms:play-services-tasks:18.2.0] AndroidManifest.xml:2:1-5:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.gms:play-services-tasks:18.2.0] AndroidManifest.xml:3:5-44
+application defined in both files...
+Merging application with lower [com.google.android.gms:play-services-tasks:18.2.0] AndroidManifest.xml:4:5-20
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\32113ce662d816f700965d0e1e0b2574\transformed\play-services-basement-18.4.0\AndroidManifest.xml
+Merging manifest with lower [com.google.android.gms:play-services-basement:18.4.0] AndroidManifest.xml:2:1-9:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.gms:play-services-basement:18.4.0] AndroidManifest.xml:3:5-44
+application defined in both files...
+Merging application with lower [com.google.android.gms:play-services-basement:18.4.0] AndroidManifest.xml:5:5-7:19
+Adopted [meta-data: null]
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\07818df1640e2a18beb33c47a98ef799\transformed\viewpager-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.viewpager:viewpager:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.viewpager:viewpager:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\711ff35bee3c8348924a58f5c3c6b839\transformed\recyclerview-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.recyclerview:recyclerview:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.recyclerview:recyclerview:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\4369c640b93bd65d9ba075e539e93952\transformed\customview-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.customview:customview:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.customview:customview:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\b2cdb7af07318c1bf0fba66d31aa4941\transformed\core-1.15.0\AndroidManifest.xml
+Merging manifest with lower [androidx.core:core:1.15.0] AndroidManifest.xml:17:1-30:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.core:core:1.15.0] AndroidManifest.xml:20:5-44
+Adopted [permission: null]
+Adopted [uses-permission: null]
+application defined in both files...
+Merging application with lower [androidx.core:core:1.15.0] AndroidManifest.xml:28:5-89
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\591aaa77985bca302df8c7aaa82c24ed\transformed\core-ktx-1.15.0\AndroidManifest.xml
+Merging manifest with lower [androidx.core:core-ktx:1.15.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.core:core-ktx:1.15.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\5ca5f19e2174173b763df8383cedf789\transformed\annotation-experimental-1.4.1\AndroidManifest.xml
+Merging manifest with lower [androidx.annotation:annotation-experimental:1.4.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.annotation:annotation-experimental:1.4.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml
+Merging manifest with lower [androidx.profileinstaller:profileinstaller:1.4.0] AndroidManifest.xml:17:1-55:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.profileinstaller:profileinstaller:1.4.0] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.profileinstaller:profileinstaller:1.4.0] AndroidManifest.xml:23:5-53:19
+provider#androidx.startup.InitializationProvider defined in both files...
+Merging provider#androidx.startup.InitializationProvider with lower [androidx.profileinstaller:profileinstaller:1.4.0] AndroidManifest.xml:24:9-32:20
+Adopted [meta-data: null]
+Adopted [receiver: null]
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\ede5a96565d3e739f5e5bf9a298c563a\transformed\startup-runtime-1.1.1\AndroidManifest.xml
+Merging manifest with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:17:1-33:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:21:5-23:41
+application defined in both files...
+Merging application with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:25:5-31:19
+provider#androidx.startup.InitializationProvider defined in both files...
+Merging provider#androidx.startup.InitializationProvider with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:26:9-30:34
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\91a2135a86e8b5ec164dd060f8afa33f\transformed\tracing-1.2.0\AndroidManifest.xml
+Merging manifest with lower [androidx.tracing:tracing:1.2.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.tracing:tracing:1.2.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\8aeb05e648391db5b630a4e5a3087917\transformed\tracing-ktx-1.2.0\AndroidManifest.xml
+Merging manifest with lower [androidx.tracing:tracing-ktx:1.2.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.tracing:tracing-ktx:1.2.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\521e7c43ebb0268962f0c29a13aad33e\transformed\cursoradapter-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.cursoradapter:cursoradapter:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.cursoradapter:cursoradapter:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\c3df521821b044c1fd4a319b83b31daa\transformed\cardview-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.cardview:cardview:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.cardview:cardview:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\f93a3e3e76c7576952a16c5ee590c0bc\transformed\exifinterface-1.3.2\AndroidManifest.xml
+Merging manifest with lower [androidx.exifinterface:exifinterface:1.3.2] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.exifinterface:exifinterface:1.3.2] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\8cfd071bea1c76afb5badb36604c5048\transformed\interpolator-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.interpolator:interpolator:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.interpolator:interpolator:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\443cc8b7619e48eb955bf503a40b2d30\transformed\versionedparcelable-1.1.1\AndroidManifest.xml
+Merging manifest with lower [androidx.versionedparcelable:versionedparcelable:1.1.1] AndroidManifest.xml:17:1-27:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.versionedparcelable:versionedparcelable:1.1.1] AndroidManifest.xml:20:5-22:41
+application defined in both files...
+Merging application with lower [androidx.versionedparcelable:versionedparcelable:1.1.1] AndroidManifest.xml:24:5-25:19
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\035e20b4049cf9c86a247f868ffeb2af\transformed\core-runtime-2.2.0\AndroidManifest.xml
+Merging manifest with lower [androidx.arch.core:core-runtime:2.2.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.arch.core:core-runtime:2.2.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a9b92a3297b4c57be357c54900761b0c\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml
+Merging manifest with lower [com.google.android.datatransport:transport-backend-cct:2.3.3] AndroidManifest.xml:15:1-38:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.datatransport:transport-backend-cct:2.3.3] AndroidManifest.xml:19:5-21:41
+Adopted [uses-permission: null]
+Adopted [uses-permission: null]
+application defined in both files...
+Merging application with lower [com.google.android.datatransport:transport-backend-cct:2.3.3] AndroidManifest.xml:28:5-36:19
+Adopted [service: null]
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a6364e44f774994595ad00e909ee9d81\transformed\transport-runtime-2.2.6\AndroidManifest.xml
+Merging manifest with lower [com.google.android.datatransport:transport-runtime:2.2.6] AndroidManifest.xml:15:1-41:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.datatransport:transport-runtime:2.2.6] AndroidManifest.xml:18:5-20:41
+uses-permission#android.permission.ACCESS_NETWORK_STATE defined in both files...
+Merging uses-permission#android.permission.ACCESS_NETWORK_STATE with lower [com.google.android.datatransport:transport-runtime:2.2.6] AndroidManifest.xml:22:5-79
+application defined in both files...
+Merging application with lower [com.google.android.datatransport:transport-runtime:2.2.6] AndroidManifest.xml:25:5-39:19
+Adopted [service: null]
+Adopted [receiver: null]
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery defined in both files...
+Merging service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery with lower [com.google.android.datatransport:transport-runtime:2.2.6] AndroidManifest.xml:36:9-38:40
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\e85b4407bf901695b05c146253270ded\transformed\transport-api-2.2.1\AndroidManifest.xml
+Merging manifest with lower [com.google.android.datatransport:transport-api:2.2.1] AndroidManifest.xml:15:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.datatransport:transport-api:2.2.1] AndroidManifest.xml:18:5-20:41
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\6197029f2cab8412fde1230d2a34a505\transformed\firebase-components-16.1.0\AndroidManifest.xml
+Merging manifest with lower [com.google.firebase:firebase-components:16.1.0] AndroidManifest.xml:15:1-23:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.firebase:firebase-components:16.1.0] AndroidManifest.xml:19:5-21:41
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\2448d09f542b1238eb053b415a359c83\transformed\firebase-encoders-json-17.1.0\AndroidManifest.xml
+Merging manifest with lower [com.google.firebase:firebase-encoders-json:17.1.0] AndroidManifest.xml:15:1-23:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.firebase:firebase-encoders-json:17.1.0] AndroidManifest.xml:19:5-21:41
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\f3ea98e3cd7a8bac7fe876cef62aa687\transformed\documentfile-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.documentfile:documentfile:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.documentfile:documentfile:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\66ea75b2c02a3de3bec42645fc782e9b\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\96174470101683ed0bcd17fc67d8f96c\transformed\print-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.print:print:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.print:print:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\dntrp\.gradle\caches\9.4.1\transforms\1dc1682b419ac8ba1a23749cbc1ff02c\transformed\image-1.0.0-beta1\AndroidManifest.xml
+Merging manifest with lower [com.google.android.odml:image:1.0.0-beta1] AndroidManifest.xml:2:1-9:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.odml:image:1.0.0-beta1] AndroidManifest.xml:5:5-44
+application defined in both files...
+Merging application with lower [com.google.android.odml:image:1.0.0-beta1] AndroidManifest.xml:7:5-20
+Merging result: SUCCESS
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.aadhaarocr"
+4    android:versionCode="15"
+5    android:versionName="v1.2.0-1-ga1c435b-dirty" >
+6
+7    <uses-sdk
+7-->INJECTED
+8        android:minSdkVersion="24"
+8-->INJECTED
+9        android:targetSdkVersion="35" />
+9-->INJECTED
+10
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:5:5-65
+11-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:5:22-62
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:6:5-80
+12-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:6:22-77
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:7:5-81
+13-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:7:22-78
+14    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+14-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:8:5-76
+14-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:8:22-73
+15
+16    <uses-feature
+16-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:10:5-12:35
+17        android:name="android.hardware.camera"
+17-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:11:9-47
+18        android:required="true" />
+18-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:12:9-32
+19
+20    <permission
+20-->[androidx.core:core:1.15.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\b2cdb7af07318c1bf0fba66d31aa4941\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+21        android:name="com.aadhaarocr.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+21-->[androidx.core:core:1.15.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\b2cdb7af07318c1bf0fba66d31aa4941\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+22        android:protectionLevel="signature" />
+22-->[androidx.core:core:1.15.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\b2cdb7af07318c1bf0fba66d31aa4941\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+23
+24    <uses-permission android:name="com.aadhaarocr.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+24-->[androidx.core:core:1.15.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\b2cdb7af07318c1bf0fba66d31aa4941\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+24-->[androidx.core:core:1.15.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\b2cdb7af07318c1bf0fba66d31aa4941\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+25    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+26-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a9b92a3297b4c57be357c54900761b0c\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:25:5-79
+26-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a9b92a3297b4c57be357c54900761b0c\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:25:22-76
+27    <uses-permission android:name="android.permission.INTERNET" />
+27-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a9b92a3297b4c57be357c54900761b0c\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:26:5-67
+27-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a9b92a3297b4c57be357c54900761b0c\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:26:22-64
+28
+29    <application
+29-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:14:5-33:19
+30        android:allowBackup="true"
+30-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:15:9-35
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.15.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\b2cdb7af07318c1bf0fba66d31aa4941\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+32        android:dataExtractionRules="@xml/data_extraction_rules"
+32-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:16:9-65
+33        android:debuggable="true"
+34        android:extractNativeLibs="false"
+34-->INJECTED
+35        android:fullBackupContent="@xml/backup_rules"
+35-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:17:9-54
+36        android:icon="@mipmap/ic_launcher"
+36-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:18:9-43
+37        android:label="@string/app_name"
+37-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:19:9-41
+38        android:roundIcon="@mipmap/ic_launcher_round"
+38-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:20:9-54
+39        android:supportsRtl="true"
+39-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:21:9-35
+40        android:theme="@style/Theme.AadhaarOCR" >
+40-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:22:9-48
+41        <activity
+41-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:24:9-32:20
+42            android:name="com.aadhaarocr.MainActivity"
+42-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:25:13-41
+43            android:exported="true"
+43-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:26:13-36
+44            android:theme="@style/Theme.AadhaarOCR" >
+44-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:27:13-52
+45            <intent-filter>
+45-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:28:13-31:29
+46                <action android:name="android.intent.action.MAIN" />
+46-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:29:17-69
+46-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:29:25-66
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:30:17-77
+48-->C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\AndroidManifest.xml:30:27-74
+49            </intent-filter>
+50        </activity>
+51
+52        <service
+52-->[androidx.camera:camera-camera2:1.4.1] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\efdf6459d8a0ca00f7126208bfd83667\transformed\camera-camera2-1.4.1\AndroidManifest.xml:24:9-33:19
+53            android:name="androidx.camera.core.impl.MetadataHolderService"
+53-->[androidx.camera:camera-camera2:1.4.1] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\efdf6459d8a0ca00f7126208bfd83667\transformed\camera-camera2-1.4.1\AndroidManifest.xml:25:13-75
+54            android:enabled="false"
+54-->[androidx.camera:camera-camera2:1.4.1] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\efdf6459d8a0ca00f7126208bfd83667\transformed\camera-camera2-1.4.1\AndroidManifest.xml:26:13-36
+55            android:exported="false" >
+55-->[androidx.camera:camera-camera2:1.4.1] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\efdf6459d8a0ca00f7126208bfd83667\transformed\camera-camera2-1.4.1\AndroidManifest.xml:27:13-37
+56            <meta-data
+56-->[androidx.camera:camera-camera2:1.4.1] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\efdf6459d8a0ca00f7126208bfd83667\transformed\camera-camera2-1.4.1\AndroidManifest.xml:30:13-32:89
+57                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+57-->[androidx.camera:camera-camera2:1.4.1] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\efdf6459d8a0ca00f7126208bfd83667\transformed\camera-camera2-1.4.1\AndroidManifest.xml:31:17-103
+58                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+58-->[androidx.camera:camera-camera2:1.4.1] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\efdf6459d8a0ca00f7126208bfd83667\transformed\camera-camera2-1.4.1\AndroidManifest.xml:32:17-86
+59        </service>
+60        <service
+60-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\6f82251bdee26fd961a0759dc31474fb\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:9:9-15:19
+61            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+61-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\6f82251bdee26fd961a0759dc31474fb\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:10:13-91
+62            android:directBootAware="true"
+62-->[com.google.mlkit:common:18.11.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\3257757785024becffbe417943b71b02\transformed\common-18.11.0\AndroidManifest.xml:17:13-43
+63            android:exported="false" >
+63-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\6f82251bdee26fd961a0759dc31474fb\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:11:13-37
+64            <meta-data
+64-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\6f82251bdee26fd961a0759dc31474fb\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:12:13-14:85
+65                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
+65-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\6f82251bdee26fd961a0759dc31474fb\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:13:17-114
+66                android:value="com.google.firebase.components.ComponentRegistrar" />
+66-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\6f82251bdee26fd961a0759dc31474fb\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:14:17-82
+67            <meta-data
+67-->[com.google.mlkit:vision-common:17.3.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\94ff8a7450778f3d9bb4b8b3d19f7cec\transformed\vision-common-17.3.0\AndroidManifest.xml:12:13-14:85
+68                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+68-->[com.google.mlkit:vision-common:17.3.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\94ff8a7450778f3d9bb4b8b3d19f7cec\transformed\vision-common-17.3.0\AndroidManifest.xml:13:17-124
+69                android:value="com.google.firebase.components.ComponentRegistrar" />
+69-->[com.google.mlkit:vision-common:17.3.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\94ff8a7450778f3d9bb4b8b3d19f7cec\transformed\vision-common-17.3.0\AndroidManifest.xml:14:17-82
+70            <meta-data
+70-->[com.google.mlkit:common:18.11.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\3257757785024becffbe417943b71b02\transformed\common-18.11.0\AndroidManifest.xml:20:13-22:85
+71                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+71-->[com.google.mlkit:common:18.11.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\3257757785024becffbe417943b71b02\transformed\common-18.11.0\AndroidManifest.xml:21:17-120
+72                android:value="com.google.firebase.components.ComponentRegistrar" />
+72-->[com.google.mlkit:common:18.11.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\3257757785024becffbe417943b71b02\transformed\common-18.11.0\AndroidManifest.xml:22:17-82
+73        </service>
+74
+75        <provider
+75-->[com.google.mlkit:common:18.11.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\3257757785024becffbe417943b71b02\transformed\common-18.11.0\AndroidManifest.xml:9:9-13:38
+76            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+76-->[com.google.mlkit:common:18.11.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\3257757785024becffbe417943b71b02\transformed\common-18.11.0\AndroidManifest.xml:10:13-78
+77            android:authorities="com.aadhaarocr.mlkitinitprovider"
+77-->[com.google.mlkit:common:18.11.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\3257757785024becffbe417943b71b02\transformed\common-18.11.0\AndroidManifest.xml:11:13-69
+78            android:exported="false"
+78-->[com.google.mlkit:common:18.11.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\3257757785024becffbe417943b71b02\transformed\common-18.11.0\AndroidManifest.xml:12:13-37
+79            android:initOrder="99" />
+79-->[com.google.mlkit:common:18.11.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\3257757785024becffbe417943b71b02\transformed\common-18.11.0\AndroidManifest.xml:13:13-35
+80        <provider
+80-->[androidx.emoji2:emoji2:1.3.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\9659e57fdba563d27ee936eea8847a70\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+81            android:name="androidx.startup.InitializationProvider"
+81-->[androidx.emoji2:emoji2:1.3.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\9659e57fdba563d27ee936eea8847a70\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+82            android:authorities="com.aadhaarocr.androidx-startup"
+82-->[androidx.emoji2:emoji2:1.3.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\9659e57fdba563d27ee936eea8847a70\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+83            android:exported="false" >
+83-->[androidx.emoji2:emoji2:1.3.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\9659e57fdba563d27ee936eea8847a70\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+84            <meta-data
+84-->[androidx.emoji2:emoji2:1.3.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\9659e57fdba563d27ee936eea8847a70\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+85                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+85-->[androidx.emoji2:emoji2:1.3.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\9659e57fdba563d27ee936eea8847a70\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+86                android:value="androidx.startup" />
+86-->[androidx.emoji2:emoji2:1.3.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\9659e57fdba563d27ee936eea8847a70\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+87            <meta-data
+87-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\696a073d0f79164f9b1675bf72c67c58\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
+88                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+88-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\696a073d0f79164f9b1675bf72c67c58\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
+89                android:value="androidx.startup" />
+89-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\696a073d0f79164f9b1675bf72c67c58\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
+90            <meta-data
+90-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+91                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+91-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+92                android:value="androidx.startup" />
+92-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+93        </provider>
+94
+95        <activity
+95-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\acde11ba6b8719c268044936181629e0\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+96            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+96-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\acde11ba6b8719c268044936181629e0\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+97            android:exported="false"
+97-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\acde11ba6b8719c268044936181629e0\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+98            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+98-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\acde11ba6b8719c268044936181629e0\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+99
+100        <meta-data
+100-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\32113ce662d816f700965d0e1e0b2574\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+101            android:name="com.google.android.gms.version"
+101-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\32113ce662d816f700965d0e1e0b2574\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+102            android:value="@integer/google_play_services_version" />
+102-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\32113ce662d816f700965d0e1e0b2574\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+103
+104        <receiver
+104-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+105            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+105-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+106            android:directBootAware="false"
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+107            android:enabled="true"
+107-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+108            android:exported="true"
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+109            android:permission="android.permission.DUMP" >
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+110            <intent-filter>
+110-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+111                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+111-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+111-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+112            </intent-filter>
+113            <intent-filter>
+113-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+114                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+115            </intent-filter>
+116            <intent-filter>
+116-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+117                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+117-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+117-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+118            </intent-filter>
+119            <intent-filter>
+119-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+120                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+120-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+120-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\094ba5c2197f2d6719f11478f60c506a\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+121            </intent-filter>
+122        </receiver>
+123
+124        <service
+124-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a9b92a3297b4c57be357c54900761b0c\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+125            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+125-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a9b92a3297b4c57be357c54900761b0c\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+126            android:exported="false" >
+126-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a9b92a3297b4c57be357c54900761b0c\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+127            <meta-data
+127-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a9b92a3297b4c57be357c54900761b0c\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+128                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+128-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a9b92a3297b4c57be357c54900761b0c\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+129                android:value="cct" />
+129-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a9b92a3297b4c57be357c54900761b0c\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+130        </service>
+131        <service
+131-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a6364e44f774994595ad00e909ee9d81\transformed\transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
+132            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+132-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a6364e44f774994595ad00e909ee9d81\transformed\transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
+133            android:exported="false"
+133-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a6364e44f774994595ad00e909ee9d81\transformed\transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
+134            android:permission="android.permission.BIND_JOB_SERVICE" >
+134-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a6364e44f774994595ad00e909ee9d81\transformed\transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
+135        </service>
+136
+137        <receiver
+137-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a6364e44f774994595ad00e909ee9d81\transformed\transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
+138            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+138-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a6364e44f774994595ad00e909ee9d81\transformed\transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
+139            android:exported="false" />
+139-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\dntrp\.gradle\caches\9.4.1\transforms\a6364e44f774994595ad00e909ee9d81\transformed\transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
+140    </application>
+141
+142</manifest>
+
+Merged manifest saved to C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\merged_manifest\debug\processDebugMainManifest\AndroidManifest.xml
+Resolve mutations for :app:processDebugManifest (Thread[#70,included builds,5,main]) started.
+:app:processDebugManifest (Thread[#70,included builds,5,main]) started.
+
+> Task :app:processDebugManifest
+Caching disabled for task ':app:processDebugManifest' because:
+  Build cache is disabled
+Task ':app:processDebugManifest' is not up-to-date because:
+  Input property 'mainMergedManifest' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\merged_manifest\debug\processDebugMainManifest\AndroidManifest.xml has changed.
+Resolve mutations for :app:processDebugManifestForPackage (Thread[#70,included builds,5,main]) started.
+:app:processDebugManifestForPackage (Thread[#77,Execution worker Thread 7,5,main]) started.
+Resolve mutations for :app:javaPreCompileDebug (Thread[#70,included builds,5,main]) started.
+:app:javaPreCompileDebug (Thread[#70,included builds,5,main]) started.
+
+> Task :app:javaPreCompileDebug UP-TO-DATE
+Caching disabled for task ':app:javaPreCompileDebug' because:
+  Build cache is disabled
+Skipping task ':app:javaPreCompileDebug' as it is up-to-date.
+Resolve mutations for :app:preDebugAndroidTestBuild (Thread[#70,included builds,5,main]) started.
+:app:preDebugAndroidTestBuild (Thread[#70,included builds,5,main]) started.
+
+> Task :app:preDebugAndroidTestBuild SKIPPED
+Skipping task ':app:preDebugAndroidTestBuild' as task onlyIf 'Task is enabled' is false.
+Resolve mutations for :app:dataBindingMergeDependencyArtifactsDebugAndroidTest (Thread[#70,included builds,5,main]) started.
+:app:dataBindingMergeDependencyArtifactsDebugAndroidTest (Thread[#70,included builds,5,main]) started.
+
+> Task :app:dataBindingMergeDependencyArtifactsDebugAndroidTest UP-TO-DATE
+Caching disabled for task ':app:dataBindingMergeDependencyArtifactsDebugAndroidTest' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:dataBindingMergeDependencyArtifactsDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:generateDebugAndroidTestResValues (Thread[#70,included builds,5,main]) started.
+:app:generateDebugAndroidTestResValues (Thread[#70,included builds,5,main]) started.
+
+> Task :app:generateDebugAndroidTestResValues UP-TO-DATE
+Caching disabled for task ':app:generateDebugAndroidTestResValues' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugAndroidTestResValues' as it is up-to-date.
+Resolve mutations for :app:generateDebugAndroidTestResources (Thread[#70,included builds,5,main]) started.
+:app:generateDebugAndroidTestResources (Thread[#70,included builds,5,main]) started.
+
+> Task :app:generateDebugAndroidTestResources UP-TO-DATE
+Caching disabled for task ':app:generateDebugAndroidTestResources' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugAndroidTestResources' as it is up-to-date.
+Resolve mutations for :app:mergeDebugAndroidTestResources (Thread[#70,included builds,5,main]) started.
+:app:mergeDebugAndroidTestResources (Thread[#70,included builds,5,main]) started.
+
+> Task :app:mergeDebugAndroidTestResources UP-TO-DATE
+Caching disabled for task ':app:mergeDebugAndroidTestResources' because:
+  Build cache is disabled
+Skipping task ':app:mergeDebugAndroidTestResources' as it is up-to-date.
+Resolve mutations for :app:dataBindingGenBaseClassesDebugAndroidTest (Thread[#70,included builds,5,main]) started.
+:app:dataBindingGenBaseClassesDebugAndroidTest (Thread[#70,included builds,5,main]) started.
+
+> Task :app:dataBindingGenBaseClassesDebugAndroidTest UP-TO-DATE
+Caching disabled for task ':app:dataBindingGenBaseClassesDebugAndroidTest' because:
+  Build cache is disabled
+Skipping task ':app:dataBindingGenBaseClassesDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:processDebugAndroidTestManifest (Thread[#70,included builds,5,main]) started.
+:app:processDebugAndroidTestManifest (Thread[#70,included builds,5,main]) started.
+
+> Task :app:processDebugAndroidTestManifest UP-TO-DATE
+Caching disabled for task ':app:processDebugAndroidTestManifest' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:processDebugAndroidTestManifest' as it is up-to-date.
+Resolve mutations for :app:generateDebugAndroidTestBuildConfig (Thread[#70,included builds,5,main]) started.
+:app:generateDebugAndroidTestBuildConfig (Thread[#70,included builds,5,main]) started.
+
+> Task :app:generateDebugAndroidTestBuildConfig UP-TO-DATE
+Caching disabled for task ':app:generateDebugAndroidTestBuildConfig' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugAndroidTestBuildConfig' as it is up-to-date.
+Resolve mutations for :app:checkDebugAndroidTestAarMetadata (Thread[#70,included builds,5,main]) started.
+:app:checkDebugAndroidTestAarMetadata (Thread[#70,included builds,5,main]) started.
+
+> Task :app:checkDebugAndroidTestAarMetadata UP-TO-DATE
+Caching disabled for task ':app:checkDebugAndroidTestAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:checkDebugAndroidTestAarMetadata' as it is up-to-date.
+Resolve mutations for :app:mapDebugAndroidTestSourceSetPaths (Thread[#70,included builds,5,main]) started.
+:app:mapDebugAndroidTestSourceSetPaths (Thread[#71,Execution worker,5,main]) started.
+
+> Task :app:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+Caching disabled for task ':app:mapDebugAndroidTestSourceSetPaths' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:mapDebugAndroidTestSourceSetPaths' as it is up-to-date.
+Resolve mutations for :app:processDebugAndroidTestNavigationResources (Thread[#71,Execution worker,5,main]) started.
+:app:processDebugAndroidTestNavigationResources (Thread[#71,Execution worker,5,main]) started.
+
+> Task :app:processDebugAndroidTestNavigationResources UP-TO-DATE
+Caching disabled for task ':app:processDebugAndroidTestNavigationResources' because:
+  Build cache is disabled
+Skipping task ':app:processDebugAndroidTestNavigationResources' as it is up-to-date.
+Resolve mutations for :app:compileDebugAndroidTestNavigationResources (Thread[#71,Execution worker,5,main]) started.
+:app:compileDebugAndroidTestNavigationResources (Thread[#71,Execution worker,5,main]) started.
+
+> Task :app:compileDebugAndroidTestNavigationResources UP-TO-DATE
+Caching disabled for task ':app:compileDebugAndroidTestNavigationResources' because:
+  Build cache is disabled
+Skipping task ':app:compileDebugAndroidTestNavigationResources' as it is up-to-date.
+Resolve mutations for :app:processDebugAndroidTestResources (Thread[#71,Execution worker,5,main]) started.
+:app:processDebugAndroidTestResources (Thread[#71,Execution worker,5,main]) started.
+
+> Task :app:processDebugAndroidTestResources UP-TO-DATE
+Caching disabled for task ':app:processDebugAndroidTestResources' because:
+  Build cache is disabled
+Skipping task ':app:processDebugAndroidTestResources' as it is up-to-date.
+Resolve mutations for :app:javaPreCompileDebugAndroidTest (Thread[#71,Execution worker,5,main]) started.
+:app:javaPreCompileDebugAndroidTest (Thread[#71,Execution worker,5,main]) started.
+
+> Task :app:javaPreCompileDebugAndroidTest UP-TO-DATE
+Caching disabled for task ':app:javaPreCompileDebugAndroidTest' because:
+  Build cache is disabled
+Skipping task ':app:javaPreCompileDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:generateDebugAssets (Thread[#71,Execution worker,5,main]) started.
+:app:generateDebugAssets (Thread[#71,Execution worker,5,main]) started.
+
+> Task :app:generateDebugAssets UP-TO-DATE
+Skipping task ':app:generateDebugAssets' as it has no actions.
+Resolve mutations for :app:mergeDebugAssets (Thread[#71,Execution worker,5,main]) started.
+:app:mergeDebugAssets (Thread[#71,Execution worker,5,main]) started.
+
+> Task :app:mergeDebugAssets UP-TO-DATE
+Caching disabled for task ':app:mergeDebugAssets' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeDebugAssets' as it is up-to-date.
+Resolve mutations for :app:compressDebugAssets (Thread[#71,Execution worker,5,main]) started.
+:app:compressDebugAssets (Thread[#71,Execution worker,5,main]) started.
+
+> Task :app:compressDebugAssets UP-TO-DATE
+Caching disabled for task ':app:compressDebugAssets' because:
+  Build cache is disabled
+Skipping task ':app:compressDebugAssets' as it is up-to-date.
+Resolve mutations for :app:generateDebugGlobalSynthetics (Thread[#71,Execution worker,5,main]) started.
+:app:generateDebugGlobalSynthetics (Thread[#71,Execution worker,5,main]) started.
+
+> Task :app:generateDebugGlobalSynthetics UP-TO-DATE
+Caching disabled for task ':app:generateDebugGlobalSynthetics' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugGlobalSynthetics' as it is up-to-date.
+Resolve mutations for :app:checkDebugDuplicateClasses (Thread[#71,Execution worker,5,main]) started.
+:app:checkDebugDuplicateClasses (Thread[#71,Execution worker,5,main]) started.
+
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+Caching disabled for task ':app:checkDebugDuplicateClasses' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:checkDebugDuplicateClasses' as it is up-to-date.
+Resolve mutations for :app:desugarDebugFileDependencies (Thread[#71,Execution worker,5,main]) started.
+:app:desugarDebugFileDependencies (Thread[#71,Execution worker,5,main]) started.
+
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+Caching disabled for task ':app:desugarDebugFileDependencies' because:
+  Build cache is disabled
+Skipping task ':app:desugarDebugFileDependencies' as it is up-to-date.
+Resolve mutations for :app:mergeExtDexDebug (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:mergeExtDexDebug (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:processDebugManifestForPackage
+Custom actions are attached to task ':app:processDebugManifestForPackage'.
+Caching disabled for task ':app:processDebugManifestForPackage' because:
+  Build cache is disabled
+Task ':app:processDebugManifestForPackage' is not up-to-date because:
+  Input property 'mergedManifests' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\merged_manifests\debug\processDebugManifest\AndroidManifest.xml has changed.
+
+> Task :app:mergeExtDexDebug UP-TO-DATE
+Caching disabled for task ':app:mergeExtDexDebug' because:
+  Build cache is disabled
+Skipping task ':app:mergeExtDexDebug' as it is up-to-date.
+Resolve mutations for :app:mergeLibDexDebug (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:mergeLibDexDebug (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeLibDexDebug UP-TO-DATE
+Caching disabled for task ':app:mergeLibDexDebug' because:
+  Build cache is disabled
+Skipping task ':app:mergeLibDexDebug' as it is up-to-date.
+Resolve mutations for :app:mergeDebugJniLibFolders (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:mergeDebugJniLibFolders (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+Caching disabled for task ':app:mergeDebugJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeDebugJniLibFolders' as it is up-to-date.
+Resolve mutations for :app:mergeDebugNativeLibs (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:mergeDebugNativeLibs (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeDebugNativeLibs UP-TO-DATE
+Caching disabled for task ':app:mergeDebugNativeLibs' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:mergeDebugNativeLibs' as it is up-to-date.
+Resolve mutations for :app:processDebugResources (Thread[#77,Execution worker Thread 7,5,main]) started.
+:app:processDebugResources (Thread[#77,Execution worker Thread 7,5,main]) started.
+Resolve mutations for :app:stripDebugDebugSymbols (Thread[#75,Execution worker Thread 5,5,main]) started.
+:app:stripDebugDebugSymbols (Thread[#75,Execution worker Thread 5,5,main]) started.
+
+> Task :app:stripDebugDebugSymbols UP-TO-DATE
+Caching disabled for task ':app:stripDebugDebugSymbols' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:stripDebugDebugSymbols' as it is up-to-date.
+Resolve mutations for :app:validateSigningDebug (Thread[#75,Execution worker Thread 5,5,main]) started.
+:app:validateSigningDebug (Thread[#75,Execution worker Thread 5,5,main]) started.
+
+> Task :app:validateSigningDebug UP-TO-DATE
+Caching disabled for task ':app:validateSigningDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:validateSigningDebug' as it is up-to-date.
+Resolve mutations for :app:writeDebugAppMetadata (Thread[#75,Execution worker Thread 5,5,main]) started.
+:app:writeDebugAppMetadata (Thread[#75,Execution worker Thread 5,5,main]) started.
+
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+Caching disabled for task ':app:writeDebugAppMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:writeDebugAppMetadata' as it is up-to-date.
+Resolve mutations for :app:writeDebugSigningConfigVersions (Thread[#75,Execution worker Thread 5,5,main]) started.
+:app:writeDebugSigningConfigVersions (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+Caching disabled for task ':app:writeDebugSigningConfigVersions' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:writeDebugSigningConfigVersions' as it is up-to-date.
+Resolve mutations for :app:generateDebugAndroidTestAssets (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:generateDebugAndroidTestAssets (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+Skipping task ':app:generateDebugAndroidTestAssets' as it has no actions.
+Resolve mutations for :app:mergeDebugAndroidTestAssets (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:mergeDebugAndroidTestAssets (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeDebugAndroidTestAssets UP-TO-DATE
+Caching disabled for task ':app:mergeDebugAndroidTestAssets' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeDebugAndroidTestAssets' as it is up-to-date.
+Resolve mutations for :app:compressDebugAndroidTestAssets (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:compressDebugAndroidTestAssets (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:compressDebugAndroidTestAssets UP-TO-DATE
+Caching disabled for task ':app:compressDebugAndroidTestAssets' because:
+  Build cache is disabled
+Skipping task ':app:compressDebugAndroidTestAssets' as it is up-to-date.
+Resolve mutations for :app:generateDebugAndroidTestGlobalSynthetics (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:generateDebugAndroidTestGlobalSynthetics (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:generateDebugAndroidTestGlobalSynthetics UP-TO-DATE
+Caching disabled for task ':app:generateDebugAndroidTestGlobalSynthetics' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugAndroidTestGlobalSynthetics' as it is up-to-date.
+Resolve mutations for :app:checkDebugAndroidTestDuplicateClasses (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:checkDebugAndroidTestDuplicateClasses (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:checkDebugAndroidTestDuplicateClasses UP-TO-DATE
+Caching disabled for task ':app:checkDebugAndroidTestDuplicateClasses' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:checkDebugAndroidTestDuplicateClasses' as it is up-to-date.
+Resolve mutations for :app:desugarDebugAndroidTestFileDependencies (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:desugarDebugAndroidTestFileDependencies (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:desugarDebugAndroidTestFileDependencies UP-TO-DATE
+Caching disabled for task ':app:desugarDebugAndroidTestFileDependencies' because:
+  Build cache is disabled
+Skipping task ':app:desugarDebugAndroidTestFileDependencies' as it is up-to-date.
+Resolve mutations for :app:mergeExtDexDebugAndroidTest (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:mergeExtDexDebugAndroidTest (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeExtDexDebugAndroidTest UP-TO-DATE
+Caching disabled for task ':app:mergeExtDexDebugAndroidTest' because:
+  Build cache is disabled
+Skipping task ':app:mergeExtDexDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:mergeLibDexDebugAndroidTest (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:mergeLibDexDebugAndroidTest (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeLibDexDebugAndroidTest UP-TO-DATE
+Caching disabled for task ':app:mergeLibDexDebugAndroidTest' because:
+  Build cache is disabled
+Skipping task ':app:mergeLibDexDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:mergeDebugAndroidTestJniLibFolders (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:mergeDebugAndroidTestJniLibFolders (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+Caching disabled for task ':app:mergeDebugAndroidTestJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeDebugAndroidTestJniLibFolders' as it is up-to-date.
+Resolve mutations for :app:mergeDebugAndroidTestNativeLibs (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:mergeDebugAndroidTestNativeLibs (Thread[#72,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+Skipping task ':app:mergeDebugAndroidTestNativeLibs' as it has no source files and no previous output files.
+Resolve mutations for :app:stripDebugAndroidTestDebugSymbols (Thread[#72,Execution worker Thread 2,5,main]) started.
+:app:stripDebugAndroidTestDebugSymbols (Thread[#74,Execution worker Thread 4,5,main]) started.
+
+> Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+Skipping task ':app:stripDebugAndroidTestDebugSymbols' as it has no source files and no previous output files.
+Resolve mutations for :app:validateSigningDebugAndroidTest (Thread[#74,Execution worker Thread 4,5,main]) started.
+:app:validateSigningDebugAndroidTest (Thread[#74,Execution worker Thread 4,5,main]) started.
+
+> Task :app:validateSigningDebugAndroidTest UP-TO-DATE
+Caching disabled for task ':app:validateSigningDebugAndroidTest' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:validateSigningDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:writeDebugAndroidTestSigningConfigVersions (Thread[#74,Execution worker Thread 4,5,main]) started.
+:app:writeDebugAndroidTestSigningConfigVersions (Thread[#74,Execution worker Thread 4,5,main]) started.
+
+> Task :app:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+Caching disabled for task ':app:writeDebugAndroidTestSigningConfigVersions' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:writeDebugAndroidTestSigningConfigVersions' as it is up-to-date.
+
+> Task :app:processDebugResources
+Caching disabled for task ':app:processDebugResources' because:
+  Build cache is disabled
+Task ':app:processDebugResources' is not up-to-date because:
+  Value of input property 'useStableIds' has changed for task ':app:processDebugResources'
+The input changes require a full rebuild for incremental task ':app:processDebugResources'.
+AAPT2 aapt2-9.2.1-15009934-windows Daemon #0: starting
+Aapt output file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\linked_resources_binary_format\debug\processDebugResources\linked-resources-binary-format-debug.ap_
+Resolve mutations for :app:compileDebugKotlin (Thread[#77,Execution worker Thread 7,5,main]) started.
+:app:compileDebugKotlin (Thread[#74,Execution worker Thread 4,5,main]) started.
+
+> Task :app:compileDebugKotlin UP-TO-DATE
+Caching disabled for task ':app:compileDebugKotlin' because:
+  Build cache is disabled
+Skipping task ':app:compileDebugKotlin' as it is up-to-date.
+Resolve mutations for :app:compileDebugJavaWithJavac (Thread[#74,Execution worker Thread 4,5,main]) started.
+:app:compileDebugJavaWithJavac (Thread[#74,Execution worker Thread 4,5,main]) started.
+
+> Task :app:compileDebugJavaWithJavac UP-TO-DATE
+Custom actions are attached to task ':app:compileDebugJavaWithJavac'.
+Caching disabled for task ':app:compileDebugJavaWithJavac' because:
+  Build cache is disabled
+Skipping task ':app:compileDebugJavaWithJavac' as it is up-to-date.
+No compile result for :app:compileDebugJavaWithJavac
+Resolve mutations for :app:bundleDebugClassesToCompileJar (Thread[#76,Execution worker Thread 6,5,main]) started.
+:app:bundleDebugClassesToCompileJar (Thread[#76,Execution worker Thread 6,5,main]) started.
+Resolve mutations for :app:processDebugJavaRes (Thread[#74,Execution worker Thread 4,5,main]) started.
+:app:processDebugJavaRes (Thread[#74,Execution worker Thread 4,5,main]) started.
+
+> Task :app:processDebugJavaRes UP-TO-DATE
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\resources', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\resources', not found
+Caching disabled for task ':app:processDebugJavaRes' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:processDebugJavaRes' as it is up-to-date.
+Resolve mutations for :app:mergeDebugJavaResource (Thread[#74,Execution worker Thread 4,5,main]) started.
+:app:mergeDebugJavaResource (Thread[#74,Execution worker Thread 4,5,main]) started.
+
+> Task :app:bundleDebugClassesToCompileJar
+Caching disabled for task ':app:bundleDebugClassesToCompileJar' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:bundleDebugClassesToCompileJar' is not up-to-date because:
+  Input property 'inputDirs' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug\com\aadhaarocr\AadhaarOCRProcessor.class has changed.
+work action resolve classes.jar (project :app) (Thread[#76,Execution worker Thread 6,5,main]) started.
+
+> Task :app:mergeDebugJavaResource UP-TO-DATE
+Caching disabled for task ':app:mergeDebugJavaResource' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:mergeDebugJavaResource' as it is up-to-date.
+Resolve mutations for :app:compileDebugAndroidTestKotlin (Thread[#74,Execution worker Thread 4,5,main]) started.
+:app:compileDebugAndroidTestKotlin (Thread[#74,Execution worker Thread 4,5,main]) started.
+
+> Task :app:compileDebugAndroidTestKotlin
+Caching disabled for BuildToolsApiClasspathEntrySnapshotTransform: C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_app_classes_jar\debug\bundleDebugClassesToCompileJar\classes.jar because:
+  Build cache is disabled
+Caching disabled for task ':app:compileDebugAndroidTestKotlin' because:
+  Build cache is disabled
+Skipping task ':app:compileDebugAndroidTestKotlin' as it is up-to-date.
+
+> Task :app:compileDebugAndroidTestKotlin UP-TO-DATE
+Resolve mutations for :app:compileDebugAndroidTestJavaWithJavac (Thread[#74,Execution worker Thread 4,5,main]) started.
+:app:compileDebugAndroidTestJavaWithJavac (Thread[#74,Execution worker Thread 4,5,main]) started.
+
+> Task :app:compileDebugAndroidTestJavaWithJavac UP-TO-DATE
+Custom actions are attached to task ':app:compileDebugAndroidTestJavaWithJavac'.
+Caching disabled for task ':app:compileDebugAndroidTestJavaWithJavac' because:
+  Build cache is disabled
+Task ':app:compileDebugAndroidTestJavaWithJavac' is not up-to-date because:
+  Input property 'classpath' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_app_classes_jar\debug\bundleDebugClassesToCompileJar\classes.jar has changed.
+Compilation mode: in-process compilation
+Created classpath snapshot for incremental compilation in 1.059 secs.
+None of the classes needs to be compiled! Analysis took 1.196 secs. 
+Resolve mutations for :app:dexBuilderDebug (Thread[#74,Execution worker Thread 4,5,main]) started.
+:app:dexBuilderDebug (Thread[#73,Execution worker Thread 3,5,main]) started.
+
+> Task :app:dexBuilderDebug
+Caching disabled for task ':app:dexBuilderDebug' because:
+  Build cache is disabled
+Task ':app:dexBuilderDebug' is not up-to-date because:
+  Value of input property 'dexParams.errorFormatMode' has changed for task ':app:dexBuilderDebug'
+The input changes require a full rebuild for incremental task ':app:dexBuilderDebug'.
+Dex builder is incremental : false 
+Processing input C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug
+Processing input C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes
+Dexing C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug
+Dexing C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes
+Processing input C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debug\processDebugResources\R.jar
+Dexing C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debug\processDebugResources\R.jar
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e94a3c55fad3546de3b60b6682778f1b36c6a941f8fd4e63cb52922c701a5c35_0.jar'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e94a3c55fad3546de3b60b6682778f1b36c6a941f8fd4e63cb52922c701a5c35_1.jar'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e94a3c55fad3546de3b60b6682778f1b36c6a941f8fd4e63cb52922c701a5c35_2.jar'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e94a3c55fad3546de3b60b6682778f1b36c6a941f8fd4e63cb52922c701a5c35_3.jar'
+Done with all dex archive conversions
+Resolve mutations for :app:mergeProjectDexDebug (Thread[#73,Execution worker Thread 3,5,main]) started.
+:app:mergeProjectDexDebug (Thread[#75,Execution worker Thread 5,5,main]) started.
+
+> Task :app:mergeProjectDexDebug UP-TO-DATE
+Caching disabled for task ':app:mergeProjectDexDebug' because:
+  Build cache is disabled
+Skipping task ':app:mergeProjectDexDebug' as it is up-to-date.
+Resolve mutations for :app:packageDebug (Thread[#73,Execution worker Thread 3,5,main]) started.
+:app:packageDebug (Thread[#73,Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:processDebugAndroidTestJavaRes (Thread[#75,Execution worker Thread 5,5,main]) started.
+:app:processDebugAndroidTestJavaRes (Thread[#75,Execution worker Thread 5,5,main]) started.
+
+> Task :app:processDebugAndroidTestJavaRes UP-TO-DATE
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\resources', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\resources', not found
+Caching disabled for task ':app:processDebugAndroidTestJavaRes' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:processDebugAndroidTestJavaRes' as it is up-to-date.
+Resolve mutations for :app:mergeDebugAndroidTestJavaResource (Thread[#75,Execution worker Thread 5,5,main]) started.
+:app:mergeDebugAndroidTestJavaResource (Thread[#74,Execution worker Thread 4,5,main]) started.
+
+> Task :app:mergeDebugAndroidTestJavaResource UP-TO-DATE
+Caching disabled for task ':app:mergeDebugAndroidTestJavaResource' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:mergeDebugAndroidTestJavaResource' as it is up-to-date.
+Resolve mutations for :app:dexBuilderDebugAndroidTest (Thread[#74,Execution worker Thread 4,5,main]) started.
+:app:dexBuilderDebugAndroidTest (Thread[#74,Execution worker Thread 4,5,main]) started.
+
+> Task :app:dexBuilderDebugAndroidTest UP-TO-DATE
+Caching disabled for task ':app:dexBuilderDebugAndroidTest' because:
+  Build cache is disabled
+Skipping task ':app:dexBuilderDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:mergeProjectDexDebugAndroidTest (Thread[#74,Execution worker Thread 4,5,main]) started.
+:app:mergeProjectDexDebugAndroidTest (Thread[#74,Execution worker Thread 4,5,main]) started.
+
+> Task :app:mergeProjectDexDebugAndroidTest UP-TO-DATE
+Caching disabled for task ':app:mergeProjectDexDebugAndroidTest' because:
+  Build cache is disabled
+Skipping task ':app:mergeProjectDexDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:packageDebugAndroidTest (Thread[#74,Execution worker Thread 4,5,main]) started.
+:app:packageDebugAndroidTest (Thread[#74,Execution worker Thread 4,5,main]) started.
+
+> Task :app:packageDebugAndroidTest UP-TO-DATE
+Custom actions are attached to task ':app:packageDebugAndroidTest'.
+Caching disabled for task ':app:packageDebugAndroidTest' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:packageDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:createDebugAndroidTestApkListingFileRedirect (Thread[#70,included builds,5,main]) started.
+:app:createDebugAndroidTestApkListingFileRedirect (Thread[#70,included builds,5,main]) started.
+
+> Task :app:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+Caching disabled for task ':app:createDebugAndroidTestApkListingFileRedirect' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:createDebugAndroidTestApkListingFileRedirect' as it is up-to-date.
+
+> Task :app:packageDebug
+Custom actions are attached to task ':app:packageDebug'.
+Caching disabled for task ':app:packageDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:packageDebug' is not up-to-date because:
+  Value of input property 'deterministicEntryOrder' has changed for task ':app:packageDebug'
+The input changes require a full rebuild for incremental task ':app:packageDebug'.
+Resolve mutations for :app:createDebugApkListingFileRedirect (Thread[#73,Execution worker Thread 3,5,main]) started.
+:app:createDebugApkListingFileRedirect (Thread[#73,Execution worker Thread 3,5,main]) started.
+
+> Task :app:createDebugApkListingFileRedirect
+Caching disabled for task ':app:createDebugApkListingFileRedirect' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:createDebugApkListingFileRedirect' is not up-to-date because:
+  Input property 'listingFile' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\apk\debug\output-metadata.json has been removed.
+  Input property 'listingFile' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\outputs\apk\debug\output-metadata.json has been added.
+Resolve mutations for :app:connectedDebugAndroidTest (Thread[#73,Execution worker Thread 3,5,main]) started.
+:app:connectedDebugAndroidTest (Thread[#73,Execution worker Thread 3,5,main]) started.
+
+> Task :app:connectedDebugAndroidTest
+Caching disabled for task ':app:connectedDebugAndroidTest' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:connectedDebugAndroidTest' is not up-to-date because:
+  Task.upToDateWhen is false.
+
+[DeviceMonitor]: Connected to adb for device monitoring
+
+> Task :app:connectedDebugAndroidTest
+emulator-5554 with id Pixel_8_API_34 is not a Gradle Managed Device
+
+Constructing runner from config.
+Configuring Android Instrumentation driver: android_instrumentation_runtime {
+  instrumentation_info {
+    app_package: "com.aadhaarocr"
+    test_package: "com.aadhaarocr.test"
+    test_runner_class: "androidx.test.runner.AndroidJUnitRunner"
+  }
+  instrumentation_args {
+    args_map {
+      key: "additionalTestOutputDir"
+      value: "/sdcard/Android/media/com.aadhaarocr/additional_test_output"
+    }
+  }
+}
+am_instrument_timeout: 31536000
+
+Configuring AndroidTestApkInstallerPlugin: apks_to_install {
+  apk_paths: "C:\\Users\\dntrp\\projects\\AadhaarOCRAndroid\\app\\build\\outputs\\apk\\debug\\AadhaarOCR.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+apks_to_install {
+  apk_paths: "C:\\Users\\dntrp\\projects\\AadhaarOCRAndroid\\app\\build\\outputs\\apk\\androidTest\\debug\\app-debug-androidTest.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+instrumentation_target_package_id: "com.aadhaarocr"
+
+No installables found in test fixture. Nothing to install.
+Installing [C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\outputs\apk\debug\AadhaarOCR.apk] on device emulator-5554.
+Installing [C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\outputs\apk\androidTest\debug\app-debug-androidTest.apk] on device emulator-5554.
+Start logcat streaming.
+Running Android Instrumentation driver.
+Starting 1 tests on Pixel_8_API_34(AVD) - 14
+Pixel_8_API_34(AVD) - 14 Tests 0/1 completed. (0 skipped) (0 failed)
+
+com.aadhaarocr.AadhaarOCRProcessorTest > testAadhaarExtraction[Pixel_8_API_34(AVD) - 14] [32mSUCCESS [0m
+Copying files from device to host: /sdcard/Android/media/com.aadhaarocr/additional_test_output to C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\outputs\connected_android_test_additional_output\debugAndroidTest\connected\Pixel_8_API_34(AVD) - 14
+Stop logcat streaming.
+Uninstalling com.aadhaarocr for device emulator-5554.
+Uninstalling com.aadhaarocr.test for device emulator-5554.
+Pixel_8_API_34(AVD) - 14 Tests 1/1 completed. (0 skipped) (0 failed)
+Finished 1 tests on Pixel_8_API_34(AVD) - 14
+Execute com.aadhaarocr.AadhaarOCRProcessorTest.testAadhaarExtraction: PASSED
+Resolve mutations for :app:connectedAndroidTest (Thread[#73,Execution worker Thread 3,5,main]) started.
+:app:connectedAndroidTest (Thread[#73,Execution worker Thread 3,5,main]) started.
+
+> Task :app:connectedAndroidTest
+Skipping task ':app:connectedAndroidTest' as it has no actions.
+AAPT2 aapt2-9.2.1-15009934-windows Daemon #0: shutdown
+Build fe76ce66-11b9-48c3-a46a-03c14425d7e7 is closed
+
+[Incubating] Problems report is available at: file:///C:/Users/dntrp/projects/AadhaarOCRAndroid/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.4.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 3m 12s
+73 actionable tasks: 9 executed, 64 up-to-date
+Watched directory hierarchies: [C:\Users\dntrp\projects\AadhaarOCRAndroid]

@@ -119,7 +119,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="16dp"
-                        android:text="Please check if data is correct. If not, click RETAKE at the bottom."
+                        android:text="Review the extracted data above. Tap on any field to manually edit it if the OCR made a mistake. Click PROCEED when finished."
                         android:textColor="#1864AB"
                         android:textStyle="italic" />
                 </com.google.android.material.card.MaterialCardView>

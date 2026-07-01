@@ -41,23 +41,35 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         _currentWorkflow.value = AppWorkflow(state = AppState.PENDING)
     }
 
-    fun processCapturedBitmap(bitmap: Bitmap, onResult: () -> Unit) {
+    fun processCapturedBitmap(bitmap: Bitmap, isBackOfCard: Boolean = false, onResult: () -> Unit) {
         _capturedBitmap = bitmap
+        val existingData = _currentWorkflow.value.aadhaarData
         _currentWorkflow.value = _currentWorkflow.value.copy(state = AppState.PROCESSING)
         
         viewModelScope.launch {
             try {
-                val aadhaarData = withContext(Dispatchers.Default) {
-                    ocrProcessor.processAadhaarCard(bitmap)
+                val extractedData = withContext(Dispatchers.Default) {
+                    ocrProcessor.processAadhaarCard(bitmap, isBackOfCard)
                 }
+                
+                val finalData = if (isBackOfCard && existingData != null) {
+                    // Merge: Keep front demographics, only take Address from back image
+                    existingData.copy(
+                        address = extractedData.address,
+                        rawOcrText = existingData.rawOcrText + "\n---BACK---\n" + extractedData.rawOcrText
+                    )
+                } else {
+                    extractedData
+                }
+
                 _currentWorkflow.value = _currentWorkflow.value.copy(
                     state = AppState.PROCESSED,
-                    aadhaarData = aadhaarData
+                    aadhaarData = finalData
                 )
             } catch (e: Exception) {
                 _currentWorkflow.value = _currentWorkflow.value.copy(
                     state = AppState.PROCESSED,
-                    aadhaarData = AadhaarData(
+                    aadhaarData = existingData ?: AadhaarData(
                         isValidAadhaar = false,
                         validationMessage = "Processing failed: ${e.message}",
                         rawOcrText = "Error: ${e.localizedMessage}"

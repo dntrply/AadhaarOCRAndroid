@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "970837829217",
+    "project_id": "aadhaarocr-staging",
+    "storage_bucket": "aadhaarocr-staging.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970837829217:android:8b5ab8d0034e4c87052c20",
+        "android_client_info": {
+          "package_name": "com.aadhaarocr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFczSD7sea4fhUhTRm6VTT1eOVmxh3w8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

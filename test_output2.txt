@@ -1,0 +1,937 @@
+Initialized native services in: C:\Users\dntrp\.gradle\native
+Initialized jansi services in: C:\Users\dntrp\.gradle\native
+The client will now receive all logging from the daemon (pid: 7580). The daemon log file: C:\Users\dntrp\.gradle\daemon\9.4.1\daemon-7580.out.log
+Starting 4th build in daemon [uptime: 46 mins 44.057 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 2 GiB]
+Using 8 worker leases.
+Operational build model parameters: {cachingModelBuilding=false, configurationCache=false, configurationCacheDisabledReason=null, configurationCacheParallelLoad=false, configurationCacheParallelStore=false, configureOnDemand=false, invalidateCoupledProjects=false, isolatedProjects=false, modelAsProjectDependency=false, modelBuilding=false, parallelModelBuilding=false, parallelProjectConfiguration=false, parallelProjectExecution=false, resilientModelBuilding=false}
+Now considering [C:\Users\dntrp\projects\AadhaarOCRAndroid] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Resolved plugin [id: 'org.gradle.toolchains.foojay-resolver-convention', version: '1.0.0']
+Settings evaluated using settings file 'C:\Users\dntrp\projects\AadhaarOCRAndroid\settings.gradle'.
+Projects loaded. Root project using build file 'C:\Users\dntrp\projects\AadhaarOCRAndroid\build.gradle'.
+Included projects: [root project 'Aadhaar OCR Android', project ':app']
+
+> Configure project :
+Evaluating root project 'Aadhaar OCR Android' using build file 'C:\Users\dntrp\projects\AadhaarOCRAndroid\build.gradle'.
+Resolved plugin [id: 'com.android.application', version: '9.2.1', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.2.10', apply: false]
+
+> Configure project :app
+Evaluating project ':app' using build file 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build.gradle'.
+Resolved plugin [id: 'com.android.application', version: '9.2.1']
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.2.10']
+WARNING: The option setting 'android.usesSdkInManifest.disallowed=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.sdk.defaultTargetSdkToCompileSdkIfUnset=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.enableAppCompileTimeRClass=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.builtInKotlin=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.newDsl=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.r8.optimizedResourceShrinking=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.defaults.buildfeatures.resvalues=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+Using default execution profile
+Build 3a92f417-1ec1-484e-aa4d-a2cdd9c5913c is started
+Using Kotlin Gradle Plugin gradle813 variant
+WARNING: API 'applicationVariants' is obsolete and has been replaced with 'AndroidComponentsExtension'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+The legacy variant API is disabled by default in AGP 9.0, but can be re-enabled by adding 
+    android.newDsl=false
+to this project's gradle.properties file.
+For more information, see http://developer.android.com/build/r/new-dsl.
+
+To determine what is calling applicationVariants, use -Pandroid.debug.obsoleteApi=true on the command line to display more information.
+WARNING: API 'testVariants' is obsolete and has been replaced with 'AndroidComponentsExtension'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+The legacy variant API is disabled by default in AGP 9.0, but can be re-enabled by adding 
+    android.newDsl=false
+to this project's gradle.properties file.
+For more information, see http://developer.android.com/build/r/new-dsl.
+
+To determine what is calling testVariants, use -Pandroid.debug.obsoleteApi=true on the command line to display more information.
+WARNING: API 'unitTestVariants' is obsolete and has been replaced with 'AndroidComponentsExtension'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+The legacy variant API is disabled by default in AGP 9.0, but can be re-enabled by adding 
+    android.newDsl=false
+to this project's gradle.properties file.
+For more information, see http://developer.android.com/build/r/new-dsl.
+
+To determine what is calling unitTestVariants, use -Pandroid.debug.obsoleteApi=true on the command line to display more information.
+WARNING: The property android.dependency.excludeLibraryComponentsFromConstraints improves project import performance for very large projects. It should be enabled to improve performance.
+To suppress this warning, add android.generateSyncIssueWhenLibraryConstraintsAreEnabled=false to gradle.properties
+WARNING: The property android.dependency.excludeLibraryComponentsFromConstraints improves project import performance for very large projects. It should be enabled to improve performance.
+To suppress this warning, add android.generateSyncIssueWhenLibraryConstraintsAreEnabled=false to gradle.properties
+WARNING: The property android.dependency.excludeLibraryComponentsFromConstraints improves project import performance for very large projects. It should be enabled to improve performance.
+To suppress this warning, add android.generateSyncIssueWhenLibraryConstraintsAreEnabled=false to gradle.properties
+WARNING: The property android.dependency.excludeLibraryComponentsFromConstraints improves project import performance for very large projects. It should be enabled to improve performance.
+To suppress this warning, add android.generateSyncIssueWhenLibraryConstraintsAreEnabled=false to gradle.properties
+All projects evaluated.
+Task name matched 'connectedAndroidTest'
+Selected primary task 'connectedAndroidTest' from project :
+Adding -Xuse-inline-scopes-numbers Kotlin compiler flag for task :app:compileDebugAndroidTestKotlin
+Adding -Xuse-inline-scopes-numbers Kotlin compiler flag for task :app:compileDebugKotlin
+Tasks to be executed: [task ':app:checkKotlinGradlePluginConfigurationErrors', task ':app:preBuild', task ':app:preDebugBuild', task ':app:dataBindingMergeDependencyArtifactsDebug', task ':app:generateDebugResValues', task ':app:generateDebugResources', task ':app:mergeDebugResources', task ':app:packageDebugResources', task ':app:processDebugNavigationResources', task ':app:parseDebugLocalResources', task ':app:dataBindingGenBaseClassesDebug', task ':app:generateDebugBuildConfig', task ':app:checkDebugAarMetadata', task ':app:mapDebugSourceSetPaths', task ':app:compileDebugNavigationResources', task ':app:createDebugCompatibleScreenManifests', task ':app:extractDeepLinksDebug', task ':app:processDebugMainManifest', task ':app:processDebugManifest', task ':app:processDebugManifestForPackage', task ':app:processDebugResources', task ':app:compileDebugKotlin', task ':app:javaPreCompileDebug', task ':app:compileDebugJavaWithJavac', task ':app:bundleDebugClassesToCompileJar', task ':app:preDebugAndroidTestBuild', task ':app:dataBindingMergeDependencyArtifactsDebugAndroidTest', task ':app:generateDebugAndroidTestResValues', task ':app:generateDebugAndroidTestResources', task ':app:mergeDebugAndroidTestResources', task ':app:dataBindingGenBaseClassesDebugAndroidTest', task ':app:processDebugAndroidTestManifest', task ':app:generateDebugAndroidTestBuildConfig', task ':app:checkDebugAndroidTestAarMetadata', task ':app:mapDebugAndroidTestSourceSetPaths', task ':app:processDebugAndroidTestNavigationResources', task ':app:compileDebugAndroidTestNavigationResources', task ':app:processDebugAndroidTestResources', task ':app:compileDebugAndroidTestKotlin', task ':app:javaPreCompileDebugAndroidTest', task ':app:compileDebugAndroidTestJavaWithJavac', task ':app:generateDebugAssets', task ':app:mergeDebugAssets', task ':app:compressDebugAssets', task ':app:generateDebugGlobalSynthetics', task ':app:processDebugJavaRes', task ':app:mergeDebugJavaResource', task ':app:checkDebugDuplicateClasses', task ':app:desugarDebugFileDependencies', task ':app:mergeExtDexDebug', task ':app:mergeLibDexDebug', task ':app:dexBuilderDebug', task ':app:mergeProjectDexDebug', task ':app:mergeDebugJniLibFolders', task ':app:mergeDebugNativeLibs', task ':app:stripDebugDebugSymbols', task ':app:validateSigningDebug', task ':app:writeDebugAppMetadata', task ':app:writeDebugSigningConfigVersions', task ':app:packageDebug', task ':app:createDebugApkListingFileRedirect', task ':app:generateDebugAndroidTestAssets', task ':app:mergeDebugAndroidTestAssets', task ':app:compressDebugAndroidTestAssets', task ':app:generateDebugAndroidTestGlobalSynthetics', task ':app:processDebugAndroidTestJavaRes', task ':app:mergeDebugAndroidTestJavaResource', task ':app:checkDebugAndroidTestDuplicateClasses', task ':app:desugarDebugAndroidTestFileDependencies', task ':app:mergeExtDexDebugAndroidTest', task ':app:mergeLibDexDebugAndroidTest', task ':app:dexBuilderDebugAndroidTest', task ':app:mergeProjectDexDebugAndroidTest', task ':app:mergeDebugAndroidTestJniLibFolders', task ':app:mergeDebugAndroidTestNativeLibs', task ':app:stripDebugAndroidTestDebugSymbols', task ':app:validateSigningDebugAndroidTest', task ':app:writeDebugAndroidTestSigningConfigVersions', task ':app:packageDebugAndroidTest', task ':app:createDebugAndroidTestApkListingFileRedirect', task ':app:connectedDebugAndroidTest', task ':app:connectedAndroidTest']
+Tasks that were excluded: []
+Resolve mutations for :app:checkKotlinGradlePluginConfigurationErrors (Thread[#288,Execution worker,5,main]) started.
+:app:checkKotlinGradlePluginConfigurationErrors (Thread[#288,Execution worker,5,main]) started.
+
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':app:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :app:preBuild (Thread[#287,included builds,5,main]) started.
+:app:preBuild (Thread[#293,Execution worker Thread 6,5,main]) started.
+
+> Task :app:preBuild UP-TO-DATE
+Skipping task ':app:preBuild' as it has no actions.
+Resolve mutations for :app:preDebugBuild (Thread[#293,Execution worker Thread 6,5,main]) started.
+:app:preDebugBuild (Thread[#293,Execution worker Thread 6,5,main]) started.
+
+> Task :app:preDebugBuild UP-TO-DATE
+Skipping task ':app:preDebugBuild' as it has no actions.
+Resolve mutations for :app:dataBindingMergeDependencyArtifactsDebug (Thread[#293,Execution worker Thread 6,5,main]) started.
+:app:dataBindingMergeDependencyArtifactsDebug (Thread[#287,included builds,5,main]) started.
+
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+Caching disabled for task ':app:dataBindingMergeDependencyArtifactsDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:dataBindingMergeDependencyArtifactsDebug' as it is up-to-date.
+Resolve mutations for :app:generateDebugResValues (Thread[#287,included builds,5,main]) started.
+:app:generateDebugResValues (Thread[#287,included builds,5,main]) started.
+
+> Task :app:generateDebugResValues UP-TO-DATE
+Caching disabled for task ':app:generateDebugResValues' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugResValues' as it is up-to-date.
+Resolve mutations for :app:generateDebugResources (Thread[#287,included builds,5,main]) started.
+:app:generateDebugResources (Thread[#287,included builds,5,main]) started.
+
+> Task :app:generateDebugResources UP-TO-DATE
+Caching disabled for task ':app:generateDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugResources' as it is up-to-date.
+Resolve mutations for :app:mergeDebugResources (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:mergeDebugResources (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeDebugResources UP-TO-DATE
+Caching disabled for task ':app:mergeDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:mergeDebugResources' as it is up-to-date.
+Resolve mutations for :app:packageDebugResources (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:packageDebugResources (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:packageDebugResources UP-TO-DATE
+Caching disabled for task ':app:packageDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:packageDebugResources' as it is up-to-date.
+Resolve mutations for :app:processDebugNavigationResources (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:processDebugNavigationResources (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:processDebugNavigationResources UP-TO-DATE
+Caching disabled for task ':app:processDebugNavigationResources' because:
+  Build cache is disabled
+Skipping task ':app:processDebugNavigationResources' as it is up-to-date.
+Resolve mutations for :app:parseDebugLocalResources (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:parseDebugLocalResources (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:parseDebugLocalResources UP-TO-DATE
+Caching disabled for task ':app:parseDebugLocalResources' because:
+  Build cache is disabled
+Skipping task ':app:parseDebugLocalResources' as it is up-to-date.
+Resolve mutations for :app:dataBindingGenBaseClassesDebug (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:dataBindingGenBaseClassesDebug (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+Caching disabled for task ':app:dataBindingGenBaseClassesDebug' because:
+  Build cache is disabled
+Skipping task ':app:dataBindingGenBaseClassesDebug' as it is up-to-date.
+Resolve mutations for :app:generateDebugBuildConfig (Thread[#293,Execution worker Thread 6,5,main]) started.
+:app:generateDebugBuildConfig (Thread[#293,Execution worker Thread 6,5,main]) started.
+
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+Caching disabled for task ':app:generateDebugBuildConfig' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugBuildConfig' as it is up-to-date.
+Resolve mutations for :app:checkDebugAarMetadata (Thread[#293,Execution worker Thread 6,5,main]) started.
+:app:checkDebugAarMetadata (Thread[#293,Execution worker Thread 6,5,main]) started.
+
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+Caching disabled for task ':app:checkDebugAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:checkDebugAarMetadata' as it is up-to-date.
+Resolve mutations for :app:mapDebugSourceSetPaths (Thread[#293,Execution worker Thread 6,5,main]) started.
+:app:mapDebugSourceSetPaths (Thread[#293,Execution worker Thread 6,5,main]) started.
+
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+Caching disabled for task ':app:mapDebugSourceSetPaths' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:mapDebugSourceSetPaths' as it is up-to-date.
+Resolve mutations for :app:compileDebugNavigationResources (Thread[#293,Execution worker Thread 6,5,main]) started.
+:app:compileDebugNavigationResources (Thread[#293,Execution worker Thread 6,5,main]) started.
+
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+Caching disabled for task ':app:compileDebugNavigationResources' because:
+  Build cache is disabled
+Skipping task ':app:compileDebugNavigationResources' as it is up-to-date.
+Resolve mutations for :app:createDebugCompatibleScreenManifests (Thread[#293,Execution worker Thread 6,5,main]) started.
+:app:createDebugCompatibleScreenManifests (Thread[#293,Execution worker Thread 6,5,main]) started.
+
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+Caching disabled for task ':app:createDebugCompatibleScreenManifests' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:createDebugCompatibleScreenManifests' as it is up-to-date.
+Resolve mutations for :app:extractDeepLinksDebug (Thread[#293,Execution worker Thread 6,5,main]) started.
+:app:extractDeepLinksDebug (Thread[#293,Execution worker Thread 6,5,main]) started.
+
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+Caching disabled for task ':app:extractDeepLinksDebug' because:
+  Build cache is disabled
+Skipping task ':app:extractDeepLinksDebug' as it is up-to-date.
+Resolve mutations for :app:processDebugMainManifest (Thread[#293,Execution worker Thread 6,5,main]) started.
+:app:processDebugMainManifest (Thread[#293,Execution worker Thread 6,5,main]) started.
+
+> Task :app:processDebugMainManifest UP-TO-DATE
+Caching disabled for task ':app:processDebugMainManifest' because:
+  Build cache is disabled
+Skipping task ':app:processDebugMainManifest' as it is up-to-date.
+Resolve mutations for :app:processDebugManifest (Thread[#293,Execution worker Thread 6,5,main]) started.
+:app:processDebugManifest (Thread[#293,Execution worker Thread 6,5,main]) started.
+
+> Task :app:processDebugManifest UP-TO-DATE
+Caching disabled for task ':app:processDebugManifest' because:
+  Build cache is disabled
+Skipping task ':app:processDebugManifest' as it is up-to-date.
+Resolve mutations for :app:processDebugManifestForPackage (Thread[#293,Execution worker Thread 6,5,main]) started.
+:app:processDebugManifestForPackage (Thread[#293,Execution worker Thread 6,5,main]) started.
+
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+Custom actions are attached to task ':app:processDebugManifestForPackage'.
+Caching disabled for task ':app:processDebugManifestForPackage' because:
+  Build cache is disabled
+Skipping task ':app:processDebugManifestForPackage' as it is up-to-date.
+Resolve mutations for :app:processDebugResources (Thread[#293,Execution worker Thread 6,5,main]) started.
+:app:processDebugResources (Thread[#293,Execution worker Thread 6,5,main]) started.
+
+> Task :app:processDebugResources UP-TO-DATE
+Caching disabled for task ':app:processDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:processDebugResources' as it is up-to-date.
+Resolve mutations for :app:compileDebugKotlin (Thread[#293,Execution worker Thread 6,5,main]) started.
+:app:compileDebugKotlin (Thread[#293,Execution worker Thread 6,5,main]) started.
+Resolve mutations for :app:javaPreCompileDebug (Thread[#291,Execution worker Thread 4,5,main]) started.
+:app:javaPreCompileDebug (Thread[#291,Execution worker Thread 4,5,main]) started.
+
+> Task :app:javaPreCompileDebug UP-TO-DATE
+Caching disabled for task ':app:javaPreCompileDebug' because:
+  Build cache is disabled
+Skipping task ':app:javaPreCompileDebug' as it is up-to-date.
+Resolve mutations for :app:preDebugAndroidTestBuild (Thread[#291,Execution worker Thread 4,5,main]) started.
+:app:preDebugAndroidTestBuild (Thread[#291,Execution worker Thread 4,5,main]) started.
+
+> Task :app:preDebugAndroidTestBuild SKIPPED
+Skipping task ':app:preDebugAndroidTestBuild' as task onlyIf 'Task is enabled' is false.
+Resolve mutations for :app:dataBindingMergeDependencyArtifactsDebugAndroidTest (Thread[#291,Execution worker Thread 4,5,main]) started.
+:app:dataBindingMergeDependencyArtifactsDebugAndroidTest (Thread[#291,Execution worker Thread 4,5,main]) started.
+
+> Task :app:dataBindingMergeDependencyArtifactsDebugAndroidTest UP-TO-DATE
+Caching disabled for task ':app:dataBindingMergeDependencyArtifactsDebugAndroidTest' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:dataBindingMergeDependencyArtifactsDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:generateDebugAndroidTestResValues (Thread[#291,Execution worker Thread 4,5,main]) started.
+:app:generateDebugAndroidTestResValues (Thread[#291,Execution worker Thread 4,5,main]) started.
+
+> Task :app:generateDebugAndroidTestResValues UP-TO-DATE
+Caching disabled for task ':app:generateDebugAndroidTestResValues' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugAndroidTestResValues' as it is up-to-date.
+Resolve mutations for :app:generateDebugAndroidTestResources (Thread[#291,Execution worker Thread 4,5,main]) started.
+:app:generateDebugAndroidTestResources (Thread[#291,Execution worker Thread 4,5,main]) started.
+
+> Task :app:generateDebugAndroidTestResources UP-TO-DATE
+Caching disabled for task ':app:generateDebugAndroidTestResources' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugAndroidTestResources' as it is up-to-date.
+Resolve mutations for :app:mergeDebugAndroidTestResources (Thread[#291,Execution worker Thread 4,5,main]) started.
+:app:mergeDebugAndroidTestResources (Thread[#291,Execution worker Thread 4,5,main]) started.
+
+> Task :app:mergeDebugAndroidTestResources UP-TO-DATE
+Caching disabled for task ':app:mergeDebugAndroidTestResources' because:
+  Build cache is disabled
+Skipping task ':app:mergeDebugAndroidTestResources' as it is up-to-date.
+Resolve mutations for :app:dataBindingGenBaseClassesDebugAndroidTest (Thread[#291,Execution worker Thread 4,5,main]) started.
+:app:dataBindingGenBaseClassesDebugAndroidTest (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:dataBindingGenBaseClassesDebugAndroidTest UP-TO-DATE
+Caching disabled for task ':app:dataBindingGenBaseClassesDebugAndroidTest' because:
+  Build cache is disabled
+Skipping task ':app:dataBindingGenBaseClassesDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:processDebugAndroidTestManifest (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:processDebugAndroidTestManifest (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:processDebugAndroidTestManifest UP-TO-DATE
+Caching disabled for task ':app:processDebugAndroidTestManifest' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:processDebugAndroidTestManifest' as it is up-to-date.
+Resolve mutations for :app:generateDebugAndroidTestBuildConfig (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:generateDebugAndroidTestBuildConfig (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:generateDebugAndroidTestBuildConfig UP-TO-DATE
+Caching disabled for task ':app:generateDebugAndroidTestBuildConfig' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugAndroidTestBuildConfig' as it is up-to-date.
+Resolve mutations for :app:checkDebugAndroidTestAarMetadata (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:checkDebugAndroidTestAarMetadata (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:checkDebugAndroidTestAarMetadata UP-TO-DATE
+Caching disabled for task ':app:checkDebugAndroidTestAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:checkDebugAndroidTestAarMetadata' as it is up-to-date.
+Resolve mutations for :app:mapDebugAndroidTestSourceSetPaths (Thread[#288,Execution worker,5,main]) started.
+:app:mapDebugAndroidTestSourceSetPaths (Thread[#288,Execution worker,5,main]) started.
+
+> Task :app:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+Caching disabled for task ':app:mapDebugAndroidTestSourceSetPaths' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:mapDebugAndroidTestSourceSetPaths' as it is up-to-date.
+Resolve mutations for :app:processDebugAndroidTestNavigationResources (Thread[#288,Execution worker,5,main]) started.
+:app:processDebugAndroidTestNavigationResources (Thread[#288,Execution worker,5,main]) started.
+
+> Task :app:processDebugAndroidTestNavigationResources UP-TO-DATE
+Caching disabled for task ':app:processDebugAndroidTestNavigationResources' because:
+  Build cache is disabled
+Skipping task ':app:processDebugAndroidTestNavigationResources' as it is up-to-date.
+Resolve mutations for :app:compileDebugAndroidTestNavigationResources (Thread[#288,Execution worker,5,main]) started.
+:app:compileDebugAndroidTestNavigationResources (Thread[#288,Execution worker,5,main]) started.
+
+> Task :app:compileDebugAndroidTestNavigationResources UP-TO-DATE
+Caching disabled for task ':app:compileDebugAndroidTestNavigationResources' because:
+  Build cache is disabled
+Skipping task ':app:compileDebugAndroidTestNavigationResources' as it is up-to-date.
+Resolve mutations for :app:processDebugAndroidTestResources (Thread[#288,Execution worker,5,main]) started.
+:app:processDebugAndroidTestResources (Thread[#288,Execution worker,5,main]) started.
+
+> Task :app:processDebugAndroidTestResources UP-TO-DATE
+Caching disabled for task ':app:processDebugAndroidTestResources' because:
+  Build cache is disabled
+Skipping task ':app:processDebugAndroidTestResources' as it is up-to-date.
+Resolve mutations for :app:javaPreCompileDebugAndroidTest (Thread[#288,Execution worker,5,main]) started.
+:app:javaPreCompileDebugAndroidTest (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:javaPreCompileDebugAndroidTest UP-TO-DATE
+Caching disabled for task ':app:javaPreCompileDebugAndroidTest' because:
+  Build cache is disabled
+Skipping task ':app:javaPreCompileDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:generateDebugAssets (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:generateDebugAssets (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:generateDebugAssets UP-TO-DATE
+Skipping task ':app:generateDebugAssets' as it has no actions.
+Resolve mutations for :app:mergeDebugAssets (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:mergeDebugAssets (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeDebugAssets UP-TO-DATE
+Caching disabled for task ':app:mergeDebugAssets' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeDebugAssets' as it is up-to-date.
+Resolve mutations for :app:compressDebugAssets (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:compressDebugAssets (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:compressDebugAssets UP-TO-DATE
+Caching disabled for task ':app:compressDebugAssets' because:
+  Build cache is disabled
+Skipping task ':app:compressDebugAssets' as it is up-to-date.
+Resolve mutations for :app:generateDebugGlobalSynthetics (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:generateDebugGlobalSynthetics (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:generateDebugGlobalSynthetics UP-TO-DATE
+Caching disabled for task ':app:generateDebugGlobalSynthetics' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugGlobalSynthetics' as it is up-to-date.
+Resolve mutations for :app:checkDebugDuplicateClasses (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:checkDebugDuplicateClasses (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+Caching disabled for task ':app:checkDebugDuplicateClasses' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:checkDebugDuplicateClasses' as it is up-to-date.
+Resolve mutations for :app:desugarDebugFileDependencies (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:desugarDebugFileDependencies (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+Caching disabled for task ':app:desugarDebugFileDependencies' because:
+  Build cache is disabled
+Skipping task ':app:desugarDebugFileDependencies' as it is up-to-date.
+Resolve mutations for :app:mergeExtDexDebug (Thread[#290,Execution worker Thread 3,5,main]) started.
+:app:mergeExtDexDebug (Thread[#290,Execution worker Thread 3,5,main]) started.
+
+> Task :app:mergeExtDexDebug UP-TO-DATE
+Caching disabled for task ':app:mergeExtDexDebug' because:
+  Build cache is disabled
+Skipping task ':app:mergeExtDexDebug' as it is up-to-date.
+Resolve mutations for :app:mergeLibDexDebug (Thread[#290,Execution worker Thread 3,5,main]) started.
+:app:mergeLibDexDebug (Thread[#290,Execution worker Thread 3,5,main]) started.
+
+> Task :app:mergeLibDexDebug UP-TO-DATE
+Caching disabled for task ':app:mergeLibDexDebug' because:
+  Build cache is disabled
+Skipping task ':app:mergeLibDexDebug' as it is up-to-date.
+Resolve mutations for :app:mergeDebugJniLibFolders (Thread[#290,Execution worker Thread 3,5,main]) started.
+:app:mergeDebugJniLibFolders (Thread[#290,Execution worker Thread 3,5,main]) started.
+
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+Caching disabled for task ':app:mergeDebugJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeDebugJniLibFolders' as it is up-to-date.
+Resolve mutations for :app:mergeDebugNativeLibs (Thread[#290,Execution worker Thread 3,5,main]) started.
+:app:mergeDebugNativeLibs (Thread[#290,Execution worker Thread 3,5,main]) started.
+
+> Task :app:mergeDebugNativeLibs UP-TO-DATE
+Caching disabled for task ':app:mergeDebugNativeLibs' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:mergeDebugNativeLibs' as it is up-to-date.
+Resolve mutations for :app:stripDebugDebugSymbols (Thread[#290,Execution worker Thread 3,5,main]) started.
+:app:stripDebugDebugSymbols (Thread[#290,Execution worker Thread 3,5,main]) started.
+
+> Task :app:stripDebugDebugSymbols UP-TO-DATE
+Caching disabled for task ':app:stripDebugDebugSymbols' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:stripDebugDebugSymbols' as it is up-to-date.
+Resolve mutations for :app:validateSigningDebug (Thread[#290,Execution worker Thread 3,5,main]) started.
+:app:validateSigningDebug (Thread[#290,Execution worker Thread 3,5,main]) started.
+
+> Task :app:validateSigningDebug UP-TO-DATE
+Caching disabled for task ':app:validateSigningDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:validateSigningDebug' as it is up-to-date.
+Resolve mutations for :app:writeDebugAppMetadata (Thread[#290,Execution worker Thread 3,5,main]) started.
+:app:writeDebugAppMetadata (Thread[#290,Execution worker Thread 3,5,main]) started.
+
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+Caching disabled for task ':app:writeDebugAppMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:writeDebugAppMetadata' as it is up-to-date.
+Resolve mutations for :app:writeDebugSigningConfigVersions (Thread[#290,Execution worker Thread 3,5,main]) started.
+:app:writeDebugSigningConfigVersions (Thread[#290,Execution worker Thread 3,5,main]) started.
+
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+Caching disabled for task ':app:writeDebugSigningConfigVersions' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:writeDebugSigningConfigVersions' as it is up-to-date.
+Resolve mutations for :app:generateDebugAndroidTestAssets (Thread[#290,Execution worker Thread 3,5,main]) started.
+:app:generateDebugAndroidTestAssets (Thread[#290,Execution worker Thread 3,5,main]) started.
+
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+Skipping task ':app:generateDebugAndroidTestAssets' as it has no actions.
+Resolve mutations for :app:mergeDebugAndroidTestAssets (Thread[#290,Execution worker Thread 3,5,main]) started.
+:app:mergeDebugAndroidTestAssets (Thread[#290,Execution worker Thread 3,5,main]) started.
+
+> Task :app:mergeDebugAndroidTestAssets UP-TO-DATE
+Caching disabled for task ':app:mergeDebugAndroidTestAssets' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeDebugAndroidTestAssets' as it is up-to-date.
+Resolve mutations for :app:compressDebugAndroidTestAssets (Thread[#290,Execution worker Thread 3,5,main]) started.
+:app:compressDebugAndroidTestAssets (Thread[#292,Execution worker Thread 5,5,main]) started.
+
+> Task :app:compressDebugAndroidTestAssets UP-TO-DATE
+Caching disabled for task ':app:compressDebugAndroidTestAssets' because:
+  Build cache is disabled
+Skipping task ':app:compressDebugAndroidTestAssets' as it is up-to-date.
+Resolve mutations for :app:generateDebugAndroidTestGlobalSynthetics (Thread[#292,Execution worker Thread 5,5,main]) started.
+:app:generateDebugAndroidTestGlobalSynthetics (Thread[#292,Execution worker Thread 5,5,main]) started.
+
+> Task :app:generateDebugAndroidTestGlobalSynthetics UP-TO-DATE
+Caching disabled for task ':app:generateDebugAndroidTestGlobalSynthetics' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugAndroidTestGlobalSynthetics' as it is up-to-date.
+Resolve mutations for :app:checkDebugAndroidTestDuplicateClasses (Thread[#292,Execution worker Thread 5,5,main]) started.
+:app:checkDebugAndroidTestDuplicateClasses (Thread[#292,Execution worker Thread 5,5,main]) started.
+
+> Task :app:checkDebugAndroidTestDuplicateClasses UP-TO-DATE
+Caching disabled for task ':app:checkDebugAndroidTestDuplicateClasses' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:checkDebugAndroidTestDuplicateClasses' as it is up-to-date.
+Resolve mutations for :app:desugarDebugAndroidTestFileDependencies (Thread[#292,Execution worker Thread 5,5,main]) started.
+:app:desugarDebugAndroidTestFileDependencies (Thread[#292,Execution worker Thread 5,5,main]) started.
+
+> Task :app:desugarDebugAndroidTestFileDependencies UP-TO-DATE
+Caching disabled for task ':app:desugarDebugAndroidTestFileDependencies' because:
+  Build cache is disabled
+Skipping task ':app:desugarDebugAndroidTestFileDependencies' as it is up-to-date.
+Resolve mutations for :app:mergeExtDexDebugAndroidTest (Thread[#292,Execution worker Thread 5,5,main]) started.
+:app:mergeExtDexDebugAndroidTest (Thread[#292,Execution worker Thread 5,5,main]) started.
+
+> Task :app:mergeExtDexDebugAndroidTest UP-TO-DATE
+Caching disabled for task ':app:mergeExtDexDebugAndroidTest' because:
+  Build cache is disabled
+Skipping task ':app:mergeExtDexDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:mergeLibDexDebugAndroidTest (Thread[#292,Execution worker Thread 5,5,main]) started.
+:app:mergeLibDexDebugAndroidTest (Thread[#292,Execution worker Thread 5,5,main]) started.
+
+> Task :app:mergeLibDexDebugAndroidTest UP-TO-DATE
+Caching disabled for task ':app:mergeLibDexDebugAndroidTest' because:
+  Build cache is disabled
+Skipping task ':app:mergeLibDexDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:mergeDebugAndroidTestJniLibFolders (Thread[#292,Execution worker Thread 5,5,main]) started.
+:app:mergeDebugAndroidTestJniLibFolders (Thread[#292,Execution worker Thread 5,5,main]) started.
+
+> Task :app:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+Caching disabled for task ':app:mergeDebugAndroidTestJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeDebugAndroidTestJniLibFolders' as it is up-to-date.
+Resolve mutations for :app:mergeDebugAndroidTestNativeLibs (Thread[#292,Execution worker Thread 5,5,main]) started.
+:app:mergeDebugAndroidTestNativeLibs (Thread[#292,Execution worker Thread 5,5,main]) started.
+
+> Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+Skipping task ':app:mergeDebugAndroidTestNativeLibs' as it has no source files and no previous output files.
+Resolve mutations for :app:stripDebugAndroidTestDebugSymbols (Thread[#292,Execution worker Thread 5,5,main]) started.
+:app:stripDebugAndroidTestDebugSymbols (Thread[#292,Execution worker Thread 5,5,main]) started.
+
+> Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+Skipping task ':app:stripDebugAndroidTestDebugSymbols' as it has no source files and no previous output files.
+Resolve mutations for :app:validateSigningDebugAndroidTest (Thread[#292,Execution worker Thread 5,5,main]) started.
+:app:validateSigningDebugAndroidTest (Thread[#292,Execution worker Thread 5,5,main]) started.
+
+> Task :app:validateSigningDebugAndroidTest UP-TO-DATE
+Caching disabled for task ':app:validateSigningDebugAndroidTest' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:validateSigningDebugAndroidTest' as it is up-to-date.
+Resolve mutations for :app:writeDebugAndroidTestSigningConfigVersions (Thread[#292,Execution worker Thread 5,5,main]) started.
+:app:writeDebugAndroidTestSigningConfigVersions (Thread[#292,Execution worker Thread 5,5,main]) started.
+
+> Task :app:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+Caching disabled for task ':app:writeDebugAndroidTestSigningConfigVersions' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:writeDebugAndroidTestSigningConfigVersions' as it is up-to-date.
+
+> Task :app:compileDebugKotlin
+Caching disabled for task ':app:compileDebugKotlin' because:
+  Build cache is disabled
+Task ':app:compileDebugKotlin' is not up-to-date because:
+  Input property 'sources' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\java\com\aadhaarocr\AadhaarOCRProcessor.kt has changed.
+  Input property 'sources' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\java\com\aadhaarocr\MainViewModel.kt has changed.
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\kotlin', not found
+Kotlin source files: C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\java\com\aadhaarocr\AadhaarOCRProcessor.kt, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\java\com\aadhaarocr\CSVExporter.kt, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\java\com\aadhaarocr\MainActivity.kt, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\java\com\aadhaarocr\MainViewModel.kt
+Java source files: C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\generated\source\buildConfig\debug\com\aadhaarocr\BuildConfig.java, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\generated\data_binding_base_class_source_out\debug\out\com\aadhaarocr\databinding\ActivityMainBinding.java, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\generated\data_binding_base_class_source_out\debug\out\com\aadhaarocr\databinding\ActivityMainResultsCardBinding.java, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\generated\data_binding_base_class_source_out\debug\out\com\aadhaarocr\databinding\ActivityMainValidationCardBinding.java
+Script source files: 
+Script file extensions: 
+Using Kotlin/JVM incremental compilation
+[KOTLIN] Kotlin compilation 'jdkHome' argument: null
+Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), sourceChanges=org.jetbrains.kotlin.buildtools.api.SourcesChanges$Known@432e3e58, classpathChanges=NoChanges, workingDir=C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\kotlin\compileDebugKotlin\cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\kotlin\compileDebugKotlin\local-state\build-history.bin, useModuleDetection=true), icFeatures=IncrementalCompilationFeatures(usePreciseJavaTracking=true, withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false, enableMonotonousIncrementalCompileSetExpansion=true), outputFiles=[C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\kotlin\compileDebugKotlin\cacheable, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\kotlin\compileDebugKotlin\local-state])
+Finished executing kotlin compiler using DAEMON strategy
+Resolve mutations for :app:compileDebugJavaWithJavac (Thread[#293,Execution worker Thread 6,5,main]) started.
+:app:compileDebugJavaWithJavac (Thread[#293,Execution worker Thread 6,5,main]) started.
+
+> Task :app:compileDebugJavaWithJavac UP-TO-DATE
+Custom actions are attached to task ':app:compileDebugJavaWithJavac'.
+Caching disabled for task ':app:compileDebugJavaWithJavac' because:
+  Build cache is disabled
+Task ':app:compileDebugJavaWithJavac' is not up-to-date because:
+  Input property 'classpath' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug\com\aadhaarocr\AadhaarOCRProcessor.class has changed.
+Compilation mode: in-process compilation
+Created classpath snapshot for incremental compilation in 0.297 secs.
+None of the classes needs to be compiled! Analysis took 0.397 secs. 
+Resolve mutations for :app:bundleDebugClassesToCompileJar (Thread[#292,Execution worker Thread 5,5,main]) started.
+:app:bundleDebugClassesToCompileJar (Thread[#292,Execution worker Thread 5,5,main]) started.
+Resolve mutations for :app:processDebugJavaRes (Thread[#287,included builds,5,main]) started.
+:app:processDebugJavaRes (Thread[#287,included builds,5,main]) started.
+
+> Task :app:processDebugJavaRes UP-TO-DATE
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\main\resources', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debug\resources', not found
+Caching disabled for task ':app:processDebugJavaRes' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:processDebugJavaRes' as it is up-to-date.
+Resolve mutations for :app:mergeDebugJavaResource (Thread[#287,included builds,5,main]) started.
+:app:mergeDebugJavaResource (Thread[#287,included builds,5,main]) started.
+
+> Task :app:mergeDebugJavaResource UP-TO-DATE
+Caching disabled for task ':app:mergeDebugJavaResource' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:mergeDebugJavaResource' as it is up-to-date.
+Resolve mutations for :app:dexBuilderDebug (Thread[#287,included builds,5,main]) started.
+:app:dexBuilderDebug (Thread[#287,included builds,5,main]) started.
+
+> Task :app:bundleDebugClassesToCompileJar
+Caching disabled for task ':app:bundleDebugClassesToCompileJar' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:bundleDebugClassesToCompileJar' is not up-to-date because:
+  Input property 'inputDirs' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug\com\aadhaarocr\AadhaarOCRProcessor$processAadhaarCard$1.class has changed.
+  Input property 'inputDirs' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug\com\aadhaarocr\AadhaarOCRProcessor.class has changed.
+  Input property 'inputDirs' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug\com\aadhaarocr\MainViewModel$processCapturedBitmap$1$extractedData$1.class has changed.
+  and more...
+
+> Task :app:dexBuilderDebug
+Caching disabled for task ':app:dexBuilderDebug' because:
+  Build cache is disabled
+Task ':app:dexBuilderDebug' is not up-to-date because:
+  Input property 'projectClasses' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug\com\aadhaarocr\AadhaarOCRProcessor$processAadhaarCard$1.class has changed.
+  Input property 'projectClasses' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug\com\aadhaarocr\AadhaarOCRProcessor.class has changed.
+  Input property 'projectClasses' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug\com\aadhaarocr\MainViewModel$processCapturedBitmap$1$extractedData$1.class has changed.
+  and more...
+Dex builder is incremental : true 
+Processing input C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug
+Processing input C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes
+Dexing C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug
+Dexing C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes
+Processing input C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debug\processDebugResources\R.jar
+Dexing C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debug\processDebugResources\R.jar
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debug' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e94a3c55fad3546de3b60b6682778f1b36c6a941f8fd4e63cb52922c701a5c35_0.jar'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e94a3c55fad3546de3b60b6682778f1b36c6a941f8fd4e63cb52922c701a5c35_1.jar'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e94a3c55fad3546de3b60b6682778f1b36c6a941f8fd4e63cb52922c701a5c35_2.jar'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e94a3c55fad3546de3b60b6682778f1b36c6a941f8fd4e63cb52922c701a5c35_3.jar'
+Done with all dex archive conversions
+work action resolve classes.jar (project :app) (Thread[#287,included builds,5,main]) started.
+Resolve mutations for :app:compileDebugAndroidTestKotlin (Thread[#287,included builds,5,main]) started.
+:app:compileDebugAndroidTestKotlin (Thread[#287,included builds,5,main]) started.
+Resolve mutations for :app:mergeProjectDexDebug (Thread[#290,Execution worker Thread 3,5,main]) started.
+:app:mergeProjectDexDebug (Thread[#290,Execution worker Thread 3,5,main]) started.
+
+> Task :app:compileDebugAndroidTestKotlin
+Caching disabled for BuildToolsApiClasspathEntrySnapshotTransform: C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_app_classes_jar\debug\bundleDebugClassesToCompileJar\classes.jar because:
+  Build cache is disabled
+Caching disabled for task ':app:compileDebugAndroidTestKotlin' because:
+  Build cache is disabled
+Task ':app:compileDebugAndroidTestKotlin' is not up-to-date because:
+  Input property 'classpathSnapshotProperties.classpathSnapshot' file C:\Users\dntrp\.gradle\caches\9.4.1\transforms\1c304fef779edc4890ae91c39ec9e727\transformed\classes_jar-snapshot.bin has been removed.
+  Input property 'classpathSnapshotProperties.classpathSnapshot' file C:\Users\dntrp\.gradle\caches\9.4.1\transforms\892010ece1a8f79893319f718f91bf04\transformed\classes_jar-snapshot.bin has been added.
+  Input property 'sources' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\java\com\aadhaarocr\AadhaarOCRProcessorTest.kt has changed.
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debugAndroidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debugAndroidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debugAndroidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\debugAndroidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\java', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\kotlin', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\kotlin', not found
+Kotlin source files: C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\java\com\aadhaarocr\AadhaarOCRProcessorTest.kt
+Java source files: C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\generated\source\buildConfig\androidTest\debug\com\aadhaarocr\test\BuildConfig.java
+Script source files: 
+Script file extensions: 
+Using Kotlin/JVM incremental compilation
+[KOTLIN] Kotlin compilation 'jdkHome' argument: null
+Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), sourceChanges=org.jetbrains.kotlin.buildtools.api.SourcesChanges$Known@5668df86, classpathChanges=ToBeComputedByIncrementalCompiler, workingDir=C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\kotlin\compileDebugAndroidTestKotlin\cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\kotlin\compileDebugAndroidTestKotlin\local-state\build-history.bin, useModuleDetection=true), icFeatures=IncrementalCompilationFeatures(usePreciseJavaTracking=true, withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false, enableMonotonousIncrementalCompileSetExpansion=true), outputFiles=[C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debugAndroidTest, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\kotlin\compileDebugAndroidTestKotlin\cacheable, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\kotlin\compileDebugAndroidTestKotlin\local-state])
+
+> Task :app:mergeProjectDexDebug
+Caching disabled for task ':app:mergeProjectDexDebug' because:
+  Build cache is disabled
+Task ':app:mergeProjectDexDebug' is not up-to-date because:
+  Input property 'dexDirs' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\com\aadhaarocr\AadhaarOCRProcessor$processAadhaarCard$1.dex has changed.
+  Input property 'dexDirs' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\com\aadhaarocr\AadhaarOCRProcessor.dex has changed.
+  Input property 'dexDirs' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\com\aadhaarocr\MainViewModel$processCapturedBitmap$1$extractedData$1.dex has changed.
+  and more...
+Merging to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\dex\debug\mergeProjectDexDebug\12' with D8 from all or a subset of dex files in C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, and from all global synthetics files in 
+Resolve mutations for :app:packageDebug (Thread[#290,Execution worker Thread 3,5,main]) started.
+:app:packageDebug (Thread[#290,Execution worker Thread 3,5,main]) started.
+
+> Task :app:packageDebug
+Custom actions are attached to task ':app:packageDebug'.
+Caching disabled for task ':app:packageDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:packageDebug' is not up-to-date because:
+  Input property 'dexFolders' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\dex\debug\mergeProjectDexDebug\12\classes.dex has changed.
+Resolve mutations for :app:createDebugApkListingFileRedirect (Thread[#290,Execution worker Thread 3,5,main]) started.
+:app:createDebugApkListingFileRedirect (Thread[#290,Execution worker Thread 3,5,main]) started.
+
+> Task :app:createDebugApkListingFileRedirect UP-TO-DATE
+Caching disabled for task ':app:createDebugApkListingFileRedirect' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:createDebugApkListingFileRedirect' as it is up-to-date.
+
+> Task :app:compileDebugAndroidTestKotlin
+Finished executing kotlin compiler using DAEMON strategy
+Resolve mutations for :app:compileDebugAndroidTestJavaWithJavac (Thread[#287,included builds,5,main]) started.
+:app:compileDebugAndroidTestJavaWithJavac (Thread[#287,included builds,5,main]) started.
+
+> Task :app:compileDebugAndroidTestJavaWithJavac UP-TO-DATE
+Custom actions are attached to task ':app:compileDebugAndroidTestJavaWithJavac'.
+Caching disabled for task ':app:compileDebugAndroidTestJavaWithJavac' because:
+  Build cache is disabled
+Task ':app:compileDebugAndroidTestJavaWithJavac' is not up-to-date because:
+  Input property 'classpath' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_app_classes_jar\debug\bundleDebugClassesToCompileJar\classes.jar has changed.
+Compilation mode: in-process compilation
+Created classpath snapshot for incremental compilation in 0.206 secs.
+None of the classes needs to be compiled! Analysis took 0.272 secs. 
+Resolve mutations for :app:processDebugAndroidTestJavaRes (Thread[#287,included builds,5,main]) started.
+:app:processDebugAndroidTestJavaRes (Thread[#287,included builds,5,main]) started.
+
+> Task :app:processDebugAndroidTestJavaRes UP-TO-DATE
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTest\resources', not found
+file or directory 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\src\androidTestDebug\resources', not found
+Caching disabled for task ':app:processDebugAndroidTestJavaRes' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:processDebugAndroidTestJavaRes' as it is up-to-date.
+Resolve mutations for :app:mergeDebugAndroidTestJavaResource (Thread[#287,included builds,5,main]) started.
+:app:mergeDebugAndroidTestJavaResource (Thread[#287,included builds,5,main]) started.
+
+> Task :app:mergeDebugAndroidTestJavaResource UP-TO-DATE
+Caching disabled for task ':app:mergeDebugAndroidTestJavaResource' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:mergeDebugAndroidTestJavaResource' as it is up-to-date.
+Resolve mutations for :app:dexBuilderDebugAndroidTest (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:dexBuilderDebugAndroidTest (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:dexBuilderDebugAndroidTest
+Caching disabled for task ':app:dexBuilderDebugAndroidTest' because:
+  Build cache is disabled
+Task ':app:dexBuilderDebugAndroidTest' is not up-to-date because:
+  Input property 'projectClasses' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debugAndroidTest\com\aadhaarocr\AadhaarOCRProcessorTest$testAadhaarExtraction$1.class has changed.
+Dex builder is incremental : true 
+Processing input C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debugAndroidTest
+Processing input C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debugAndroidTest\compileDebugAndroidTestJavaWithJavac\classes
+Dexing C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debugAndroidTest
+Dexing C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debugAndroidTest\compileDebugAndroidTestJavaWithJavac\classes
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debugAndroidTest' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debugAndroidTest\compileDebugAndroidTestJavaWithJavac\classes' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debugAndroidTest' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debugAndroidTest\compileDebugAndroidTestJavaWithJavac\classes' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debugAndroidTest' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debugAndroidTest\compileDebugAndroidTestJavaWithJavac\classes' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out'
+Processing input C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debugAndroidTest\processDebugAndroidTestResources\R.jar
+Dexing C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debugAndroidTest\processDebugAndroidTestResources\R.jar
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\tmp\kotlin-classes\debugAndroidTest' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\javac\debugAndroidTest\compileDebugAndroidTestJavaWithJavac\classes' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debugAndroidTest\processDebugAndroidTestResources\R.jar' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out\895523ca841adbafe86cfc201e11b742d9580e527ac6034a34fea4e56ed86b23_0.jar'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debugAndroidTest\processDebugAndroidTestResources\R.jar' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out\895523ca841adbafe86cfc201e11b742d9580e527ac6034a34fea4e56ed86b23_1.jar'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debugAndroidTest\processDebugAndroidTestResources\R.jar' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out\895523ca841adbafe86cfc201e11b742d9580e527ac6034a34fea4e56ed86b23_2.jar'
+Dexing 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\compile_and_runtime_r_class_jar\debugAndroidTest\processDebugAndroidTestResources\R.jar' to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out\895523ca841adbafe86cfc201e11b742d9580e527ac6034a34fea4e56ed86b23_3.jar'
+Done with all dex archive conversions
+Resolve mutations for :app:mergeProjectDexDebugAndroidTest (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:mergeProjectDexDebugAndroidTest (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeProjectDexDebugAndroidTest
+Caching disabled for task ':app:mergeProjectDexDebugAndroidTest' because:
+  Build cache is disabled
+Task ':app:mergeProjectDexDebugAndroidTest' is not up-to-date because:
+  Input property 'dexDirs' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out\com\aadhaarocr\AadhaarOCRProcessorTest$testAadhaarExtraction$1.dex has changed.
+Merging to 'C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\dex\debugAndroidTest\mergeProjectDexDebugAndroidTest\12' with D8 from all or a subset of dex files in C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out, C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\project_dex_archive\debugAndroidTest\dexBuilderDebugAndroidTest\out, and from all global synthetics files in 
+Resolve mutations for :app:packageDebugAndroidTest (Thread[#289,Execution worker Thread 2,5,main]) started.
+:app:packageDebugAndroidTest (Thread[#289,Execution worker Thread 2,5,main]) started.
+
+> Task :app:packageDebugAndroidTest
+Custom actions are attached to task ':app:packageDebugAndroidTest'.
+Caching disabled for task ':app:packageDebugAndroidTest' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:packageDebugAndroidTest' is not up-to-date because:
+  Input property 'dexFolders' file C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\intermediates\dex\debugAndroidTest\mergeProjectDexDebugAndroidTest\12\classes.dex has changed.
+Resolve mutations for :app:createDebugAndroidTestApkListingFileRedirect (Thread[#292,Execution worker Thread 5,5,main]) started.
+:app:createDebugAndroidTestApkListingFileRedirect (Thread[#292,Execution worker Thread 5,5,main]) started.
+
+> Task :app:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+Caching disabled for task ':app:createDebugAndroidTestApkListingFileRedirect' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:createDebugAndroidTestApkListingFileRedirect' as it is up-to-date.
+Resolve mutations for :app:connectedDebugAndroidTest (Thread[#292,Execution worker Thread 5,5,main]) started.
+:app:connectedDebugAndroidTest (Thread[#292,Execution worker Thread 5,5,main]) started.
+[DeviceMonitor]: Connected to adb for device monitoring
+
+> Task :app:connectedDebugAndroidTest
+Caching disabled for task ':app:connectedDebugAndroidTest' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:connectedDebugAndroidTest' is not up-to-date because:
+  Task.upToDateWhen is false.
+emulator-5554 with id Pixel_8_API_34 is not a Gradle Managed Device
+
+Constructing runner from config.
+Configuring Android Instrumentation driver: android_instrumentation_runtime {
+  instrumentation_info {
+    app_package: "com.aadhaarocr"
+    test_package: "com.aadhaarocr.test"
+    test_runner_class: "androidx.test.runner.AndroidJUnitRunner"
+  }
+  instrumentation_args {
+    args_map {
+      key: "additionalTestOutputDir"
+      value: "/sdcard/Android/media/com.aadhaarocr/additional_test_output"
+    }
+  }
+}
+am_instrument_timeout: 31536000
+
+Configuring AndroidTestApkInstallerPlugin: apks_to_install {
+  apk_paths: "C:\\Users\\dntrp\\projects\\AadhaarOCRAndroid\\app\\build\\outputs\\apk\\debug\\AadhaarOCR.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+apks_to_install {
+  apk_paths: "C:\\Users\\dntrp\\projects\\AadhaarOCRAndroid\\app\\build\\outputs\\apk\\androidTest\\debug\\app-debug-androidTest.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+instrumentation_target_package_id: "com.aadhaarocr"
+
+No installables found in test fixture. Nothing to install.
+Installing [C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\outputs\apk\debug\AadhaarOCR.apk] on device emulator-5554.
+Installing [C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\outputs\apk\androidTest\debug\app-debug-androidTest.apk] on device emulator-5554.
+Start logcat streaming.
+Running Android Instrumentation driver.
+Starting 1 tests on Pixel_8_API_34(AVD) - 14
+Pixel_8_API_34(AVD) - 14 Tests 0/1 completed. (0 skipped) (0 failed)
+
+com.aadhaarocr.AadhaarOCRProcessorTest > testAadhaarExtraction[Pixel_8_API_34(AVD) - 14] [32mSUCCESS [0m
+Copying files from device to host: /sdcard/Android/media/com.aadhaarocr/additional_test_output to C:\Users\dntrp\projects\AadhaarOCRAndroid\app\build\outputs\connected_android_test_additional_output\debugAndroidTest\connected\Pixel_8_API_34(AVD) - 14
+Stop logcat streaming.
+Uninstalling com.aadhaarocr for device emulator-5554.
+Uninstalling com.aadhaarocr.test for device emulator-5554.
+Finished 1 tests on Pixel_8_API_34(AVD) - 14
+Execute com.aadhaarocr.AadhaarOCRProcessorTest.testAadhaarExtraction: PASSED
+Resolve mutations for :app:connectedAndroidTest (Thread[#292,Execution worker Thread 5,5,main]) started.
+:app:connectedAndroidTest (Thread[#292,Execution worker Thread 5,5,main]) started.
+
+> Task :app:connectedAndroidTest
+Skipping task ':app:connectedAndroidTest' as it has no actions.
+Build 3a92f417-1ec1-484e-aa4d-a2cdd9c5913c is closed
+
+[Incubating] Problems report is available at: file:///C:/Users/dntrp/projects/AadhaarOCRAndroid/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.4.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1m 22s
+73 actionable tasks: 10 executed, 63 up-to-date
+Watched directory hierarchies: [C:\Users\dntrp\projects\AadhaarOCRAndroid]
