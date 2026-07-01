@@ -56,6 +56,40 @@ class AadhaarOCRProcessor {
                 return AadhaarData(validationMessage = "No text detected in image.")
             }
 
+            val allAngles = mutableListOf<Double>()
+            for (block in result.textBlocks) {
+                for (line in block.lines) {
+                    val points = line.cornerPoints
+                    if (points != null && points.size >= 2) {
+                        val dx = points[1].x - points[0].x
+                        val dy = points[1].y - points[0].y
+                        val angle = Math.toDegrees(Math.atan2(dy.toDouble(), dx.toDouble()))
+                        allAngles.add(angle)
+                    }
+                }
+            }
+            
+            // Find dominant angle using a simple histogram binning (e.g. 10 degree bins)
+            var dominantAngle = 0.0
+            if (allAngles.isNotEmpty()) {
+                val bins = mutableMapOf<Int, Int>()
+                for (angle in allAngles) {
+                    var normAngle = angle % 180
+                    if (normAngle < 0) normAngle += 180
+                    val bin = (normAngle / 10).toInt() * 10
+                    bins[bin] = (bins[bin] ?: 0) + 1
+                }
+                val dominantBin = bins.maxByOrNull { it.value }?.key ?: 0
+                val dominantAngles = allAngles.filter {
+                    var norm = it % 180
+                    if (norm < 0) norm += 180
+                    (norm / 10).toInt() * 10 == dominantBin
+                }
+                if (dominantAngles.isNotEmpty()) {
+                    dominantAngle = dominantAngles.average()
+                }
+            }
+
             val filteredLinesList = mutableListOf<String>()
             for (block in result.textBlocks) {
                 for (line in block.lines) {
@@ -64,10 +98,19 @@ class AadhaarOCRProcessor {
                         val dx = points[1].x - points[0].x
                         val dy = points[1].y - points[0].y
                         val angle = Math.toDegrees(Math.atan2(dy.toDouble(), dx.toDouble()))
-                        // Vertical text is around 90 or -90 (270) degrees. Filter out if between 45-135 or 225-315 (-135 to -45)
-                        val absAngle = Math.abs(angle)
-                        if (absAngle in 45.0..135.0) {
-                            Log.d(TAG, "Filtered out vertical text: '${line.text}' (Angle: $angle)")
+                        
+                        var normAngle = angle % 180
+                        if (normAngle < 0) normAngle += 180
+                        
+                        var normDom = dominantAngle % 180
+                        if (normDom < 0) normDom += 180
+                        
+                        val diff = Math.abs(normAngle - normDom)
+                        val minDiff = Math.min(diff, 180 - diff)
+                        
+                        // Perpendicular text is around 90 degrees from the dominant angle
+                        if (minDiff in 45.0..135.0) {
+                            Log.d(TAG, "Filtered out perpendicular text: '${line.text}' (Angle: $angle, Dominant: $dominantAngle)")
                             continue
                         }
                     }
