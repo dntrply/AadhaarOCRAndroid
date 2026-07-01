@@ -39,6 +39,8 @@ class MainActivity : AppCompatActivity() {
     
     private var imageCapture: ImageCapture? = null
 
+    private var isCapturingBack = false
+
     companion object {
         private const val TAG = "MainActivity"
         private val REQUIRED_PERMISSIONS = mutableListOf(Manifest.permission.CAMERA).apply {
@@ -89,6 +91,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnGallery.setOnClickListener {
+            isCapturingBack = false
             pickImageLauncher.launch("image/*")
         }
 
@@ -102,6 +105,22 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnAbout.setOnClickListener {
             showAboutDialog()
+        }
+        
+        binding.cardResultsInclude.btnCaptureBack.setOnClickListener {
+            isCapturingBack = true
+            binding.layoutCapture.visibility = View.VISIBLE
+            binding.cardResultsInclude.cardResults.visibility = View.GONE
+            binding.btnNext.visibility = View.INVISIBLE
+            startCamera()
+            binding.previewView.visibility = View.VISIBLE
+            binding.imagePreview.visibility = View.GONE
+            binding.btnCapture.text = "📸 CAPTURE BACK OF CARD"
+        }
+
+        binding.cardResultsInclude.btnGalleryBack.setOnClickListener {
+            isCapturingBack = true
+            pickImageLauncher.launch("image/*")
         }
     }
 
@@ -175,16 +194,50 @@ class MainActivity : AppCompatActivity() {
         val capture = imageCapture ?: return
         capture.takePicture(ContextCompat.getMainExecutor(this), object : ImageCapture.OnImageCapturedCallback() {
             override fun onCaptureSuccess(image: ImageProxy) {
-                val bitmap = image.toBitmap()
-                image.close()
-                processImage(bitmap)
+                try {
+                    val fullBitmap = image.toBitmap()
+                    image.close()
+                    
+                    // Scale down the bitmap to avoid OutOfMemoryError and Canvas too large exceptions
+                    val maxDimension = 1920f
+                    val scale = minOf(maxDimension / fullBitmap.width, maxDimension / fullBitmap.height, 1f)
+                    
+                    val finalBitmap = if (scale < 1f) {
+                        Bitmap.createScaledBitmap(
+                            fullBitmap, 
+                            (fullBitmap.width * scale).toInt(), 
+                            (fullBitmap.height * scale).toInt(), 
+                            true
+                        )
+                    } else {
+                        fullBitmap
+                    }
+                    
+                    processImage(finalBitmap)
+                } catch (e: Exception) {
+                    Log.e(TAG, "Error processing captured image", e)
+                    Toast.makeText(this@MainActivity, "Failed to capture image: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onError(exception: ImageCaptureException) {
+                Log.e(TAG, "Photo capture failed: ${exception.message}", exception)
+                val errorMessage = when (exception.imageCaptureError) {
+                    ImageCapture.ERROR_CAMERA_CLOSED -> "Camera was closed unexpectedly. Please try again."
+                    ImageCapture.ERROR_CAPTURE_FAILED -> "Failed to capture the photo. Keep your hands steady and try again."
+                    ImageCapture.ERROR_FILE_IO -> "Failed to save the photo. Please check your device storage."
+                    ImageCapture.ERROR_INVALID_CAMERA -> "The selected camera is invalid or unavailable."
+                    ImageCapture.ERROR_UNKNOWN -> "An unknown error occurred while capturing the photo."
+                    else -> "Camera error: ${exception.message}. Please restart the app and try again."
+                }
+                Toast.makeText(this@MainActivity, errorMessage, Toast.LENGTH_LONG).show()
             }
         })
     }
 
     private fun processImage(bitmap: Bitmap) {
-        viewModel.processCapturedBitmap(bitmap) {
-            // Callback handles any additional logic after processing, if needed.
+        viewModel.processCapturedBitmap(bitmap, isCapturingBack) {
+            isCapturingBack = false
         }
     }
 
@@ -245,13 +298,18 @@ class MainActivity : AppCompatActivity() {
             AppState.PROCESSED -> {
                 binding.tvCurrentStep.text = "STEP 2: Preview & Edit"
                 binding.btnNext.text = "GENERATE CSV"
-                binding.tvManualInstructions.text = "Verify the extraction. Edit the fields if needed, or click RETAKE. Then click GENERATE CSV."
-                workflow.aadhaarData?.let { displayResults(it) }
+                workflow.aadhaarData?.let { 
+                    displayResults(it)
+                    if (it.address.isBlank() || it.address.contains("Not detected", ignoreCase = true)) {
+                        binding.cardResultsInclude.layoutCaptureBack.visibility = View.VISIBLE
+                    } else {
+                        binding.cardResultsInclude.layoutCaptureBack.visibility = View.GONE
+                    }
+                }
             }
             AppState.HMS_IMPORTED -> {
                 binding.tvCurrentStep.text = "STEP 3: HMS Import"
                 binding.btnNext.text = "HMS IMPORTED ✓"
-                binding.tvManualInstructions.text = "CSV generated at ${workflow.csvPath}. Import it to HMS system and click HMS IMPORTED."
             }
             AppState.COMPLETED -> {
                 resetWizard()
@@ -260,6 +318,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun resetWizard() {
+        isCapturingBack = false
         viewModel.startNewWorkflow()
         binding.imagePreview.visibility = View.GONE
         binding.previewView.visibility = View.GONE
