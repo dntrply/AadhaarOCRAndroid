@@ -51,13 +51,38 @@ class AadhaarOCRProcessor {
         return try {
             val inputImage = InputImage.fromBitmap(bitmap, 0)
             val result = textRecognizer.process(inputImage).await()
-            val fullText = result.text
-            
-            if (fullText.isBlank()) {
+            if (result.text.isBlank()) {
                 return AadhaarData(validationMessage = "No text detected in image.")
             }
 
-            val lines = fullText.split("\n").map { it.trim() }.filter { it.isNotEmpty() }
+            val filteredLinesList = mutableListOf<String>()
+            for (block in result.textBlocks) {
+                for (line in block.lines) {
+                    val points = line.cornerPoints
+                    if (points != null && points.size >= 2) {
+                        val dx = points[1].x - points[0].x
+                        val dy = points[1].y - points[0].y
+                        val angle = Math.toDegrees(Math.atan2(dy.toDouble(), dx.toDouble()))
+                        // Vertical text is around 90 or -90 (270) degrees. Filter out if between 45-135 or 225-315 (-135 to -45)
+                        val absAngle = Math.abs(angle)
+                        if (absAngle in 45.0..135.0) {
+                            Log.d(TAG, "Filtered out vertical text: '${line.text}' (Angle: $angle)")
+                            continue
+                        }
+                    }
+                    val t = line.text.trim()
+                    if (t.isNotEmpty()) {
+                        filteredLinesList.add(t)
+                    }
+                }
+            }
+            
+            if (filteredLinesList.isEmpty()) {
+                return AadhaarData(validationMessage = "No readable horizontal text detected.")
+            }
+
+            val lines = filteredLinesList
+            val fullText = lines.joinToString("\n")
             
             // Core Extraction Pipeline
             var name = ""
