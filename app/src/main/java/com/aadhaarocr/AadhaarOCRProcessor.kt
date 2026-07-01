@@ -1,5 +1,6 @@
 package com.aadhaarocr
 
+import androidx.annotation.VisibleForTesting
 import android.graphics.Bitmap
 import android.util.Log
 import com.google.mlkit.vision.common.InputImage
@@ -31,7 +32,7 @@ data class AadhaarData(
 class AadhaarOCRProcessor {
     
     // Upgraded to Devanagari Recognizer to support both English & Hindi perfectly!
-    private val textRecognizer = TextRecognition.getClient(DevanagariTextRecognizerOptions.Builder().build())
+    private val textRecognizer by lazy { TextRecognition.getClient(DevanagariTextRecognizerOptions.Builder().build()) }
     
     companion object {
         private const val TAG = "AadhaarOCRProcessor"
@@ -252,7 +253,8 @@ class AadhaarOCRProcessor {
         return ""
     }
 
-    private fun extractUID(text: String): String {
+    @VisibleForTesting
+    internal fun extractUID(text: String): String {
         // Clean birth years first to avoid confusion
         val dobMatch = Regex("\\d{2}[/-]\\d{2}[/-](\\d{4})").find(text)
         val birthYear = dobMatch?.groupValues?.get(1) ?: ""
@@ -302,7 +304,8 @@ class AadhaarOCRProcessor {
         return ""
     }
 
-    private fun extractAddress(lines: List<String>, name: String): String {
+    @VisibleForTesting
+    internal fun extractAddress(lines: List<String>, name: String): String {
         val addressStartPattern = Regex("(?i)^(?:address|पता)[:\\s]+(.*)$")
         val englishAddressStartPattern = Regex("(?i)^address[:\\s]+(.*)$")
         
