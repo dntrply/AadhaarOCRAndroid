@@ -14,9 +14,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.camera.core.*
-import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Lifecycle
@@ -24,8 +23,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.aadhaarocr.databinding.ActivityMainBinding
 import kotlinx.coroutines.launch
-import java.util.concurrent.ExecutorService
-import java.util.concurrent.Executors
+import java.io.File
+import java.io.IOException
 
 /**
  * Main Activity for the Aadhaar OCR Wizard.
@@ -34,12 +33,10 @@ import java.util.concurrent.Executors
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var cameraExecutor: ExecutorService
     private val viewModel: MainViewModel by viewModels()
     
-    private var imageCapture: ImageCapture? = null
-
     private var isCapturingBack = false
+    private var currentPhotoUri: android.net.Uri? = null
 
     companion object {
         private const val TAG = "MainActivity"
@@ -59,8 +56,6 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        cameraExecutor = Executors.newSingleThreadExecutor()
         
         setupClickListeners()
         setupObservers()
@@ -80,14 +75,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupClickListeners() {
         binding.btnCapture.setOnClickListener {
-            if (binding.previewView.visibility == View.VISIBLE) {
-                capturePhoto()
-            } else {
-                startCamera()
-                binding.previewView.visibility = View.VISIBLE
-                binding.imagePreview.visibility = View.GONE
-                binding.btnCapture.text = "📸 CLICK NOW"
-            }
+            startCamera()
         }
 
         binding.btnGallery.setOnClickListener {
@@ -120,9 +108,6 @@ class MainActivity : AppCompatActivity() {
             binding.cardResultsInclude.cardResults.visibility = View.GONE
             binding.btnNext.visibility = View.INVISIBLE
             startCamera()
-            binding.previewView.visibility = View.VISIBLE
-            binding.imagePreview.visibility = View.GONE
-            binding.btnCapture.text = "📸 CAPTURE BACK OF CARD"
         }
 
         binding.cardResultsInclude.btnGalleryBack.setOnClickListener {
@@ -176,70 +161,64 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private val takePictureLauncher = registerForActivityResult(ActivityResultContracts.TakePicture()) { success ->
+        if (success) {
+            currentPhotoUri?.let { uri ->
+                try {
+                    contentResolver.openInputStream(uri)?.use { stream ->
+                        val fullBitmap = BitmapFactory.decodeStream(stream)
+                        
+                        // Scale down the bitmap to avoid OutOfMemoryError and Canvas too large exceptions
+                        val maxDimension = 1920f
+                        val scale = minOf(maxDimension / fullBitmap.width, maxDimension / fullBitmap.height, 1f)
+                        
+                        val finalBitmap = if (scale < 1f) {
+                            Bitmap.createScaledBitmap(
+                                fullBitmap, 
+                                (fullBitmap.width * scale).toInt(), 
+                                (fullBitmap.height * scale).toInt(), 
+                                true
+                            )
+                        } else {
+                            fullBitmap
+                        }
+                        
+                        processImage(finalBitmap)
+                    }
+                } catch (e: Exception) {
+                    Log.e(TAG, "Error processing captured image", e)
+                    Toast.makeText(this, "Failed to load captured image: ${e.message}", Toast.LENGTH_SHORT).show()
+                    resetWizard()
+                }
+            }
+        } else {
+            // User cancelled
+            resetWizard()
+        }
+    }
+
     private fun startCamera() {
         if (!allPermissionsGranted()) {
             requestPermissionLauncher.launch(REQUIRED_PERMISSIONS)
             return
         }
-        val providerFuture = ProcessCameraProvider.getInstance(this)
-        providerFuture.addListener({
-            val cameraProvider = providerFuture.get()
-            val preview = Preview.Builder().build().also { it.setSurfaceProvider(binding.previewView.surfaceProvider) }
-            imageCapture = ImageCapture.Builder().setCaptureMode(ImageCapture.CAPTURE_MODE_MINIMIZE_LATENCY).build()
-            try {
-                cameraProvider.unbindAll()
-                cameraProvider.bindToLifecycle(this, CameraSelector.DEFAULT_BACK_CAMERA, preview, imageCapture)
-            } catch (e: Exception) { 
-                Log.e(TAG, "Camera failed", e)
-                Toast.makeText(this, "Failed to open camera. Hardware might be in use.", Toast.LENGTH_LONG).show()
-                resetWizard()
-            }
-        }, ContextCompat.getMainExecutor(this))
-    }
-
-    private fun capturePhoto() {
-        val capture = imageCapture ?: return
-        capture.takePicture(ContextCompat.getMainExecutor(this), object : ImageCapture.OnImageCapturedCallback() {
-            override fun onCaptureSuccess(image: ImageProxy) {
-                try {
-                    val fullBitmap = image.toBitmap()
-                    image.close()
-                    
-                    // Scale down the bitmap to avoid OutOfMemoryError and Canvas too large exceptions
-                    val maxDimension = 1920f
-                    val scale = minOf(maxDimension / fullBitmap.width, maxDimension / fullBitmap.height, 1f)
-                    
-                    val finalBitmap = if (scale < 1f) {
-                        Bitmap.createScaledBitmap(
-                            fullBitmap, 
-                            (fullBitmap.width * scale).toInt(), 
-                            (fullBitmap.height * scale).toInt(), 
-                            true
-                        )
-                    } else {
-                        fullBitmap
-                    }
-                    
-                    processImage(finalBitmap)
-                } catch (e: Exception) {
-                    Log.e(TAG, "Error processing captured image", e)
-                    Toast.makeText(this@MainActivity, "Failed to capture image: ${e.message}", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            override fun onError(exception: ImageCaptureException) {
-                Log.e(TAG, "Photo capture failed: ${exception.message}", exception)
-                val errorMessage = when (exception.imageCaptureError) {
-                    ImageCapture.ERROR_CAMERA_CLOSED -> "Camera was closed unexpectedly. Please try again."
-                    ImageCapture.ERROR_CAPTURE_FAILED -> "Failed to capture the photo. Keep your hands steady and try again."
-                    ImageCapture.ERROR_FILE_IO -> "Failed to save the photo. Please check your device storage."
-                    ImageCapture.ERROR_INVALID_CAMERA -> "The selected camera is invalid or unavailable."
-                    ImageCapture.ERROR_UNKNOWN -> "An unknown error occurred while capturing the photo."
-                    else -> "Camera error: ${exception.message}. Please restart the app and try again."
-                }
-                Toast.makeText(this@MainActivity, errorMessage, Toast.LENGTH_LONG).show()
-            }
-        })
+        
+        try {
+            val photoFile = File.createTempFile(
+                "JPEG_${System.currentTimeMillis()}_",
+                ".jpg",
+                cacheDir
+            )
+            currentPhotoUri = FileProvider.getUriForFile(
+                this,
+                "${packageName}.fileprovider",
+                photoFile
+            )
+            takePictureLauncher.launch(currentPhotoUri!!)
+        } catch (ex: IOException) {
+            Log.e(TAG, "Error creating file for camera", ex)
+            Toast.makeText(this, "Error creating temp file", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun processImage(bitmap: Bitmap) {
@@ -290,7 +269,6 @@ class MainActivity : AppCompatActivity() {
             viewModel.capturedBitmap?.let { 
                 binding.imagePreview.setImageBitmap(it)
                 binding.imagePreview.visibility = View.VISIBLE
-                binding.previewView.visibility = View.GONE
             }
         }
 
@@ -328,7 +306,6 @@ class MainActivity : AppCompatActivity() {
         isCapturingBack = false
         viewModel.startNewWorkflow()
         binding.imagePreview.visibility = View.GONE
-        binding.previewView.visibility = View.GONE
         binding.btnCapture.text = "📷 CAPTURE PHOTO"
     }
 
