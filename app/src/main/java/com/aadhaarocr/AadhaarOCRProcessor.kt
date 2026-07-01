@@ -56,15 +56,23 @@ class AadhaarOCRProcessor {
                 return AadhaarData(validationMessage = "No text detected in image.")
             }
 
+            class ParsedLine(val text: String, val cx: Double, val cy: Double, val angle: Double)
+            val parsedLines = mutableListOf<ParsedLine>()
             val allAngles = mutableListOf<Double>()
+            
             for (block in result.textBlocks) {
                 for (line in block.lines) {
                     val points = line.cornerPoints
-                    if (points != null && points.size >= 2) {
+                    if (points != null && points.size >= 4) {
                         val dx = points[1].x - points[0].x
                         val dy = points[1].y - points[0].y
                         val angle = Math.toDegrees(Math.atan2(dy.toDouble(), dx.toDouble()))
                         allAngles.add(angle)
+                        
+                        val cx = (points[0].x + points[1].x + points[2].x + points[3].x) / 4.0
+                        val cy = (points[0].y + points[1].y + points[2].y + points[3].y) / 4.0
+                        
+                        parsedLines.add(ParsedLine(line.text.trim(), cx, cy, angle))
                     }
                 }
             }
@@ -90,36 +98,40 @@ class AadhaarOCRProcessor {
                 }
             }
 
-            val filteredLinesList = mutableListOf<String>()
-            for (block in result.textBlocks) {
-                for (line in block.lines) {
-                    val points = line.cornerPoints
-                    if (points != null && points.size >= 2) {
-                        val dx = points[1].x - points[0].x
-                        val dy = points[1].y - points[0].y
-                        val angle = Math.toDegrees(Math.atan2(dy.toDouble(), dx.toDouble()))
-                        
-                        var normAngle = angle % 180
-                        if (normAngle < 0) normAngle += 180
-                        
-                        var normDom = dominantAngle % 180
-                        if (normDom < 0) normDom += 180
-                        
-                        val diff = Math.abs(normAngle - normDom)
-                        val minDiff = Math.min(diff, 180 - diff)
-                        
-                        // Perpendicular text is around 90 degrees from the dominant angle
-                        if (minDiff in 45.0..135.0) {
-                            Log.d(TAG, "Filtered out perpendicular text: '${line.text}' (Angle: $angle, Dominant: $dominantAngle)")
-                            continue
-                        }
-                    }
-                    val t = line.text.trim()
-                    if (t.isNotEmpty()) {
-                        filteredLinesList.add(t)
-                    }
+            val rad = Math.toRadians(-dominantAngle)
+            val cos = Math.cos(rad)
+            val sin = Math.sin(rad)
+
+            val sortedFilteredLines = parsedLines.mapNotNull { line ->
+                var normAngle = line.angle % 180
+                if (normAngle < 0) normAngle += 180
+                
+                var normDom = dominantAngle % 180
+                if (normDom < 0) normDom += 180
+                
+                val diff = Math.abs(normAngle - normDom)
+                val minDiff = Math.min(diff, 180 - diff)
+                
+                // Perpendicular text is around 90 degrees from the dominant angle
+                if (minDiff in 45.0..135.0) {
+                    Log.d(TAG, "Filtered out perpendicular text: '${line.text}' (Angle: ${line.angle}, Dominant: $dominantAngle)")
+                    null
+                } else if (line.text.isEmpty()) {
+                    null
+                } else {
+                    val rx = line.cx * cos - line.cy * sin
+                    val ry = line.cx * sin + line.cy * cos
+                    Triple(line.text, rx, ry)
                 }
-            }
+            }.sortedWith { a, b ->
+                if (Math.abs(a.third - b.third) > 30) {
+                    a.third.compareTo(b.third)
+                } else {
+                    a.second.compareTo(b.second)
+                }
+            }.map { it.first }
+
+            val filteredLinesList = sortedFilteredLines.toMutableList()
             
             if (filteredLinesList.isEmpty()) {
                 return AadhaarData(validationMessage = "No readable horizontal text detected.")
